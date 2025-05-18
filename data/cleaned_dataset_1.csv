@@ -1,0 +1,717 @@
+"JURISDICTION","AGE_GROUP","DETECTION_METHOD","FINES"
+"ACT","17-25","Police issued",8
+"ACT","26-39","Police issued",8
+"ACT","40-64","Police issued",12
+"NSW","17-25","Police issued",55
+"NSW","26-39","Police issued",54
+"NSW","40-64","Police issued",43
+"NSW","65 and over","Police issued",6
+"NSW","17-25","Police issued",270
+"NSW","26-39","Police issued",335
+"NSW","40-64","Police issued",200
+"NSW","65 and over","Police issued",31
+"NSW","17-25","Police issued",6
+"NSW","26-39","Police issued",8
+"NSW","40-64","Police issued",9
+"NSW","65 and over","Police issued",1
+"NSW","40-64","Police issued",1
+"NSW","26-39","Police issued",1
+"NSW","Unknown","Camera issued",17080
+"NT","17-25","Police issued",3
+"NT","26-39","Police issued",7
+"NT","40-64","Police issued",8
+"NT","65 and over","Police issued",3
+"SA","0-16","Police issued",1
+"SA","17-25","Police issued",106
+"SA","26-39","Police issued",182
+"SA","40-64","Police issued",117
+"SA","65 and over","Police issued",20
+"SA","Unknown","Police issued",0
+"TAS","17-25","Police issued",27
+"TAS","26-39","Police issued",63
+"TAS","40-64","Police issued",28
+"TAS","65 and over","Police issued",7
+"VIC","0-16","Police issued",1
+"VIC","17-25","Police issued",47
+"VIC","26-39","Police issued",55
+"VIC","40-64","Police issued",41
+"VIC","65 and over","Police issued",7
+"VIC","0-16","Police issued",1
+"VIC","17-25","Police issued",298
+"VIC","26-39","Police issued",654
+"VIC","40-64","Police issued",406
+"VIC","65 and over","Police issued",38
+"VIC","17-25","Police issued",7
+"VIC","26-39","Police issued",11
+"VIC","40-64","Police issued",9
+"VIC","65 and over","Police issued",3
+"VIC","26-39","Police issued",2
+"VIC","40-64","Police issued",1
+"WA","17-25","Police issued",72
+"WA","26-39","Police issued",178
+"WA","40-64","Police issued",123
+"WA","65 and over","Police issued",19
+"QLD","Unknown","Camera issued",77213
+"QLD","Unknown","Police issued",3079
+"ACT","17-25","Police issued",7
+"ACT","26-39","Police issued",8
+"ACT","40-64","Police issued",12
+"ACT","65 and over","Police issued",1
+"NSW","17-25","Police issued",48
+"NSW","26-39","Police issued",54
+"NSW","40-64","Police issued",61
+"NSW","65 and over","Police issued",4
+"NSW","17-25","Police issued",278
+"NSW","26-39","Police issued",423
+"NSW","40-64","Police issued",308
+"NSW","65 and over","Police issued",28
+"NSW","17-25","Police issued",4
+"NSW","26-39","Police issued",13
+"NSW","40-64","Police issued",10
+"NSW","40-64","Police issued",1
+"NSW","Unknown","Camera issued",18057
+"NT","17-25","Police issued",5
+"NT","26-39","Police issued",6
+"NT","40-64","Police issued",5
+"SA","0-16","Police issued",0
+"SA","17-25","Police issued",150
+"SA","26-39","Police issued",239
+"SA","40-64","Police issued",177
+"SA","65 and over","Police issued",24
+"SA","Unknown","Police issued",0
+"TAS","0-16","Police issued",0
+"TAS","17-25","Police issued",29
+"TAS","26-39","Police issued",43
+"TAS","40-64","Police issued",35
+"TAS","65 and over","Police issued",5
+"VIC","0-16","Police issued",1
+"VIC","17-25","Police issued",26
+"VIC","26-39","Police issued",55
+"VIC","40-64","Police issued",40
+"VIC","65 and over","Police issued",7
+"VIC","17-25","Police issued",248
+"VIC","26-39","Police issued",586
+"VIC","40-64","Police issued",445
+"VIC","65 and over","Police issued",59
+"VIC","17-25","Police issued",2
+"VIC","26-39","Police issued",12
+"VIC","40-64","Police issued",8
+"VIC","65 and over","Police issued",2
+"VIC","26-39","Police issued",2
+"VIC","40-64","Police issued",1
+"WA","17-25","Police issued",69
+"WA","26-39","Police issued",155
+"WA","40-64","Police issued",125
+"WA","65 and over","Police issued",19
+"ACT","0-16","Police issued",1
+"ACT","17-25","Police issued",12
+"ACT","26-39","Police issued",14
+"ACT","40-64","Police issued",1
+"NSW","17-25","Police issued",37
+"NSW","26-39","Police issued",67
+"NSW","40-64","Police issued",51
+"NSW","65 and over","Police issued",5
+"NSW","17-25","Police issued",283
+"NSW","26-39","Police issued",405
+"NSW","40-64","Police issued",303
+"NSW","65 and over","Police issued",23
+"NSW","17-25","Police issued",6
+"NSW","26-39","Police issued",13
+"NSW","40-64","Police issued",11
+"NSW","65 and over","Police issued",2
+"NSW","26-39","Police issued",2
+"NSW","Unknown","Camera issued",20102
+"NT","17-25","Police issued",4
+"NT","26-39","Police issued",6
+"NT","40-64","Police issued",5
+"NT","65 and over","Police issued",0
+"SA","0-16","Police issued",0
+"SA","17-25","Police issued",153
+"SA","26-39","Police issued",228
+"SA","40-64","Police issued",198
+"SA","65 and over","Police issued",34
+"SA","Unknown","Police issued",0
+"TAS","17-25","Police issued",44
+"TAS","26-39","Police issued",44
+"TAS","40-64","Police issued",34
+"TAS","65 and over","Police issued",6
+"VIC","17-25","Police issued",55
+"VIC","26-39","Police issued",74
+"VIC","40-64","Police issued",53
+"VIC","65 and over","Police issued",9
+"VIC","0-16","Police issued",1
+"VIC","17-25","Police issued",309
+"VIC","26-39","Police issued",646
+"VIC","40-64","Police issued",536
+"VIC","65 and over","Police issued",59
+"VIC","Unknown","Police issued",1
+"VIC","17-25","Police issued",11
+"VIC","26-39","Police issued",29
+"VIC","40-64","Police issued",15
+"VIC","65 and over","Police issued",3
+"WA","17-25","Police issued",76
+"WA","26-39","Police issued",184
+"WA","40-64","Police issued",166
+"WA","65 and over","Police issued",21
+"ACT","0-16","Police issued",2
+"ACT","17-25","Police issued",7
+"ACT","26-39","Police issued",11
+"ACT","40-64","Police issued",6
+"ACT","65 and over","Police issued",2
+"NSW","0-16","Police issued",1
+"NSW","17-25","Police issued",39
+"NSW","26-39","Police issued",68
+"NSW","40-64","Police issued",38
+"NSW","65 and over","Police issued",5
+"NSW","0-16","Police issued",1
+"NSW","17-25","Police issued",348
+"NSW","26-39","Police issued",384
+"NSW","40-64","Police issued",257
+"NSW","65 and over","Police issued",31
+"NSW","17-25","Police issued",4
+"NSW","26-39","Police issued",9
+"NSW","40-64","Police issued",6
+"NSW","65 and over","Police issued",1
+"NSW","17-25","Police issued",1
+"NSW","Unknown","Camera issued",16973
+"NSW","17-25","Police issued",1
+"NT","17-25","Police issued",2
+"NT","26-39","Police issued",11
+"NT","40-64","Police issued",3
+"NT","65 and over","Police issued",0
+"SA","0-16","Police issued",0
+"SA","17-25","Police issued",122
+"SA","26-39","Police issued",184
+"SA","40-64","Police issued",135
+"SA","65 and over","Police issued",25
+"SA","Unknown","Police issued",0
+"TAS","17-25","Police issued",32
+"TAS","26-39","Police issued",70
+"TAS","40-64","Police issued",44
+"TAS","65 and over","Police issued",4
+"VIC","17-25","Police issued",21
+"VIC","26-39","Police issued",56
+"VIC","40-64","Police issued",68
+"VIC","65 and over","Police issued",7
+"VIC","17-25","Police issued",232
+"VIC","26-39","Police issued",608
+"VIC","40-64","Police issued",455
+"VIC","65 and over","Police issued",60
+"VIC","Unknown","Police issued",1
+"VIC","17-25","Police issued",5
+"VIC","26-39","Police issued",9
+"VIC","40-64","Police issued",6
+"VIC","65 and over","Police issued",1
+"VIC","26-39","Police issued",2
+"VIC","40-64","Police issued",1
+"WA","17-25","Police issued",63
+"WA","26-39","Police issued",136
+"WA","40-64","Police issued",90
+"WA","65 and over","Police issued",12
+"ACT","0-16","Police issued",3
+"ACT","17-25","Police issued",5
+"ACT","26-39","Police issued",9
+"ACT","40-64","Police issued",8
+"NSW","0-16","Police issued",2
+"NSW","17-25","Police issued",36
+"NSW","26-39","Police issued",47
+"NSW","40-64","Police issued",35
+"NSW","65 and over","Police issued",8
+"NSW","17-25","Police issued",330
+"NSW","26-39","Police issued",356
+"NSW","40-64","Police issued",267
+"NSW","65 and over","Police issued",40
+"NSW","0-16","Police issued",0
+"NSW","17-25","Police issued",3
+"NSW","26-39","Police issued",13
+"NSW","40-64","Police issued",9
+"NSW","26-39","Police issued",1
+"NSW","65 and over","Police issued",1
+"NSW","17-25","Police issued",2
+"NSW","26-39","Police issued",2
+"NSW","Unknown","Camera issued",19048
+"NT","17-25","Police issued",4
+"NT","26-39","Police issued",10
+"NT","40-64","Police issued",3
+"NT","65 and over","Police issued",1
+"SA","0-16","Police issued",0
+"SA","17-25","Police issued",105
+"SA","26-39","Police issued",194
+"SA","40-64","Police issued",187
+"SA","65 and over","Police issued",20
+"SA","Unknown","Police issued",0
+"TAS","17-25","Police issued",29
+"TAS","26-39","Police issued",68
+"TAS","40-64","Police issued",42
+"TAS","65 and over","Police issued",6
+"VIC","17-25","Police issued",30
+"VIC","26-39","Police issued",93
+"VIC","40-64","Police issued",62
+"VIC","65 and over","Police issued",12
+"VIC","17-25","Police issued",252
+"VIC","26-39","Police issued",518
+"VIC","40-64","Police issued",405
+"VIC","65 and over","Police issued",42
+"VIC","Unknown","Police issued",3
+"VIC","17-25","Police issued",10
+"VIC","26-39","Police issued",21
+"VIC","40-64","Police issued",10
+"VIC","65 and over","Police issued",1
+"VIC","17-25","Police issued",1
+"VIC","26-39","Police issued",1
+"WA","17-25","Police issued",69
+"WA","26-39","Police issued",171
+"WA","40-64","Police issued",121
+"WA","65 and over","Police issued",17
+"ACT","0-16","Police issued",2
+"ACT","17-25","Police issued",5
+"ACT","26-39","Police issued",9
+"ACT","40-64","Police issued",7
+"NSW","17-25","Police issued",48
+"NSW","26-39","Police issued",71
+"NSW","40-64","Police issued",60
+"NSW","65 and over","Police issued",6
+"NSW","17-25","Police issued",338
+"NSW","26-39","Police issued",401
+"NSW","40-64","Police issued",333
+"NSW","65 and over","Police issued",24
+"NSW","17-25","Police issued",5
+"NSW","26-39","Police issued",6
+"NSW","40-64","Police issued",12
+"NSW","65 and over","Police issued",1
+"NSW","26-39","Police issued",2
+"NSW","17-25","Police issued",2
+"NSW","40-64","Police issued",1
+"NSW","Unknown","Camera issued",16286
+"NSW","40-64","Police issued",1
+"NT","17-25","Police issued",1
+"NT","26-39","Police issued",2
+"NT","40-64","Police issued",6
+"NT","65 and over","Police issued",0
+"SA","0-16","Police issued",2
+"SA","17-25","Police issued",102
+"SA","26-39","Police issued",182
+"SA","40-64","Police issued",131
+"SA","65 and over","Police issued",20
+"SA","Unknown","Police issued",0
+"TAS","17-25","Police issued",29
+"TAS","26-39","Police issued",54
+"TAS","40-64","Police issued",44
+"TAS","65 and over","Police issued",6
+"VIC","17-25","Police issued",24
+"VIC","26-39","Police issued",61
+"VIC","40-64","Police issued",37
+"VIC","65 and over","Police issued",4
+"VIC","17-25","Police issued",196
+"VIC","26-39","Police issued",465
+"VIC","40-64","Police issued",381
+"VIC","65 and over","Police issued",37
+"VIC","17-25","Police issued",6
+"VIC","26-39","Police issued",13
+"VIC","40-64","Police issued",11
+"VIC","65 and over","Police issued",2
+"VIC","17-25","Police issued",3
+"VIC","26-39","Police issued",6
+"VIC","40-64","Police issued",6
+"WA","17-25","Police issued",63
+"WA","26-39","Police issued",124
+"WA","40-64","Police issued",103
+"WA","65 and over","Police issued",13
+"ACT","17-25","Police issued",10
+"ACT","26-39","Police issued",8
+"ACT","40-64","Police issued",6
+"ACT","65 and over","Police issued",1
+"NSW","17-25","Police issued",38
+"NSW","26-39","Police issued",41
+"NSW","40-64","Police issued",26
+"NSW","65 and over","Police issued",4
+"NSW","17-25","Police issued",253
+"NSW","26-39","Police issued",316
+"NSW","40-64","Police issued",260
+"NSW","65 and over","Police issued",19
+"NSW","17-25","Police issued",5
+"NSW","26-39","Police issued",8
+"NSW","40-64","Police issued",5
+"NSW","65 and over","Police issued",2
+"NSW","17-25","Police issued",0
+"NSW","40-64","Police issued",1
+"NSW","Unknown","Camera issued",16377
+"NT","17-25","Police issued",1
+"NT","26-39","Police issued",9
+"NT","40-64","Police issued",4
+"SA","0-16","Police issued",0
+"SA","17-25","Police issued",109
+"SA","26-39","Police issued",194
+"SA","40-64","Police issued",146
+"SA","65 and over","Police issued",18
+"SA","Unknown","Police issued",0
+"TAS","17-25","Police issued",28
+"TAS","26-39","Police issued",51
+"TAS","40-64","Police issued",42
+"TAS","65 and over","Police issued",12
+"VIC","17-25","Police issued",30
+"VIC","26-39","Police issued",59
+"VIC","40-64","Police issued",51
+"VIC","65 and over","Police issued",11
+"VIC","Unknown","Camera issued",150
+"VIC","0-16","Police issued",1
+"VIC","17-25","Police issued",216
+"VIC","26-39","Police issued",520
+"VIC","40-64","Police issued",368
+"VIC","65 and over","Police issued",55
+"VIC","Unknown","Camera issued",3157
+"VIC","17-25","Police issued",7
+"VIC","26-39","Police issued",10
+"VIC","40-64","Police issued",16
+"VIC","Unknown","Camera issued",6
+"VIC","17-25","Police issued",4
+"VIC","26-39","Police issued",9
+"VIC","40-64","Police issued",4
+"VIC","Unknown","Camera issued",283
+"WA","17-25","Police issued",60
+"WA","26-39","Police issued",115
+"WA","40-64","Police issued",92
+"WA","65 and over","Police issued",10
+"ACT","17-25","Police issued",9
+"ACT","26-39","Police issued",8
+"ACT","40-64","Police issued",6
+"NSW","0-16","Police issued",2
+"NSW","17-25","Police issued",35
+"NSW","26-39","Police issued",39
+"NSW","40-64","Police issued",33
+"NSW","65 and over","Police issued",7
+"NSW","0-16","Police issued",1
+"NSW","17-25","Police issued",298
+"NSW","26-39","Police issued",298
+"NSW","40-64","Police issued",227
+"NSW","65 and over","Police issued",14
+"NSW","17-25","Police issued",4
+"NSW","26-39","Police issued",12
+"NSW","40-64","Police issued",4
+"NSW","65 and over","Police issued",3
+"NSW","26-39","Police issued",1
+"NSW","17-25","Police issued",4
+"NSW","26-39","Police issued",1
+"NSW","Unknown","Camera issued",16242
+"NSW","40-64","Police issued",1
+"NT","17-25","Police issued",2
+"NT","26-39","Police issued",6
+"NT","40-64","Police issued",10
+"NT","65 and over","Police issued",2
+"SA","0-16","Police issued",0
+"SA","17-25","Police issued",108
+"SA","26-39","Police issued",187
+"SA","40-64","Police issued",148
+"SA","65 and over","Police issued",29
+"SA","Unknown","Police issued",0
+"TAS","17-25","Camera issued",1
+"TAS","17-25","Police issued",29
+"TAS","26-39","Camera issued",11
+"TAS","26-39","Police issued",55
+"TAS","40-64","Camera issued",16
+"TAS","40-64","Police issued",35
+"TAS","65 and over","Police issued",8
+"VIC","17-25","Police issued",36
+"VIC","26-39","Police issued",72
+"VIC","40-64","Police issued",57
+"VIC","65 and over","Police issued",5
+"VIC","Unknown","Camera issued",295
+"VIC","Unknown","Police issued",1
+"VIC","17-25","Police issued",246
+"VIC","26-39","Police issued",686
+"VIC","40-64","Police issued",546
+"VIC","65 and over","Police issued",51
+"VIC","Unknown","Camera issued",3882
+"VIC","Unknown","Police issued",1
+"VIC","17-25","Police issued",11
+"VIC","26-39","Police issued",28
+"VIC","40-64","Police issued",22
+"VIC","65 and over","Police issued",1
+"VIC","17-25","Police issued",5
+"VIC","26-39","Police issued",4
+"VIC","40-64","Police issued",7
+"VIC","Unknown","Camera issued",560
+"WA","17-25","Police issued",48
+"WA","26-39","Police issued",107
+"WA","40-64","Police issued",96
+"WA","65 and over","Police issued",3
+"ACT","17-25","Police issued",5
+"ACT","26-39","Police issued",10
+"ACT","40-64","Police issued",10
+"ACT","65 and over","Police issued",1
+"NSW","0-16","Police issued",1
+"NSW","17-25","Police issued",35
+"NSW","26-39","Police issued",55
+"NSW","40-64","Police issued",43
+"NSW","65 and over","Police issued",5
+"NSW","0-16","Police issued",1
+"NSW","17-25","Police issued",257
+"NSW","26-39","Police issued",290
+"NSW","40-64","Police issued",195
+"NSW","65 and over","Police issued",19
+"NSW","17-25","Police issued",12
+"NSW","26-39","Police issued",8
+"NSW","40-64","Police issued",9
+"NSW","65 and over","Police issued",1
+"NSW","17-25","Police issued",1
+"NSW","Unknown","Camera issued",16198
+"NT","17-25","Police issued",4
+"NT","26-39","Police issued",6
+"NT","40-64","Police issued",2
+"NT","65 and over","Police issued",1
+"SA","0-16","Police issued",0
+"SA","17-25","Police issued",107
+"SA","26-39","Police issued",178
+"SA","40-64","Police issued",171
+"SA","65 and over","Police issued",37
+"SA","Unknown","Police issued",0
+"TAS","17-25","Camera issued",12
+"TAS","17-25","Police issued",21
+"TAS","26-39","Camera issued",38
+"TAS","26-39","Police issued",44
+"TAS","40-64","Camera issued",54
+"TAS","40-64","Police issued",32
+"TAS","65 and over","Camera issued",6
+"TAS","65 and over","Police issued",7
+"VIC","17-25","Police issued",30
+"VIC","26-39","Police issued",65
+"VIC","40-64","Police issued",36
+"VIC","65 and over","Police issued",4
+"VIC","Unknown","Camera issued",274
+"VIC","17-25","Police issued",256
+"VIC","26-39","Police issued",608
+"VIC","40-64","Police issued",412
+"VIC","65 and over","Police issued",47
+"VIC","Unknown","Camera issued",4933
+"VIC","Unknown","Police issued",1
+"VIC","17-25","Police issued",12
+"VIC","26-39","Police issued",13
+"VIC","40-64","Police issued",11
+"VIC","65 and over","Police issued",5
+"VIC","17-25","Police issued",1
+"VIC","26-39","Police issued",6
+"VIC","40-64","Police issued",2
+"WA","17-25","Police issued",42
+"WA","26-39","Police issued",64
+"WA","40-64","Police issued",65
+"WA","65 and over","Police issued",12
+"ACT","0-16","Police issued",1
+"ACT","17-25","Police issued",4
+"ACT","26-39","Police issued",15
+"ACT","40-64","Police issued",5
+"NSW","17-25","Police issued",49
+"NSW","26-39","Police issued",62
+"NSW","40-64","Police issued",40
+"NSW","65 and over","Police issued",2
+"NSW","0-16","Police issued",1
+"NSW","17-25","Police issued",264
+"NSW","26-39","Police issued",336
+"NSW","40-64","Police issued",225
+"NSW","65 and over","Police issued",15
+"NSW","17-25","Police issued",10
+"NSW","26-39","Police issued",7
+"NSW","40-64","Police issued",9
+"NSW","17-25","Police issued",2
+"NSW","26-39","Police issued",2
+"NSW","17-25","Police issued",2
+"NSW","26-39","Police issued",4
+"NSW","65 and over","Police issued",1
+"NSW","Unknown","Camera issued",15740
+"NSW","26-39","Police issued",1
+"NT","17-25","Police issued",5
+"NT","26-39","Police issued",8
+"NT","40-64","Police issued",5
+"NT","65 and over","Police issued",1
+"SA","0-16","Police issued",0
+"SA","17-25","Police issued",117
+"SA","26-39","Police issued",169
+"SA","40-64","Police issued",136
+"SA","65 and over","Police issued",33
+"SA","Unknown","Police issued",0
+"TAS","17-25","Camera issued",27
+"TAS","17-25","Police issued",35
+"TAS","26-39","Camera issued",123
+"TAS","26-39","Police issued",41
+"TAS","40-64","Camera issued",110
+"TAS","40-64","Police issued",47
+"TAS","65 and over","Camera issued",16
+"TAS","65 and over","Police issued",5
+"VIC","17-25","Camera issued",37
+"VIC","17-25","Police issued",38
+"VIC","26-39","Camera issued",155
+"VIC","26-39","Police issued",87
+"VIC","40-64","Camera issued",175
+"VIC","40-64","Police issued",64
+"VIC","65 and over","Camera issued",27
+"VIC","65 and over","Police issued",6
+"VIC","Unknown","Camera issued",329
+"VIC","17-25","Camera issued",261
+"VIC","17-25","Police issued",228
+"VIC","26-39","Camera issued",1466
+"VIC","26-39","Police issued",565
+"VIC","40-64","Camera issued",1753
+"VIC","40-64","Police issued",425
+"VIC","65 and over","Camera issued",255
+"VIC","65 and over","Police issued",39
+"VIC","Unknown","Camera issued",1786
+"VIC","17-25","Police issued",8
+"VIC","26-39","Police issued",12
+"VIC","40-64","Police issued",18
+"VIC","65 and over","Police issued",5
+"VIC","26-39","Camera issued",3
+"VIC","26-39","Police issued",6
+"VIC","40-64","Camera issued",21
+"VIC","40-64","Police issued",1
+"VIC","65 and over","Camera issued",3
+"VIC","Unknown","Camera issued",8
+"WA","17-25","Police issued",52
+"WA","26-39","Police issued",92
+"WA","40-64","Police issued",101
+"WA","65 and over","Police issued",10
+"ACT","0-16","Police issued",1
+"ACT","17-25","Police issued",6
+"ACT","26-39","Police issued",7
+"ACT","40-64","Police issued",5
+"ACT","65 and over","Police issued",1
+"NSW","0-16","Police issued",3
+"NSW","17-25","Police issued",53
+"NSW","26-39","Police issued",67
+"NSW","40-64","Police issued",59
+"NSW","65 and over","Police issued",5
+"NSW","0-16","Police issued",1
+"NSW","17-25","Police issued",237
+"NSW","26-39","Police issued",302
+"NSW","40-64","Police issued",237
+"NSW","65 and over","Police issued",28
+"NSW","17-25","Police issued",4
+"NSW","26-39","Police issued",9
+"NSW","40-64","Police issued",8
+"NSW","17-25","Police issued",1
+"NSW","26-39","Police issued",3
+"NSW","17-25","Police issued",1
+"NSW","Unknown","Camera issued",15466
+"NT","17-25","Police issued",4
+"NT","26-39","Police issued",7
+"NT","40-64","Police issued",6
+"NT","65 and over","Police issued",1
+"SA","0-16","Police issued",0
+"SA","17-25","Police issued",104
+"SA","26-39","Police issued",177
+"SA","40-64","Police issued",139
+"SA","65 and over","Police issued",21
+"SA","Unknown","Police issued",0
+"TAS","17-25","Camera issued",29
+"TAS","17-25","Police issued",34
+"TAS","26-39","Camera issued",132
+"TAS","26-39","Police issued",69
+"TAS","40-64","Camera issued",146
+"TAS","40-64","Police issued",50
+"TAS","65 and over","Camera issued",21
+"TAS","65 and over","Police issued",6
+"VIC","17-25","Camera issued",30
+"VIC","17-25","Police issued",37
+"VIC","26-39","Camera issued",213
+"VIC","26-39","Police issued",61
+"VIC","40-64","Camera issued",262
+"VIC","40-64","Police issued",39
+"VIC","65 and over","Camera issued",48
+"VIC","65 and over","Police issued",1
+"VIC","Unknown","Camera issued",142
+"VIC","17-25","Camera issued",220
+"VIC","17-25","Police issued",291
+"VIC","26-39","Camera issued",1366
+"VIC","26-39","Police issued",681
+"VIC","40-64","Camera issued",1654
+"VIC","40-64","Police issued",523
+"VIC","65 and over","Camera issued",247
+"VIC","65 and over","Police issued",50
+"VIC","Unknown","Camera issued",1194
+"VIC","17-25","Police issued",5
+"VIC","26-39","Police issued",26
+"VIC","40-64","Camera issued",3
+"VIC","40-64","Police issued",18
+"VIC","65 and over","Police issued",5
+"VIC","Unknown","Camera issued",2
+"VIC","17-25","Camera issued",11
+"VIC","26-39","Camera issued",76
+"VIC","26-39","Police issued",6
+"VIC","40-64","Camera issued",77
+"VIC","40-64","Police issued",2
+"VIC","65 and over","Camera issued",6
+"VIC","Unknown","Camera issued",32
+"WA","17-25","Police issued",57
+"WA","26-39","Police issued",108
+"WA","40-64","Police issued",90
+"WA","65 and over","Police issued",6
+"ACT","17-25","Police issued",4
+"ACT","26-39","Police issued",3
+"ACT","40-64","Police issued",1
+"ACT","65 and over","Police issued",1
+"NSW","0-16","Police issued",2
+"NSW","17-25","Police issued",48
+"NSW","26-39","Police issued",55
+"NSW","40-64","Police issued",38
+"NSW","65 and over","Police issued",5
+"NSW","0-16","Police issued",2
+"NSW","17-25","Police issued",340
+"NSW","26-39","Police issued",338
+"NSW","40-64","Police issued",223
+"NSW","65 and over","Police issued",29
+"NSW","17-25","Police issued",10
+"NSW","26-39","Police issued",8
+"NSW","40-64","Police issued",6
+"NSW","65 and over","Police issued",1
+"NSW","17-25","Police issued",33
+"NSW","26-39","Police issued",57
+"NSW","40-64","Police issued",26
+"NSW","65 and over","Police issued",2
+"NSW","Unknown","Camera issued",15188
+"NSW","17-25","Police issued",1
+"NT","17-25","Police issued",6
+"NT","26-39","Police issued",12
+"NT","40-64","Police issued",7
+"NT","65 and over","Police issued",1
+"SA","0-16","Police issued",0
+"SA","17-25","Police issued",104
+"SA","26-39","Police issued",158
+"SA","40-64","Police issued",120
+"SA","65 and over","Police issued",21
+"SA","Unknown","Police issued",0
+"TAS","17-25","Camera issued",11
+"TAS","17-25","Police issued",23
+"TAS","26-39","Camera issued",57
+"TAS","26-39","Police issued",54
+"TAS","40-64","Camera issued",48
+"TAS","40-64","Police issued",30
+"TAS","65 and over","Camera issued",12
+"TAS","65 and over","Police issued",7
+"VIC","17-25","Camera issued",114
+"VIC","17-25","Police issued",37
+"VIC","26-39","Camera issued",462
+"VIC","26-39","Police issued",81
+"VIC","40-64","Camera issued",552
+"VIC","40-64","Police issued",70
+"VIC","65 and over","Camera issued",95
+"VIC","65 and over","Police issued",6
+"VIC","Unknown","Camera issued",308
+"VIC","0-16","Police issued",1
+"VIC","17-25","Camera issued",220
+"VIC","17-25","Police issued",259
+"VIC","26-39","Camera issued",1102
+"VIC","26-39","Police issued",718
+"VIC","40-64","Camera issued",1417
+"VIC","40-64","Police issued",547
+"VIC","65 and over","Camera issued",196
+"VIC","65 and over","Police issued",48
+"VIC","Unknown","Camera issued",855
+"VIC","17-25","Police issued",6
+"VIC","26-39","Police issued",9
+"VIC","40-64","Police issued",10
+"VIC","65 and over","Police issued",3
+"VIC","17-25","Police issued",1
+"VIC","26-39","Police issued",8
+"VIC","40-64","Police issued",2
+"WA","17-25","Police issued",35
+"WA","26-39","Police issued",78
+"WA","40-64","Police issued",55
+"WA","65 and over","Police issued",5
