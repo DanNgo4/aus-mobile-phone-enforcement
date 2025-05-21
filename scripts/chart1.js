@@ -1,13 +1,3 @@
-const margin = { 
-  top:    50, 
-  right:  20, 
-  bottom: 100, 
-  left:   80 
-};
-const fullWidth = 1200;
-const width  = (fullWidth / 2) - margin.left - margin.right;
-const height = 600 - margin.top  - margin.bottom;
-
 const container = d3.select("#chart1");
 container.select("svg").remove();
 
@@ -135,19 +125,19 @@ d3.csv("data/cleaned_dataset_1.csv", d3.autoType).then(data => {
   });
 
   function update() {    
-    const selAges = Array.from(document.querySelectorAll("#ageGroupFilter input:checked"))
-                         .map(n => n.value);
+    const selectedAges = Array.from(document.querySelectorAll("#ageGroupFilter input:checked"))
+                              .map(n => n.value);
 
-    const selMethods = Array.from(document.querySelectorAll("#detectionMethodFilter input:checked"))
-                            .map(n => n.value);
+    const selectedMethods = Array.from(document.querySelectorAll("#detectionMethodFilter input:checked"))
+                                 .map(n => n.value);
 
-    const selJurs = Array.from(document.querySelectorAll("#jurisdictionFilter input:checked"))
-                         .map(n => n.value);
+    const selectedStates = Array.from(document.querySelectorAll("#jurisdictionFilter input:checked"))
+                                .map(n => n.value);
 
     const filtered = data.filter(d =>
-      selAges.includes(d.AGE_GROUP) &&
-      selMethods.includes(d.DETECTION_METHOD) &&
-      selJurs.includes(d.JURISDICTION)
+      selectedAges.includes(d.AGE_GROUP) &&
+      selectedMethods.includes(d.DETECTION_METHOD) &&
+      selectedStates.includes(d.JURISDICTION)
     );
     
     const sumMap = d3.rollup(
@@ -156,7 +146,7 @@ d3.csv("data/cleaned_dataset_1.csv", d3.autoType).then(data => {
       v => {
         const totals = { total: 0 };
 
-        selMethods.forEach(m => { 
+        selectedMethods.forEach(m => { 
           const count = d3.sum(v.filter(d => d.DETECTION_METHOD === m), d => d.FINES);
           totals[m] = isNaN(count) ? 0 : count;
           totals.total += totals[m]; 
@@ -171,7 +161,7 @@ d3.csv("data/cleaned_dataset_1.csv", d3.autoType).then(data => {
     const sumData = Array.from(sumMap, ([jur, vals]) => ({ JURISDICTION: jur, ...vals }));
     
     sumData.forEach(d => {
-      selMethods.forEach(m => {
+      selectedMethods.forEach(m => {
         if (!(m in d)) d[m] = 0;
       });
     });
@@ -208,8 +198,8 @@ d3.csv("data/cleaned_dataset_1.csv", d3.autoType).then(data => {
       .call(d3.axisLeft(y2)
       .tickFormat(d3.format(",")));
 
-    updateChart(svg1Large, largeData, x1, y1, selMethods);
-    updateChart(svg1Small, smallData, x2, y2, selMethods);
+    updateChart(svg1Large, largeData, x1, y1, selectedMethods);
+    updateChart(svg1Small, smallData, x2, y2, selectedMethods);
   }
 
   function updateChart(svg, data, x, y, methods) {

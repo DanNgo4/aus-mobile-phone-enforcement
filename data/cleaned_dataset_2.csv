@@ -1,667 +1,717 @@
-"JURISDICTION","AGE_GROUP","DETECTION_METHOD","FINES"
-"ACT","17-25","Police issued",8
-"ACT","26-39","Police issued",8
-"ACT","40-64","Police issued",12
-"NSW","17-25","Police issued",55
-"NSW","26-39","Police issued",54
-"NSW","40-64","Police issued",43
-"NSW","65 and over","Police issued",6
-"NSW","17-25","Police issued",270
-"NSW","26-39","Police issued",335
-"NSW","40-64","Police issued",200
-"NSW","65 and over","Police issued",31
-"NSW","17-25","Police issued",6
-"NSW","26-39","Police issued",8
-"NSW","40-64","Police issued",9
-"NSW","65 and over","Police issued",1
-"NSW","40-64","Police issued",1
-"NSW","26-39","Police issued",1
-"NT","17-25","Police issued",3
-"NT","26-39","Police issued",7
-"NT","40-64","Police issued",8
-"NT","65 and over","Police issued",3
-"SA","0-16","Police issued",1
-"SA","17-25","Police issued",106
-"SA","26-39","Police issued",182
-"SA","40-64","Police issued",117
-"SA","65 and over","Police issued",20
-"TAS","17-25","Police issued",27
-"TAS","26-39","Police issued",63
-"TAS","40-64","Police issued",28
-"TAS","65 and over","Police issued",7
-"VIC","0-16","Police issued",1
-"VIC","17-25","Police issued",47
-"VIC","26-39","Police issued",55
-"VIC","40-64","Police issued",41
-"VIC","65 and over","Police issued",7
-"VIC","0-16","Police issued",1
-"VIC","17-25","Police issued",298
-"VIC","26-39","Police issued",654
-"VIC","40-64","Police issued",406
-"VIC","65 and over","Police issued",38
-"VIC","17-25","Police issued",7
-"VIC","26-39","Police issued",11
-"VIC","40-64","Police issued",9
-"VIC","65 and over","Police issued",3
-"VIC","26-39","Police issued",2
-"VIC","40-64","Police issued",1
-"WA","17-25","Police issued",72
-"WA","26-39","Police issued",178
-"WA","40-64","Police issued",123
-"WA","65 and over","Police issued",19
-"ACT","17-25","Police issued",7
-"ACT","26-39","Police issued",8
-"ACT","40-64","Police issued",12
-"ACT","65 and over","Police issued",1
-"NSW","17-25","Police issued",48
-"NSW","26-39","Police issued",54
-"NSW","40-64","Police issued",61
-"NSW","65 and over","Police issued",4
-"NSW","17-25","Police issued",278
-"NSW","26-39","Police issued",423
-"NSW","40-64","Police issued",308
-"NSW","65 and over","Police issued",28
-"NSW","17-25","Police issued",4
-"NSW","26-39","Police issued",13
-"NSW","40-64","Police issued",10
-"NSW","40-64","Police issued",1
-"NT","17-25","Police issued",5
-"NT","26-39","Police issued",6
-"NT","40-64","Police issued",5
-"SA","0-16","Police issued",0
-"SA","17-25","Police issued",150
-"SA","26-39","Police issued",239
-"SA","40-64","Police issued",177
-"SA","65 and over","Police issued",24
-"TAS","0-16","Police issued",0
-"TAS","17-25","Police issued",29
-"TAS","26-39","Police issued",43
-"TAS","40-64","Police issued",35
-"TAS","65 and over","Police issued",5
-"VIC","0-16","Police issued",1
-"VIC","17-25","Police issued",26
-"VIC","26-39","Police issued",55
-"VIC","40-64","Police issued",40
-"VIC","65 and over","Police issued",7
-"VIC","17-25","Police issued",248
-"VIC","26-39","Police issued",586
-"VIC","40-64","Police issued",445
-"VIC","65 and over","Police issued",59
-"VIC","17-25","Police issued",2
-"VIC","26-39","Police issued",12
-"VIC","40-64","Police issued",8
-"VIC","65 and over","Police issued",2
-"VIC","26-39","Police issued",2
-"VIC","40-64","Police issued",1
-"WA","17-25","Police issued",69
-"WA","26-39","Police issued",155
-"WA","40-64","Police issued",125
-"WA","65 and over","Police issued",19
-"ACT","0-16","Police issued",1
-"ACT","17-25","Police issued",12
-"ACT","26-39","Police issued",14
-"ACT","40-64","Police issued",1
-"NSW","17-25","Police issued",37
-"NSW","26-39","Police issued",67
-"NSW","40-64","Police issued",51
-"NSW","65 and over","Police issued",5
-"NSW","17-25","Police issued",283
-"NSW","26-39","Police issued",405
-"NSW","40-64","Police issued",303
-"NSW","65 and over","Police issued",23
-"NSW","17-25","Police issued",6
-"NSW","26-39","Police issued",13
-"NSW","40-64","Police issued",11
-"NSW","65 and over","Police issued",2
-"NSW","26-39","Police issued",2
-"NT","17-25","Police issued",4
-"NT","26-39","Police issued",6
-"NT","40-64","Police issued",5
-"NT","65 and over","Police issued",0
-"SA","0-16","Police issued",0
-"SA","17-25","Police issued",153
-"SA","26-39","Police issued",228
-"SA","40-64","Police issued",198
-"SA","65 and over","Police issued",34
-"TAS","17-25","Police issued",44
-"TAS","26-39","Police issued",44
-"TAS","40-64","Police issued",34
-"TAS","65 and over","Police issued",6
-"VIC","17-25","Police issued",55
-"VIC","26-39","Police issued",74
-"VIC","40-64","Police issued",53
-"VIC","65 and over","Police issued",9
-"VIC","0-16","Police issued",1
-"VIC","17-25","Police issued",309
-"VIC","26-39","Police issued",646
-"VIC","40-64","Police issued",536
-"VIC","65 and over","Police issued",59
-"VIC","17-25","Police issued",11
-"VIC","26-39","Police issued",29
-"VIC","40-64","Police issued",15
-"VIC","65 and over","Police issued",3
-"WA","17-25","Police issued",76
-"WA","26-39","Police issued",184
-"WA","40-64","Police issued",166
-"WA","65 and over","Police issued",21
-"ACT","0-16","Police issued",2
-"ACT","17-25","Police issued",7
-"ACT","26-39","Police issued",11
-"ACT","40-64","Police issued",6
-"ACT","65 and over","Police issued",2
-"NSW","0-16","Police issued",1
-"NSW","17-25","Police issued",39
-"NSW","26-39","Police issued",68
-"NSW","40-64","Police issued",38
-"NSW","65 and over","Police issued",5
-"NSW","0-16","Police issued",1
-"NSW","17-25","Police issued",348
-"NSW","26-39","Police issued",384
-"NSW","40-64","Police issued",257
-"NSW","65 and over","Police issued",31
-"NSW","17-25","Police issued",4
-"NSW","26-39","Police issued",9
-"NSW","40-64","Police issued",6
-"NSW","65 and over","Police issued",1
-"NSW","17-25","Police issued",1
-"NSW","17-25","Police issued",1
-"NT","17-25","Police issued",2
-"NT","26-39","Police issued",11
-"NT","40-64","Police issued",3
-"NT","65 and over","Police issued",0
-"SA","0-16","Police issued",0
-"SA","17-25","Police issued",122
-"SA","26-39","Police issued",184
-"SA","40-64","Police issued",135
-"SA","65 and over","Police issued",25
-"TAS","17-25","Police issued",32
-"TAS","26-39","Police issued",70
-"TAS","40-64","Police issued",44
-"TAS","65 and over","Police issued",4
-"VIC","17-25","Police issued",21
-"VIC","26-39","Police issued",56
-"VIC","40-64","Police issued",68
-"VIC","65 and over","Police issued",7
-"VIC","17-25","Police issued",232
-"VIC","26-39","Police issued",608
-"VIC","40-64","Police issued",455
-"VIC","65 and over","Police issued",60
-"VIC","17-25","Police issued",5
-"VIC","26-39","Police issued",9
-"VIC","40-64","Police issued",6
-"VIC","65 and over","Police issued",1
-"VIC","26-39","Police issued",2
-"VIC","40-64","Police issued",1
-"WA","17-25","Police issued",63
-"WA","26-39","Police issued",136
-"WA","40-64","Police issued",90
-"WA","65 and over","Police issued",12
-"ACT","0-16","Police issued",3
-"ACT","17-25","Police issued",5
-"ACT","26-39","Police issued",9
-"ACT","40-64","Police issued",8
-"NSW","0-16","Police issued",2
-"NSW","17-25","Police issued",36
-"NSW","26-39","Police issued",47
-"NSW","40-64","Police issued",35
-"NSW","65 and over","Police issued",8
-"NSW","17-25","Police issued",330
-"NSW","26-39","Police issued",356
-"NSW","40-64","Police issued",267
-"NSW","65 and over","Police issued",40
-"NSW","0-16","Police issued",0
-"NSW","17-25","Police issued",3
-"NSW","26-39","Police issued",13
-"NSW","40-64","Police issued",9
-"NSW","26-39","Police issued",1
-"NSW","65 and over","Police issued",1
-"NSW","17-25","Police issued",2
-"NSW","26-39","Police issued",2
-"NT","17-25","Police issued",4
-"NT","26-39","Police issued",10
-"NT","40-64","Police issued",3
-"NT","65 and over","Police issued",1
-"SA","0-16","Police issued",0
-"SA","17-25","Police issued",105
-"SA","26-39","Police issued",194
-"SA","40-64","Police issued",187
-"SA","65 and over","Police issued",20
-"TAS","17-25","Police issued",29
-"TAS","26-39","Police issued",68
-"TAS","40-64","Police issued",42
-"TAS","65 and over","Police issued",6
-"VIC","17-25","Police issued",30
-"VIC","26-39","Police issued",93
-"VIC","40-64","Police issued",62
-"VIC","65 and over","Police issued",12
-"VIC","17-25","Police issued",252
-"VIC","26-39","Police issued",518
-"VIC","40-64","Police issued",405
-"VIC","65 and over","Police issued",42
-"VIC","17-25","Police issued",10
-"VIC","26-39","Police issued",21
-"VIC","40-64","Police issued",10
-"VIC","65 and over","Police issued",1
-"VIC","17-25","Police issued",1
-"VIC","26-39","Police issued",1
-"WA","17-25","Police issued",69
-"WA","26-39","Police issued",171
-"WA","40-64","Police issued",121
-"WA","65 and over","Police issued",17
-"ACT","0-16","Police issued",2
-"ACT","17-25","Police issued",5
-"ACT","26-39","Police issued",9
-"ACT","40-64","Police issued",7
-"NSW","17-25","Police issued",48
-"NSW","26-39","Police issued",71
-"NSW","40-64","Police issued",60
-"NSW","65 and over","Police issued",6
-"NSW","17-25","Police issued",338
-"NSW","26-39","Police issued",401
-"NSW","40-64","Police issued",333
-"NSW","65 and over","Police issued",24
-"NSW","17-25","Police issued",5
-"NSW","26-39","Police issued",6
-"NSW","40-64","Police issued",12
-"NSW","65 and over","Police issued",1
-"NSW","26-39","Police issued",2
-"NSW","17-25","Police issued",2
-"NSW","40-64","Police issued",1
-"NSW","40-64","Police issued",1
-"NT","17-25","Police issued",1
-"NT","26-39","Police issued",2
-"NT","40-64","Police issued",6
-"NT","65 and over","Police issued",0
-"SA","0-16","Police issued",2
-"SA","17-25","Police issued",102
-"SA","26-39","Police issued",182
-"SA","40-64","Police issued",131
-"SA","65 and over","Police issued",20
-"TAS","17-25","Police issued",29
-"TAS","26-39","Police issued",54
-"TAS","40-64","Police issued",44
-"TAS","65 and over","Police issued",6
-"VIC","17-25","Police issued",24
-"VIC","26-39","Police issued",61
-"VIC","40-64","Police issued",37
-"VIC","65 and over","Police issued",4
-"VIC","17-25","Police issued",196
-"VIC","26-39","Police issued",465
-"VIC","40-64","Police issued",381
-"VIC","65 and over","Police issued",37
-"VIC","17-25","Police issued",6
-"VIC","26-39","Police issued",13
-"VIC","40-64","Police issued",11
-"VIC","65 and over","Police issued",2
-"VIC","17-25","Police issued",3
-"VIC","26-39","Police issued",6
-"VIC","40-64","Police issued",6
-"WA","17-25","Police issued",63
-"WA","26-39","Police issued",124
-"WA","40-64","Police issued",103
-"WA","65 and over","Police issued",13
-"ACT","17-25","Police issued",10
-"ACT","26-39","Police issued",8
-"ACT","40-64","Police issued",6
-"ACT","65 and over","Police issued",1
-"NSW","17-25","Police issued",38
-"NSW","26-39","Police issued",41
-"NSW","40-64","Police issued",26
-"NSW","65 and over","Police issued",4
-"NSW","17-25","Police issued",253
-"NSW","26-39","Police issued",316
-"NSW","40-64","Police issued",260
-"NSW","65 and over","Police issued",19
-"NSW","17-25","Police issued",5
-"NSW","26-39","Police issued",8
-"NSW","40-64","Police issued",5
-"NSW","65 and over","Police issued",2
-"NSW","17-25","Police issued",0
-"NSW","40-64","Police issued",1
-"NT","17-25","Police issued",1
-"NT","26-39","Police issued",9
-"NT","40-64","Police issued",4
-"SA","0-16","Police issued",0
-"SA","17-25","Police issued",109
-"SA","26-39","Police issued",194
-"SA","40-64","Police issued",146
-"SA","65 and over","Police issued",18
-"TAS","17-25","Police issued",28
-"TAS","26-39","Police issued",51
-"TAS","40-64","Police issued",42
-"TAS","65 and over","Police issued",12
-"VIC","17-25","Police issued",30
-"VIC","26-39","Police issued",59
-"VIC","40-64","Police issued",51
-"VIC","65 and over","Police issued",11
-"VIC","0-16","Police issued",1
-"VIC","17-25","Police issued",216
-"VIC","26-39","Police issued",520
-"VIC","40-64","Police issued",368
-"VIC","65 and over","Police issued",55
-"VIC","17-25","Police issued",7
-"VIC","26-39","Police issued",10
-"VIC","40-64","Police issued",16
-"VIC","17-25","Police issued",4
-"VIC","26-39","Police issued",9
-"VIC","40-64","Police issued",4
-"WA","17-25","Police issued",60
-"WA","26-39","Police issued",115
-"WA","40-64","Police issued",92
-"WA","65 and over","Police issued",10
-"ACT","17-25","Police issued",9
-"ACT","26-39","Police issued",8
-"ACT","40-64","Police issued",6
-"NSW","0-16","Police issued",2
-"NSW","17-25","Police issued",35
-"NSW","26-39","Police issued",39
-"NSW","40-64","Police issued",33
-"NSW","65 and over","Police issued",7
-"NSW","0-16","Police issued",1
-"NSW","17-25","Police issued",298
-"NSW","26-39","Police issued",298
-"NSW","40-64","Police issued",227
-"NSW","65 and over","Police issued",14
-"NSW","17-25","Police issued",4
-"NSW","26-39","Police issued",12
-"NSW","40-64","Police issued",4
-"NSW","65 and over","Police issued",3
-"NSW","26-39","Police issued",1
-"NSW","17-25","Police issued",4
-"NSW","26-39","Police issued",1
-"NSW","40-64","Police issued",1
-"NT","17-25","Police issued",2
-"NT","26-39","Police issued",6
-"NT","40-64","Police issued",10
-"NT","65 and over","Police issued",2
-"SA","0-16","Police issued",0
-"SA","17-25","Police issued",108
-"SA","26-39","Police issued",187
-"SA","40-64","Police issued",148
-"SA","65 and over","Police issued",29
-"TAS","17-25","Fixed or mobile camera",1
-"TAS","17-25","Police issued",29
-"TAS","26-39","Fixed or mobile camera",11
-"TAS","26-39","Police issued",55
-"TAS","40-64","Fixed or mobile camera",16
-"TAS","40-64","Police issued",35
-"TAS","65 and over","Police issued",8
-"VIC","17-25","Police issued",36
-"VIC","26-39","Police issued",72
-"VIC","40-64","Police issued",57
-"VIC","65 and over","Police issued",5
-"VIC","17-25","Police issued",246
-"VIC","26-39","Police issued",686
-"VIC","40-64","Police issued",546
-"VIC","65 and over","Police issued",51
-"VIC","17-25","Police issued",11
-"VIC","26-39","Police issued",28
-"VIC","40-64","Police issued",22
-"VIC","65 and over","Police issued",1
-"VIC","17-25","Police issued",5
-"VIC","26-39","Police issued",4
-"VIC","40-64","Police issued",7
-"WA","17-25","Police issued",48
-"WA","26-39","Police issued",107
-"WA","40-64","Police issued",96
-"WA","65 and over","Police issued",3
-"ACT","17-25","Police issued",5
-"ACT","26-39","Police issued",10
-"ACT","40-64","Police issued",10
-"ACT","65 and over","Police issued",1
-"NSW","0-16","Police issued",1
-"NSW","17-25","Police issued",35
-"NSW","26-39","Police issued",55
-"NSW","40-64","Police issued",43
-"NSW","65 and over","Police issued",5
-"NSW","0-16","Police issued",1
-"NSW","17-25","Police issued",257
-"NSW","26-39","Police issued",290
-"NSW","40-64","Police issued",195
-"NSW","65 and over","Police issued",19
-"NSW","17-25","Police issued",12
-"NSW","26-39","Police issued",8
-"NSW","40-64","Police issued",9
-"NSW","65 and over","Police issued",1
-"NSW","17-25","Police issued",1
-"NT","17-25","Police issued",4
-"NT","26-39","Police issued",6
-"NT","40-64","Police issued",2
-"NT","65 and over","Police issued",1
-"SA","0-16","Police issued",0
-"SA","17-25","Police issued",107
-"SA","26-39","Police issued",178
-"SA","40-64","Police issued",171
-"SA","65 and over","Police issued",37
-"TAS","17-25","Fixed or mobile camera",12
-"TAS","17-25","Police issued",21
-"TAS","26-39","Fixed or mobile camera",38
-"TAS","26-39","Police issued",44
-"TAS","40-64","Fixed or mobile camera",54
-"TAS","40-64","Police issued",32
-"TAS","65 and over","Fixed or mobile camera",6
-"TAS","65 and over","Police issued",7
-"VIC","17-25","Police issued",30
-"VIC","26-39","Police issued",65
-"VIC","40-64","Police issued",36
-"VIC","65 and over","Police issued",4
-"VIC","17-25","Police issued",256
-"VIC","26-39","Police issued",608
-"VIC","40-64","Police issued",412
-"VIC","65 and over","Police issued",47
-"VIC","17-25","Police issued",12
-"VIC","26-39","Police issued",13
-"VIC","40-64","Police issued",11
-"VIC","65 and over","Police issued",5
-"VIC","17-25","Police issued",1
-"VIC","26-39","Police issued",6
-"VIC","40-64","Police issued",2
-"WA","17-25","Police issued",42
-"WA","26-39","Police issued",64
-"WA","40-64","Police issued",65
-"WA","65 and over","Police issued",12
-"ACT","0-16","Police issued",1
-"ACT","17-25","Police issued",4
-"ACT","26-39","Police issued",15
-"ACT","40-64","Police issued",5
-"NSW","17-25","Police issued",49
-"NSW","26-39","Police issued",62
-"NSW","40-64","Police issued",40
-"NSW","65 and over","Police issued",2
-"NSW","0-16","Police issued",1
-"NSW","17-25","Police issued",264
-"NSW","26-39","Police issued",336
-"NSW","40-64","Police issued",225
-"NSW","65 and over","Police issued",15
-"NSW","17-25","Police issued",10
-"NSW","26-39","Police issued",7
-"NSW","40-64","Police issued",9
-"NSW","17-25","Police issued",2
-"NSW","26-39","Police issued",2
-"NSW","17-25","Police issued",2
-"NSW","26-39","Police issued",4
-"NSW","65 and over","Police issued",1
-"NSW","26-39","Police issued",1
-"NT","17-25","Police issued",5
-"NT","26-39","Police issued",8
-"NT","40-64","Police issued",5
-"NT","65 and over","Police issued",1
-"SA","0-16","Police issued",0
-"SA","17-25","Police issued",117
-"SA","26-39","Police issued",169
-"SA","40-64","Police issued",136
-"SA","65 and over","Police issued",33
-"TAS","17-25","Fixed or mobile camera",27
-"TAS","17-25","Police issued",35
-"TAS","26-39","Fixed or mobile camera",123
-"TAS","26-39","Police issued",41
-"TAS","40-64","Fixed or mobile camera",110
-"TAS","40-64","Police issued",47
-"TAS","65 and over","Fixed or mobile camera",16
-"TAS","65 and over","Police issued",5
-"VIC","17-25","Mobile camera",37
-"VIC","17-25","Police issued",38
-"VIC","26-39","Mobile camera",155
-"VIC","26-39","Police issued",87
-"VIC","40-64","Mobile camera",175
-"VIC","40-64","Police issued",64
-"VIC","65 and over","Mobile camera",27
-"VIC","65 and over","Police issued",6
-"VIC","17-25","Mobile camera",261
-"VIC","17-25","Police issued",228
-"VIC","26-39","Mobile camera",1466
-"VIC","26-39","Police issued",565
-"VIC","40-64","Mobile camera",1753
-"VIC","40-64","Police issued",425
-"VIC","65 and over","Mobile camera",255
-"VIC","65 and over","Police issued",39
-"VIC","17-25","Police issued",8
-"VIC","26-39","Police issued",12
-"VIC","40-64","Police issued",18
-"VIC","65 and over","Police issued",5
-"VIC","26-39","Mobile camera",3
-"VIC","26-39","Police issued",6
-"VIC","40-64","Mobile camera",21
-"VIC","40-64","Police issued",1
-"VIC","65 and over","Mobile camera",3
-"WA","17-25","Police issued",52
-"WA","26-39","Police issued",92
-"WA","40-64","Police issued",101
-"WA","65 and over","Police issued",10
-"ACT","0-16","Police issued",1
-"ACT","17-25","Police issued",6
-"ACT","26-39","Police issued",7
-"ACT","40-64","Police issued",5
-"ACT","65 and over","Police issued",1
-"NSW","0-16","Police issued",3
-"NSW","17-25","Police issued",53
-"NSW","26-39","Police issued",67
-"NSW","40-64","Police issued",59
-"NSW","65 and over","Police issued",5
-"NSW","0-16","Police issued",1
-"NSW","17-25","Police issued",237
-"NSW","26-39","Police issued",302
-"NSW","40-64","Police issued",237
-"NSW","65 and over","Police issued",28
-"NSW","17-25","Police issued",4
-"NSW","26-39","Police issued",9
-"NSW","40-64","Police issued",8
-"NSW","17-25","Police issued",1
-"NSW","26-39","Police issued",3
-"NSW","17-25","Police issued",1
-"NT","17-25","Police issued",4
-"NT","26-39","Police issued",7
-"NT","40-64","Police issued",6
-"NT","65 and over","Police issued",1
-"SA","0-16","Police issued",0
-"SA","17-25","Police issued",104
-"SA","26-39","Police issued",177
-"SA","40-64","Police issued",139
-"SA","65 and over","Police issued",21
-"TAS","17-25","Fixed or mobile camera",29
-"TAS","17-25","Police issued",34
-"TAS","26-39","Fixed or mobile camera",132
-"TAS","26-39","Police issued",69
-"TAS","40-64","Fixed or mobile camera",146
-"TAS","40-64","Police issued",50
-"TAS","65 and over","Fixed or mobile camera",21
-"TAS","65 and over","Police issued",6
-"VIC","17-25","Mobile camera",30
-"VIC","17-25","Police issued",37
-"VIC","26-39","Mobile camera",213
-"VIC","26-39","Police issued",61
-"VIC","40-64","Mobile camera",262
-"VIC","40-64","Police issued",39
-"VIC","65 and over","Mobile camera",48
-"VIC","65 and over","Police issued",1
-"VIC","17-25","Mobile camera",220
-"VIC","17-25","Police issued",291
-"VIC","26-39","Mobile camera",1366
-"VIC","26-39","Police issued",681
-"VIC","40-64","Mobile camera",1654
-"VIC","40-64","Police issued",523
-"VIC","65 and over","Mobile camera",247
-"VIC","65 and over","Police issued",50
-"VIC","17-25","Police issued",5
-"VIC","26-39","Police issued",26
-"VIC","40-64","Mobile camera",3
-"VIC","40-64","Police issued",18
-"VIC","65 and over","Police issued",5
-"VIC","17-25","Mobile camera",11
-"VIC","26-39","Mobile camera",76
-"VIC","26-39","Police issued",6
-"VIC","40-64","Mobile camera",77
-"VIC","40-64","Police issued",2
-"VIC","65 and over","Mobile camera",6
-"WA","17-25","Police issued",57
-"WA","26-39","Police issued",108
-"WA","40-64","Police issued",90
-"WA","65 and over","Police issued",6
-"ACT","17-25","Police issued",4
-"ACT","26-39","Police issued",3
-"ACT","40-64","Police issued",1
-"ACT","65 and over","Police issued",1
-"NSW","0-16","Police issued",2
-"NSW","17-25","Police issued",48
-"NSW","26-39","Police issued",55
-"NSW","40-64","Police issued",38
-"NSW","65 and over","Police issued",5
-"NSW","0-16","Police issued",2
-"NSW","17-25","Police issued",340
-"NSW","26-39","Police issued",338
-"NSW","40-64","Police issued",223
-"NSW","65 and over","Police issued",29
-"NSW","17-25","Police issued",10
-"NSW","26-39","Police issued",8
-"NSW","40-64","Police issued",6
-"NSW","65 and over","Police issued",1
-"NSW","17-25","Police issued",33
-"NSW","26-39","Police issued",57
-"NSW","40-64","Police issued",26
-"NSW","65 and over","Police issued",2
-"NSW","17-25","Police issued",1
-"NT","17-25","Police issued",6
-"NT","26-39","Police issued",12
-"NT","40-64","Police issued",7
-"NT","65 and over","Police issued",1
-"SA","0-16","Police issued",0
-"SA","17-25","Police issued",104
-"SA","26-39","Police issued",158
-"SA","40-64","Police issued",120
-"SA","65 and over","Police issued",21
-"TAS","17-25","Fixed or mobile camera",11
-"TAS","17-25","Police issued",23
-"TAS","26-39","Fixed or mobile camera",57
-"TAS","26-39","Police issued",54
-"TAS","40-64","Fixed or mobile camera",48
-"TAS","40-64","Police issued",30
-"TAS","65 and over","Fixed or mobile camera",12
-"TAS","65 and over","Police issued",7
-"VIC","17-25","Mobile camera",114
-"VIC","17-25","Police issued",37
-"VIC","26-39","Mobile camera",462
-"VIC","26-39","Police issued",81
-"VIC","40-64","Mobile camera",552
-"VIC","40-64","Police issued",70
-"VIC","65 and over","Mobile camera",95
-"VIC","65 and over","Police issued",6
-"VIC","0-16","Police issued",1
-"VIC","17-25","Mobile camera",220
-"VIC","17-25","Police issued",259
-"VIC","26-39","Mobile camera",1102
-"VIC","26-39","Police issued",718
-"VIC","40-64","Mobile camera",1417
-"VIC","40-64","Police issued",547
-"VIC","65 and over","Mobile camera",196
-"VIC","65 and over","Police issued",48
-"VIC","17-25","Police issued",6
-"VIC","26-39","Police issued",9
-"VIC","40-64","Police issued",10
-"VIC","65 and over","Police issued",3
-"VIC","17-25","Police issued",1
-"VIC","26-39","Police issued",8
-"VIC","40-64","Police issued",2
-"WA","17-25","Police issued",35
-"WA","26-39","Police issued",78
-"WA","40-64","Police issued",55
-"WA","65 and over","Police issued",5
+"START_DATE","END_DATE","JURISDICTION","AGE_GROUP","DETECTION_METHOD","FINES"
+"2023-01-01","2023-01-31","ACT","17-25","Police issued",8
+"2023-01-01","2023-01-31","ACT","26-39","Police issued",8
+"2023-01-01","2023-01-31","ACT","40-64","Police issued",12
+"2023-01-01","2023-01-31","NSW","17-25","Police issued",55
+"2023-01-01","2023-01-31","NSW","26-39","Police issued",54
+"2023-01-01","2023-01-31","NSW","40-64","Police issued",43
+"2023-01-01","2023-01-31","NSW","65 and over","Police issued",6
+"2023-01-01","2023-01-31","NSW","17-25","Police issued",270
+"2023-01-01","2023-01-31","NSW","26-39","Police issued",335
+"2023-01-01","2023-01-31","NSW","40-64","Police issued",200
+"2023-01-01","2023-01-31","NSW","65 and over","Police issued",31
+"2023-01-01","2023-01-31","NSW","17-25","Police issued",6
+"2023-01-01","2023-01-31","NSW","26-39","Police issued",8
+"2023-01-01","2023-01-31","NSW","40-64","Police issued",9
+"2023-01-01","2023-01-31","NSW","65 and over","Police issued",1
+"2023-01-01","2023-01-31","NSW","40-64","Police issued",1
+"2023-01-01","2023-01-31","NSW","26-39","Police issued",1
+"2023-01-01","2023-01-31","NSW","Unknown","Fixed or mobile camera",17080
+"2023-01-01","2023-01-31","NT","17-25","Police issued",3
+"2023-01-01","2023-01-31","NT","26-39","Police issued",7
+"2023-01-01","2023-01-31","NT","40-64","Police issued",8
+"2023-01-01","2023-01-31","NT","65 and over","Police issued",3
+"2023-01-01","2023-01-31","SA","0-16","Police issued",1
+"2023-01-01","2023-01-31","SA","17-25","Police issued",106
+"2023-01-01","2023-01-31","SA","26-39","Police issued",182
+"2023-01-01","2023-01-31","SA","40-64","Police issued",117
+"2023-01-01","2023-01-31","SA","65 and over","Police issued",20
+"2023-01-01","2023-01-31","SA","Unknown","Police issued",0
+"2023-01-01","2023-01-31","TAS","17-25","Police issued",27
+"2023-01-01","2023-01-31","TAS","26-39","Police issued",63
+"2023-01-01","2023-01-31","TAS","40-64","Police issued",28
+"2023-01-01","2023-01-31","TAS","65 and over","Police issued",7
+"2023-01-01","2023-01-31","VIC","0-16","Police issued",1
+"2023-01-01","2023-01-31","VIC","17-25","Police issued",47
+"2023-01-01","2023-01-31","VIC","26-39","Police issued",55
+"2023-01-01","2023-01-31","VIC","40-64","Police issued",41
+"2023-01-01","2023-01-31","VIC","65 and over","Police issued",7
+"2023-01-01","2023-01-31","VIC","0-16","Police issued",1
+"2023-01-01","2023-01-31","VIC","17-25","Police issued",298
+"2023-01-01","2023-01-31","VIC","26-39","Police issued",654
+"2023-01-01","2023-01-31","VIC","40-64","Police issued",406
+"2023-01-01","2023-01-31","VIC","65 and over","Police issued",38
+"2023-01-01","2023-01-31","VIC","17-25","Police issued",7
+"2023-01-01","2023-01-31","VIC","26-39","Police issued",11
+"2023-01-01","2023-01-31","VIC","40-64","Police issued",9
+"2023-01-01","2023-01-31","VIC","65 and over","Police issued",3
+"2023-01-01","2023-01-31","VIC","26-39","Police issued",2
+"2023-01-01","2023-01-31","VIC","40-64","Police issued",1
+"2023-01-01","2023-01-31","WA","17-25","Police issued",72
+"2023-01-01","2023-01-31","WA","26-39","Police issued",178
+"2023-01-01","2023-01-31","WA","40-64","Police issued",123
+"2023-01-01","2023-01-31","WA","65 and over","Police issued",19
+"2023-01-01","2023-12-31","QLD","Unknown","Fixed or mobile camera",77213
+"2023-01-01","2023-12-31","QLD","Unknown","Police issued",3079
+"2023-02-01","2023-02-28","ACT","17-25","Police issued",7
+"2023-02-01","2023-02-28","ACT","26-39","Police issued",8
+"2023-02-01","2023-02-28","ACT","40-64","Police issued",12
+"2023-02-01","2023-02-28","ACT","65 and over","Police issued",1
+"2023-02-01","2023-02-28","NSW","17-25","Police issued",48
+"2023-02-01","2023-02-28","NSW","26-39","Police issued",54
+"2023-02-01","2023-02-28","NSW","40-64","Police issued",61
+"2023-02-01","2023-02-28","NSW","65 and over","Police issued",4
+"2023-02-01","2023-02-28","NSW","17-25","Police issued",278
+"2023-02-01","2023-02-28","NSW","26-39","Police issued",423
+"2023-02-01","2023-02-28","NSW","40-64","Police issued",308
+"2023-02-01","2023-02-28","NSW","65 and over","Police issued",28
+"2023-02-01","2023-02-28","NSW","17-25","Police issued",4
+"2023-02-01","2023-02-28","NSW","26-39","Police issued",13
+"2023-02-01","2023-02-28","NSW","40-64","Police issued",10
+"2023-02-01","2023-02-28","NSW","40-64","Police issued",1
+"2023-02-01","2023-02-28","NSW","Unknown","Fixed or mobile camera",18057
+"2023-02-01","2023-02-28","NT","17-25","Police issued",5
+"2023-02-01","2023-02-28","NT","26-39","Police issued",6
+"2023-02-01","2023-02-28","NT","40-64","Police issued",5
+"2023-02-01","2023-02-28","SA","0-16","Police issued",0
+"2023-02-01","2023-02-28","SA","17-25","Police issued",150
+"2023-02-01","2023-02-28","SA","26-39","Police issued",239
+"2023-02-01","2023-02-28","SA","40-64","Police issued",177
+"2023-02-01","2023-02-28","SA","65 and over","Police issued",24
+"2023-02-01","2023-02-28","SA","Unknown","Police issued",0
+"2023-02-01","2023-02-28","TAS","0-16","Police issued",0
+"2023-02-01","2023-02-28","TAS","17-25","Police issued",29
+"2023-02-01","2023-02-28","TAS","26-39","Police issued",43
+"2023-02-01","2023-02-28","TAS","40-64","Police issued",35
+"2023-02-01","2023-02-28","TAS","65 and over","Police issued",5
+"2023-02-01","2023-02-28","VIC","0-16","Police issued",1
+"2023-02-01","2023-02-28","VIC","17-25","Police issued",26
+"2023-02-01","2023-02-28","VIC","26-39","Police issued",55
+"2023-02-01","2023-02-28","VIC","40-64","Police issued",40
+"2023-02-01","2023-02-28","VIC","65 and over","Police issued",7
+"2023-02-01","2023-02-28","VIC","17-25","Police issued",248
+"2023-02-01","2023-02-28","VIC","26-39","Police issued",586
+"2023-02-01","2023-02-28","VIC","40-64","Police issued",445
+"2023-02-01","2023-02-28","VIC","65 and over","Police issued",59
+"2023-02-01","2023-02-28","VIC","17-25","Police issued",2
+"2023-02-01","2023-02-28","VIC","26-39","Police issued",12
+"2023-02-01","2023-02-28","VIC","40-64","Police issued",8
+"2023-02-01","2023-02-28","VIC","65 and over","Police issued",2
+"2023-02-01","2023-02-28","VIC","26-39","Police issued",2
+"2023-02-01","2023-02-28","VIC","40-64","Police issued",1
+"2023-02-01","2023-02-28","WA","17-25","Police issued",69
+"2023-02-01","2023-02-28","WA","26-39","Police issued",155
+"2023-02-01","2023-02-28","WA","40-64","Police issued",125
+"2023-02-01","2023-02-28","WA","65 and over","Police issued",19
+"2023-03-01","2023-03-31","ACT","0-16","Police issued",1
+"2023-03-01","2023-03-31","ACT","17-25","Police issued",12
+"2023-03-01","2023-03-31","ACT","26-39","Police issued",14
+"2023-03-01","2023-03-31","ACT","40-64","Police issued",1
+"2023-03-01","2023-03-31","NSW","17-25","Police issued",37
+"2023-03-01","2023-03-31","NSW","26-39","Police issued",67
+"2023-03-01","2023-03-31","NSW","40-64","Police issued",51
+"2023-03-01","2023-03-31","NSW","65 and over","Police issued",5
+"2023-03-01","2023-03-31","NSW","17-25","Police issued",283
+"2023-03-01","2023-03-31","NSW","26-39","Police issued",405
+"2023-03-01","2023-03-31","NSW","40-64","Police issued",303
+"2023-03-01","2023-03-31","NSW","65 and over","Police issued",23
+"2023-03-01","2023-03-31","NSW","17-25","Police issued",6
+"2023-03-01","2023-03-31","NSW","26-39","Police issued",13
+"2023-03-01","2023-03-31","NSW","40-64","Police issued",11
+"2023-03-01","2023-03-31","NSW","65 and over","Police issued",2
+"2023-03-01","2023-03-31","NSW","26-39","Police issued",2
+"2023-03-01","2023-03-31","NSW","Unknown","Fixed or mobile camera",20102
+"2023-03-01","2023-03-31","NT","17-25","Police issued",4
+"2023-03-01","2023-03-31","NT","26-39","Police issued",6
+"2023-03-01","2023-03-31","NT","40-64","Police issued",5
+"2023-03-01","2023-03-31","NT","65 and over","Police issued",0
+"2023-03-01","2023-03-31","SA","0-16","Police issued",0
+"2023-03-01","2023-03-31","SA","17-25","Police issued",153
+"2023-03-01","2023-03-31","SA","26-39","Police issued",228
+"2023-03-01","2023-03-31","SA","40-64","Police issued",198
+"2023-03-01","2023-03-31","SA","65 and over","Police issued",34
+"2023-03-01","2023-03-31","SA","Unknown","Police issued",0
+"2023-03-01","2023-03-31","TAS","17-25","Police issued",44
+"2023-03-01","2023-03-31","TAS","26-39","Police issued",44
+"2023-03-01","2023-03-31","TAS","40-64","Police issued",34
+"2023-03-01","2023-03-31","TAS","65 and over","Police issued",6
+"2023-03-01","2023-03-31","VIC","17-25","Police issued",55
+"2023-03-01","2023-03-31","VIC","26-39","Police issued",74
+"2023-03-01","2023-03-31","VIC","40-64","Police issued",53
+"2023-03-01","2023-03-31","VIC","65 and over","Police issued",9
+"2023-03-01","2023-03-31","VIC","0-16","Police issued",1
+"2023-03-01","2023-03-31","VIC","17-25","Police issued",309
+"2023-03-01","2023-03-31","VIC","26-39","Police issued",646
+"2023-03-01","2023-03-31","VIC","40-64","Police issued",536
+"2023-03-01","2023-03-31","VIC","65 and over","Police issued",59
+"2023-03-01","2023-03-31","VIC","Unknown","Police issued",1
+"2023-03-01","2023-03-31","VIC","17-25","Police issued",11
+"2023-03-01","2023-03-31","VIC","26-39","Police issued",29
+"2023-03-01","2023-03-31","VIC","40-64","Police issued",15
+"2023-03-01","2023-03-31","VIC","65 and over","Police issued",3
+"2023-03-01","2023-03-31","WA","17-25","Police issued",76
+"2023-03-01","2023-03-31","WA","26-39","Police issued",184
+"2023-03-01","2023-03-31","WA","40-64","Police issued",166
+"2023-03-01","2023-03-31","WA","65 and over","Police issued",21
+"2023-04-01","2023-04-30","ACT","0-16","Police issued",2
+"2023-04-01","2023-04-30","ACT","17-25","Police issued",7
+"2023-04-01","2023-04-30","ACT","26-39","Police issued",11
+"2023-04-01","2023-04-30","ACT","40-64","Police issued",6
+"2023-04-01","2023-04-30","ACT","65 and over","Police issued",2
+"2023-04-01","2023-04-30","NSW","0-16","Police issued",1
+"2023-04-01","2023-04-30","NSW","17-25","Police issued",39
+"2023-04-01","2023-04-30","NSW","26-39","Police issued",68
+"2023-04-01","2023-04-30","NSW","40-64","Police issued",38
+"2023-04-01","2023-04-30","NSW","65 and over","Police issued",5
+"2023-04-01","2023-04-30","NSW","0-16","Police issued",1
+"2023-04-01","2023-04-30","NSW","17-25","Police issued",348
+"2023-04-01","2023-04-30","NSW","26-39","Police issued",384
+"2023-04-01","2023-04-30","NSW","40-64","Police issued",257
+"2023-04-01","2023-04-30","NSW","65 and over","Police issued",31
+"2023-04-01","2023-04-30","NSW","17-25","Police issued",4
+"2023-04-01","2023-04-30","NSW","26-39","Police issued",9
+"2023-04-01","2023-04-30","NSW","40-64","Police issued",6
+"2023-04-01","2023-04-30","NSW","65 and over","Police issued",1
+"2023-04-01","2023-04-30","NSW","17-25","Police issued",1
+"2023-04-01","2023-04-30","NSW","Unknown","Fixed or mobile camera",16973
+"2023-04-01","2023-04-30","NSW","17-25","Police issued",1
+"2023-04-01","2023-04-30","NT","17-25","Police issued",2
+"2023-04-01","2023-04-30","NT","26-39","Police issued",11
+"2023-04-01","2023-04-30","NT","40-64","Police issued",3
+"2023-04-01","2023-04-30","NT","65 and over","Police issued",0
+"2023-04-01","2023-04-30","SA","0-16","Police issued",0
+"2023-04-01","2023-04-30","SA","17-25","Police issued",122
+"2023-04-01","2023-04-30","SA","26-39","Police issued",184
+"2023-04-01","2023-04-30","SA","40-64","Police issued",135
+"2023-04-01","2023-04-30","SA","65 and over","Police issued",25
+"2023-04-01","2023-04-30","SA","Unknown","Police issued",0
+"2023-04-01","2023-04-30","TAS","17-25","Police issued",32
+"2023-04-01","2023-04-30","TAS","26-39","Police issued",70
+"2023-04-01","2023-04-30","TAS","40-64","Police issued",44
+"2023-04-01","2023-04-30","TAS","65 and over","Police issued",4
+"2023-04-01","2023-04-30","VIC","17-25","Police issued",21
+"2023-04-01","2023-04-30","VIC","26-39","Police issued",56
+"2023-04-01","2023-04-30","VIC","40-64","Police issued",68
+"2023-04-01","2023-04-30","VIC","65 and over","Police issued",7
+"2023-04-01","2023-04-30","VIC","17-25","Police issued",232
+"2023-04-01","2023-04-30","VIC","26-39","Police issued",608
+"2023-04-01","2023-04-30","VIC","40-64","Police issued",455
+"2023-04-01","2023-04-30","VIC","65 and over","Police issued",60
+"2023-04-01","2023-04-30","VIC","Unknown","Police issued",1
+"2023-04-01","2023-04-30","VIC","17-25","Police issued",5
+"2023-04-01","2023-04-30","VIC","26-39","Police issued",9
+"2023-04-01","2023-04-30","VIC","40-64","Police issued",6
+"2023-04-01","2023-04-30","VIC","65 and over","Police issued",1
+"2023-04-01","2023-04-30","VIC","26-39","Police issued",2
+"2023-04-01","2023-04-30","VIC","40-64","Police issued",1
+"2023-04-01","2023-04-30","WA","17-25","Police issued",63
+"2023-04-01","2023-04-30","WA","26-39","Police issued",136
+"2023-04-01","2023-04-30","WA","40-64","Police issued",90
+"2023-04-01","2023-04-30","WA","65 and over","Police issued",12
+"2023-05-01","2023-05-31","ACT","0-16","Police issued",3
+"2023-05-01","2023-05-31","ACT","17-25","Police issued",5
+"2023-05-01","2023-05-31","ACT","26-39","Police issued",9
+"2023-05-01","2023-05-31","ACT","40-64","Police issued",8
+"2023-05-01","2023-05-31","NSW","0-16","Police issued",2
+"2023-05-01","2023-05-31","NSW","17-25","Police issued",36
+"2023-05-01","2023-05-31","NSW","26-39","Police issued",47
+"2023-05-01","2023-05-31","NSW","40-64","Police issued",35
+"2023-05-01","2023-05-31","NSW","65 and over","Police issued",8
+"2023-05-01","2023-05-31","NSW","17-25","Police issued",330
+"2023-05-01","2023-05-31","NSW","26-39","Police issued",356
+"2023-05-01","2023-05-31","NSW","40-64","Police issued",267
+"2023-05-01","2023-05-31","NSW","65 and over","Police issued",40
+"2023-05-01","2023-05-31","NSW","0-16","Police issued",0
+"2023-05-01","2023-05-31","NSW","17-25","Police issued",3
+"2023-05-01","2023-05-31","NSW","26-39","Police issued",13
+"2023-05-01","2023-05-31","NSW","40-64","Police issued",9
+"2023-05-01","2023-05-31","NSW","26-39","Police issued",1
+"2023-05-01","2023-05-31","NSW","65 and over","Police issued",1
+"2023-05-01","2023-05-31","NSW","17-25","Police issued",2
+"2023-05-01","2023-05-31","NSW","26-39","Police issued",2
+"2023-05-01","2023-05-31","NSW","Unknown","Fixed or mobile camera",19048
+"2023-05-01","2023-05-31","NT","17-25","Police issued",4
+"2023-05-01","2023-05-31","NT","26-39","Police issued",10
+"2023-05-01","2023-05-31","NT","40-64","Police issued",3
+"2023-05-01","2023-05-31","NT","65 and over","Police issued",1
+"2023-05-01","2023-05-31","SA","0-16","Police issued",0
+"2023-05-01","2023-05-31","SA","17-25","Police issued",105
+"2023-05-01","2023-05-31","SA","26-39","Police issued",194
+"2023-05-01","2023-05-31","SA","40-64","Police issued",187
+"2023-05-01","2023-05-31","SA","65 and over","Police issued",20
+"2023-05-01","2023-05-31","SA","Unknown","Police issued",0
+"2023-05-01","2023-05-31","TAS","17-25","Police issued",29
+"2023-05-01","2023-05-31","TAS","26-39","Police issued",68
+"2023-05-01","2023-05-31","TAS","40-64","Police issued",42
+"2023-05-01","2023-05-31","TAS","65 and over","Police issued",6
+"2023-05-01","2023-05-31","VIC","17-25","Police issued",30
+"2023-05-01","2023-05-31","VIC","26-39","Police issued",93
+"2023-05-01","2023-05-31","VIC","40-64","Police issued",62
+"2023-05-01","2023-05-31","VIC","65 and over","Police issued",12
+"2023-05-01","2023-05-31","VIC","17-25","Police issued",252
+"2023-05-01","2023-05-31","VIC","26-39","Police issued",518
+"2023-05-01","2023-05-31","VIC","40-64","Police issued",405
+"2023-05-01","2023-05-31","VIC","65 and over","Police issued",42
+"2023-05-01","2023-05-31","VIC","Unknown","Police issued",3
+"2023-05-01","2023-05-31","VIC","17-25","Police issued",10
+"2023-05-01","2023-05-31","VIC","26-39","Police issued",21
+"2023-05-01","2023-05-31","VIC","40-64","Police issued",10
+"2023-05-01","2023-05-31","VIC","65 and over","Police issued",1
+"2023-05-01","2023-05-31","VIC","17-25","Police issued",1
+"2023-05-01","2023-05-31","VIC","26-39","Police issued",1
+"2023-05-01","2023-05-31","WA","17-25","Police issued",69
+"2023-05-01","2023-05-31","WA","26-39","Police issued",171
+"2023-05-01","2023-05-31","WA","40-64","Police issued",121
+"2023-05-01","2023-05-31","WA","65 and over","Police issued",17
+"2023-06-01","2023-06-30","ACT","0-16","Police issued",2
+"2023-06-01","2023-06-30","ACT","17-25","Police issued",5
+"2023-06-01","2023-06-30","ACT","26-39","Police issued",9
+"2023-06-01","2023-06-30","ACT","40-64","Police issued",7
+"2023-06-01","2023-06-30","NSW","17-25","Police issued",48
+"2023-06-01","2023-06-30","NSW","26-39","Police issued",71
+"2023-06-01","2023-06-30","NSW","40-64","Police issued",60
+"2023-06-01","2023-06-30","NSW","65 and over","Police issued",6
+"2023-06-01","2023-06-30","NSW","17-25","Police issued",338
+"2023-06-01","2023-06-30","NSW","26-39","Police issued",401
+"2023-06-01","2023-06-30","NSW","40-64","Police issued",333
+"2023-06-01","2023-06-30","NSW","65 and over","Police issued",24
+"2023-06-01","2023-06-30","NSW","17-25","Police issued",5
+"2023-06-01","2023-06-30","NSW","26-39","Police issued",6
+"2023-06-01","2023-06-30","NSW","40-64","Police issued",12
+"2023-06-01","2023-06-30","NSW","65 and over","Police issued",1
+"2023-06-01","2023-06-30","NSW","26-39","Police issued",2
+"2023-06-01","2023-06-30","NSW","17-25","Police issued",2
+"2023-06-01","2023-06-30","NSW","40-64","Police issued",1
+"2023-06-01","2023-06-30","NSW","Unknown","Fixed or mobile camera",16286
+"2023-06-01","2023-06-30","NSW","40-64","Police issued",1
+"2023-06-01","2023-06-30","NT","17-25","Police issued",1
+"2023-06-01","2023-06-30","NT","26-39","Police issued",2
+"2023-06-01","2023-06-30","NT","40-64","Police issued",6
+"2023-06-01","2023-06-30","NT","65 and over","Police issued",0
+"2023-06-01","2023-06-30","SA","0-16","Police issued",2
+"2023-06-01","2023-06-30","SA","17-25","Police issued",102
+"2023-06-01","2023-06-30","SA","26-39","Police issued",182
+"2023-06-01","2023-06-30","SA","40-64","Police issued",131
+"2023-06-01","2023-06-30","SA","65 and over","Police issued",20
+"2023-06-01","2023-06-30","SA","Unknown","Police issued",0
+"2023-06-01","2023-06-30","TAS","17-25","Police issued",29
+"2023-06-01","2023-06-30","TAS","26-39","Police issued",54
+"2023-06-01","2023-06-30","TAS","40-64","Police issued",44
+"2023-06-01","2023-06-30","TAS","65 and over","Police issued",6
+"2023-06-01","2023-06-30","VIC","17-25","Police issued",24
+"2023-06-01","2023-06-30","VIC","26-39","Police issued",61
+"2023-06-01","2023-06-30","VIC","40-64","Police issued",37
+"2023-06-01","2023-06-30","VIC","65 and over","Police issued",4
+"2023-06-01","2023-06-30","VIC","17-25","Police issued",196
+"2023-06-01","2023-06-30","VIC","26-39","Police issued",465
+"2023-06-01","2023-06-30","VIC","40-64","Police issued",381
+"2023-06-01","2023-06-30","VIC","65 and over","Police issued",37
+"2023-06-01","2023-06-30","VIC","17-25","Police issued",6
+"2023-06-01","2023-06-30","VIC","26-39","Police issued",13
+"2023-06-01","2023-06-30","VIC","40-64","Police issued",11
+"2023-06-01","2023-06-30","VIC","65 and over","Police issued",2
+"2023-06-01","2023-06-30","VIC","17-25","Police issued",3
+"2023-06-01","2023-06-30","VIC","26-39","Police issued",6
+"2023-06-01","2023-06-30","VIC","40-64","Police issued",6
+"2023-06-01","2023-06-30","WA","17-25","Police issued",63
+"2023-06-01","2023-06-30","WA","26-39","Police issued",124
+"2023-06-01","2023-06-30","WA","40-64","Police issued",103
+"2023-06-01","2023-06-30","WA","65 and over","Police issued",13
+"2023-07-01","2023-07-31","ACT","17-25","Police issued",10
+"2023-07-01","2023-07-31","ACT","26-39","Police issued",8
+"2023-07-01","2023-07-31","ACT","40-64","Police issued",6
+"2023-07-01","2023-07-31","ACT","65 and over","Police issued",1
+"2023-07-01","2023-07-31","NSW","17-25","Police issued",38
+"2023-07-01","2023-07-31","NSW","26-39","Police issued",41
+"2023-07-01","2023-07-31","NSW","40-64","Police issued",26
+"2023-07-01","2023-07-31","NSW","65 and over","Police issued",4
+"2023-07-01","2023-07-31","NSW","17-25","Police issued",253
+"2023-07-01","2023-07-31","NSW","26-39","Police issued",316
+"2023-07-01","2023-07-31","NSW","40-64","Police issued",260
+"2023-07-01","2023-07-31","NSW","65 and over","Police issued",19
+"2023-07-01","2023-07-31","NSW","17-25","Police issued",5
+"2023-07-01","2023-07-31","NSW","26-39","Police issued",8
+"2023-07-01","2023-07-31","NSW","40-64","Police issued",5
+"2023-07-01","2023-07-31","NSW","65 and over","Police issued",2
+"2023-07-01","2023-07-31","NSW","17-25","Police issued",0
+"2023-07-01","2023-07-31","NSW","40-64","Police issued",1
+"2023-07-01","2023-07-31","NSW","Unknown","Fixed or mobile camera",16377
+"2023-07-01","2023-07-31","NT","17-25","Police issued",1
+"2023-07-01","2023-07-31","NT","26-39","Police issued",9
+"2023-07-01","2023-07-31","NT","40-64","Police issued",4
+"2023-07-01","2023-07-31","SA","0-16","Police issued",0
+"2023-07-01","2023-07-31","SA","17-25","Police issued",109
+"2023-07-01","2023-07-31","SA","26-39","Police issued",194
+"2023-07-01","2023-07-31","SA","40-64","Police issued",146
+"2023-07-01","2023-07-31","SA","65 and over","Police issued",18
+"2023-07-01","2023-07-31","SA","Unknown","Police issued",0
+"2023-07-01","2023-07-31","TAS","17-25","Police issued",28
+"2023-07-01","2023-07-31","TAS","26-39","Police issued",51
+"2023-07-01","2023-07-31","TAS","40-64","Police issued",42
+"2023-07-01","2023-07-31","TAS","65 and over","Police issued",12
+"2023-07-01","2023-07-31","VIC","17-25","Police issued",30
+"2023-07-01","2023-07-31","VIC","26-39","Police issued",59
+"2023-07-01","2023-07-31","VIC","40-64","Police issued",51
+"2023-07-01","2023-07-31","VIC","65 and over","Police issued",11
+"2023-07-01","2023-07-31","VIC","Unknown","Mobile camera",150
+"2023-07-01","2023-07-31","VIC","0-16","Police issued",1
+"2023-07-01","2023-07-31","VIC","17-25","Police issued",216
+"2023-07-01","2023-07-31","VIC","26-39","Police issued",520
+"2023-07-01","2023-07-31","VIC","40-64","Police issued",368
+"2023-07-01","2023-07-31","VIC","65 and over","Police issued",55
+"2023-07-01","2023-07-31","VIC","Unknown","Mobile camera",3157
+"2023-07-01","2023-07-31","VIC","17-25","Police issued",7
+"2023-07-01","2023-07-31","VIC","26-39","Police issued",10
+"2023-07-01","2023-07-31","VIC","40-64","Police issued",16
+"2023-07-01","2023-07-31","VIC","Unknown","Mobile camera",6
+"2023-07-01","2023-07-31","VIC","17-25","Police issued",4
+"2023-07-01","2023-07-31","VIC","26-39","Police issued",9
+"2023-07-01","2023-07-31","VIC","40-64","Police issued",4
+"2023-07-01","2023-07-31","VIC","Unknown","Mobile camera",283
+"2023-07-01","2023-07-31","WA","17-25","Police issued",60
+"2023-07-01","2023-07-31","WA","26-39","Police issued",115
+"2023-07-01","2023-07-31","WA","40-64","Police issued",92
+"2023-07-01","2023-07-31","WA","65 and over","Police issued",10
+"2023-08-01","2023-08-31","ACT","17-25","Police issued",9
+"2023-08-01","2023-08-31","ACT","26-39","Police issued",8
+"2023-08-01","2023-08-31","ACT","40-64","Police issued",6
+"2023-08-01","2023-08-31","NSW","0-16","Police issued",2
+"2023-08-01","2023-08-31","NSW","17-25","Police issued",35
+"2023-08-01","2023-08-31","NSW","26-39","Police issued",39
+"2023-08-01","2023-08-31","NSW","40-64","Police issued",33
+"2023-08-01","2023-08-31","NSW","65 and over","Police issued",7
+"2023-08-01","2023-08-31","NSW","0-16","Police issued",1
+"2023-08-01","2023-08-31","NSW","17-25","Police issued",298
+"2023-08-01","2023-08-31","NSW","26-39","Police issued",298
+"2023-08-01","2023-08-31","NSW","40-64","Police issued",227
+"2023-08-01","2023-08-31","NSW","65 and over","Police issued",14
+"2023-08-01","2023-08-31","NSW","17-25","Police issued",4
+"2023-08-01","2023-08-31","NSW","26-39","Police issued",12
+"2023-08-01","2023-08-31","NSW","40-64","Police issued",4
+"2023-08-01","2023-08-31","NSW","65 and over","Police issued",3
+"2023-08-01","2023-08-31","NSW","26-39","Police issued",1
+"2023-08-01","2023-08-31","NSW","17-25","Police issued",4
+"2023-08-01","2023-08-31","NSW","26-39","Police issued",1
+"2023-08-01","2023-08-31","NSW","Unknown","Fixed or mobile camera",16242
+"2023-08-01","2023-08-31","NSW","40-64","Police issued",1
+"2023-08-01","2023-08-31","NT","17-25","Police issued",2
+"2023-08-01","2023-08-31","NT","26-39","Police issued",6
+"2023-08-01","2023-08-31","NT","40-64","Police issued",10
+"2023-08-01","2023-08-31","NT","65 and over","Police issued",2
+"2023-08-01","2023-08-31","SA","0-16","Police issued",0
+"2023-08-01","2023-08-31","SA","17-25","Police issued",108
+"2023-08-01","2023-08-31","SA","26-39","Police issued",187
+"2023-08-01","2023-08-31","SA","40-64","Police issued",148
+"2023-08-01","2023-08-31","SA","65 and over","Police issued",29
+"2023-08-01","2023-08-31","SA","Unknown","Police issued",0
+"2023-08-01","2023-08-31","TAS","17-25","Fixed or mobile camera",1
+"2023-08-01","2023-08-31","TAS","17-25","Police issued",29
+"2023-08-01","2023-08-31","TAS","26-39","Fixed or mobile camera",11
+"2023-08-01","2023-08-31","TAS","26-39","Police issued",55
+"2023-08-01","2023-08-31","TAS","40-64","Fixed or mobile camera",16
+"2023-08-01","2023-08-31","TAS","40-64","Police issued",35
+"2023-08-01","2023-08-31","TAS","65 and over","Police issued",8
+"2023-08-01","2023-08-31","VIC","17-25","Police issued",36
+"2023-08-01","2023-08-31","VIC","26-39","Police issued",72
+"2023-08-01","2023-08-31","VIC","40-64","Police issued",57
+"2023-08-01","2023-08-31","VIC","65 and over","Police issued",5
+"2023-08-01","2023-08-31","VIC","Unknown","Mobile camera",295
+"2023-08-01","2023-08-31","VIC","Unknown","Police issued",1
+"2023-08-01","2023-08-31","VIC","17-25","Police issued",246
+"2023-08-01","2023-08-31","VIC","26-39","Police issued",686
+"2023-08-01","2023-08-31","VIC","40-64","Police issued",546
+"2023-08-01","2023-08-31","VIC","65 and over","Police issued",51
+"2023-08-01","2023-08-31","VIC","Unknown","Mobile camera",3882
+"2023-08-01","2023-08-31","VIC","Unknown","Police issued",1
+"2023-08-01","2023-08-31","VIC","17-25","Police issued",11
+"2023-08-01","2023-08-31","VIC","26-39","Police issued",28
+"2023-08-01","2023-08-31","VIC","40-64","Police issued",22
+"2023-08-01","2023-08-31","VIC","65 and over","Police issued",1
+"2023-08-01","2023-08-31","VIC","17-25","Police issued",5
+"2023-08-01","2023-08-31","VIC","26-39","Police issued",4
+"2023-08-01","2023-08-31","VIC","40-64","Police issued",7
+"2023-08-01","2023-08-31","VIC","Unknown","Mobile camera",560
+"2023-08-01","2023-08-31","WA","17-25","Police issued",48
+"2023-08-01","2023-08-31","WA","26-39","Police issued",107
+"2023-08-01","2023-08-31","WA","40-64","Police issued",96
+"2023-08-01","2023-08-31","WA","65 and over","Police issued",3
+"2023-09-01","2023-09-30","ACT","17-25","Police issued",5
+"2023-09-01","2023-09-30","ACT","26-39","Police issued",10
+"2023-09-01","2023-09-30","ACT","40-64","Police issued",10
+"2023-09-01","2023-09-30","ACT","65 and over","Police issued",1
+"2023-09-01","2023-09-30","NSW","0-16","Police issued",1
+"2023-09-01","2023-09-30","NSW","17-25","Police issued",35
+"2023-09-01","2023-09-30","NSW","26-39","Police issued",55
+"2023-09-01","2023-09-30","NSW","40-64","Police issued",43
+"2023-09-01","2023-09-30","NSW","65 and over","Police issued",5
+"2023-09-01","2023-09-30","NSW","0-16","Police issued",1
+"2023-09-01","2023-09-30","NSW","17-25","Police issued",257
+"2023-09-01","2023-09-30","NSW","26-39","Police issued",290
+"2023-09-01","2023-09-30","NSW","40-64","Police issued",195
+"2023-09-01","2023-09-30","NSW","65 and over","Police issued",19
+"2023-09-01","2023-09-30","NSW","17-25","Police issued",12
+"2023-09-01","2023-09-30","NSW","26-39","Police issued",8
+"2023-09-01","2023-09-30","NSW","40-64","Police issued",9
+"2023-09-01","2023-09-30","NSW","65 and over","Police issued",1
+"2023-09-01","2023-09-30","NSW","17-25","Police issued",1
+"2023-09-01","2023-09-30","NSW","Unknown","Fixed or mobile camera",16198
+"2023-09-01","2023-09-30","NT","17-25","Police issued",4
+"2023-09-01","2023-09-30","NT","26-39","Police issued",6
+"2023-09-01","2023-09-30","NT","40-64","Police issued",2
+"2023-09-01","2023-09-30","NT","65 and over","Police issued",1
+"2023-09-01","2023-09-30","SA","0-16","Police issued",0
+"2023-09-01","2023-09-30","SA","17-25","Police issued",107
+"2023-09-01","2023-09-30","SA","26-39","Police issued",178
+"2023-09-01","2023-09-30","SA","40-64","Police issued",171
+"2023-09-01","2023-09-30","SA","65 and over","Police issued",37
+"2023-09-01","2023-09-30","SA","Unknown","Police issued",0
+"2023-09-01","2023-09-30","TAS","17-25","Fixed or mobile camera",12
+"2023-09-01","2023-09-30","TAS","17-25","Police issued",21
+"2023-09-01","2023-09-30","TAS","26-39","Fixed or mobile camera",38
+"2023-09-01","2023-09-30","TAS","26-39","Police issued",44
+"2023-09-01","2023-09-30","TAS","40-64","Fixed or mobile camera",54
+"2023-09-01","2023-09-30","TAS","40-64","Police issued",32
+"2023-09-01","2023-09-30","TAS","65 and over","Fixed or mobile camera",6
+"2023-09-01","2023-09-30","TAS","65 and over","Police issued",7
+"2023-09-01","2023-09-30","VIC","17-25","Police issued",30
+"2023-09-01","2023-09-30","VIC","26-39","Police issued",65
+"2023-09-01","2023-09-30","VIC","40-64","Police issued",36
+"2023-09-01","2023-09-30","VIC","65 and over","Police issued",4
+"2023-09-01","2023-09-30","VIC","Unknown","Mobile camera",274
+"2023-09-01","2023-09-30","VIC","17-25","Police issued",256
+"2023-09-01","2023-09-30","VIC","26-39","Police issued",608
+"2023-09-01","2023-09-30","VIC","40-64","Police issued",412
+"2023-09-01","2023-09-30","VIC","65 and over","Police issued",47
+"2023-09-01","2023-09-30","VIC","Unknown","Mobile camera",4933
+"2023-09-01","2023-09-30","VIC","Unknown","Police issued",1
+"2023-09-01","2023-09-30","VIC","17-25","Police issued",12
+"2023-09-01","2023-09-30","VIC","26-39","Police issued",13
+"2023-09-01","2023-09-30","VIC","40-64","Police issued",11
+"2023-09-01","2023-09-30","VIC","65 and over","Police issued",5
+"2023-09-01","2023-09-30","VIC","17-25","Police issued",1
+"2023-09-01","2023-09-30","VIC","26-39","Police issued",6
+"2023-09-01","2023-09-30","VIC","40-64","Police issued",2
+"2023-09-01","2023-09-30","WA","17-25","Police issued",42
+"2023-09-01","2023-09-30","WA","26-39","Police issued",64
+"2023-09-01","2023-09-30","WA","40-64","Police issued",65
+"2023-09-01","2023-09-30","WA","65 and over","Police issued",12
+"2023-10-01","2023-10-31","ACT","0-16","Police issued",1
+"2023-10-01","2023-10-31","ACT","17-25","Police issued",4
+"2023-10-01","2023-10-31","ACT","26-39","Police issued",15
+"2023-10-01","2023-10-31","ACT","40-64","Police issued",5
+"2023-10-01","2023-10-31","NSW","17-25","Police issued",49
+"2023-10-01","2023-10-31","NSW","26-39","Police issued",62
+"2023-10-01","2023-10-31","NSW","40-64","Police issued",40
+"2023-10-01","2023-10-31","NSW","65 and over","Police issued",2
+"2023-10-01","2023-10-31","NSW","0-16","Police issued",1
+"2023-10-01","2023-10-31","NSW","17-25","Police issued",264
+"2023-10-01","2023-10-31","NSW","26-39","Police issued",336
+"2023-10-01","2023-10-31","NSW","40-64","Police issued",225
+"2023-10-01","2023-10-31","NSW","65 and over","Police issued",15
+"2023-10-01","2023-10-31","NSW","17-25","Police issued",10
+"2023-10-01","2023-10-31","NSW","26-39","Police issued",7
+"2023-10-01","2023-10-31","NSW","40-64","Police issued",9
+"2023-10-01","2023-10-31","NSW","17-25","Police issued",2
+"2023-10-01","2023-10-31","NSW","26-39","Police issued",2
+"2023-10-01","2023-10-31","NSW","17-25","Police issued",2
+"2023-10-01","2023-10-31","NSW","26-39","Police issued",4
+"2023-10-01","2023-10-31","NSW","65 and over","Police issued",1
+"2023-10-01","2023-10-31","NSW","Unknown","Fixed or mobile camera",15740
+"2023-10-01","2023-10-31","NSW","26-39","Police issued",1
+"2023-10-01","2023-10-31","NT","17-25","Police issued",5
+"2023-10-01","2023-10-31","NT","26-39","Police issued",8
+"2023-10-01","2023-10-31","NT","40-64","Police issued",5
+"2023-10-01","2023-10-31","NT","65 and over","Police issued",1
+"2023-10-01","2023-10-31","SA","0-16","Police issued",0
+"2023-10-01","2023-10-31","SA","17-25","Police issued",117
+"2023-10-01","2023-10-31","SA","26-39","Police issued",169
+"2023-10-01","2023-10-31","SA","40-64","Police issued",136
+"2023-10-01","2023-10-31","SA","65 and over","Police issued",33
+"2023-10-01","2023-10-31","SA","Unknown","Police issued",0
+"2023-10-01","2023-10-31","TAS","17-25","Fixed or mobile camera",27
+"2023-10-01","2023-10-31","TAS","17-25","Police issued",35
+"2023-10-01","2023-10-31","TAS","26-39","Fixed or mobile camera",123
+"2023-10-01","2023-10-31","TAS","26-39","Police issued",41
+"2023-10-01","2023-10-31","TAS","40-64","Fixed or mobile camera",110
+"2023-10-01","2023-10-31","TAS","40-64","Police issued",47
+"2023-10-01","2023-10-31","TAS","65 and over","Fixed or mobile camera",16
+"2023-10-01","2023-10-31","TAS","65 and over","Police issued",5
+"2023-10-01","2023-10-31","VIC","17-25","Mobile camera",37
+"2023-10-01","2023-10-31","VIC","17-25","Police issued",38
+"2023-10-01","2023-10-31","VIC","26-39","Mobile camera",155
+"2023-10-01","2023-10-31","VIC","26-39","Police issued",87
+"2023-10-01","2023-10-31","VIC","40-64","Mobile camera",175
+"2023-10-01","2023-10-31","VIC","40-64","Police issued",64
+"2023-10-01","2023-10-31","VIC","65 and over","Mobile camera",27
+"2023-10-01","2023-10-31","VIC","65 and over","Police issued",6
+"2023-10-01","2023-10-31","VIC","Unknown","Mobile camera",329
+"2023-10-01","2023-10-31","VIC","17-25","Mobile camera",261
+"2023-10-01","2023-10-31","VIC","17-25","Police issued",228
+"2023-10-01","2023-10-31","VIC","26-39","Mobile camera",1466
+"2023-10-01","2023-10-31","VIC","26-39","Police issued",565
+"2023-10-01","2023-10-31","VIC","40-64","Mobile camera",1753
+"2023-10-01","2023-10-31","VIC","40-64","Police issued",425
+"2023-10-01","2023-10-31","VIC","65 and over","Mobile camera",255
+"2023-10-01","2023-10-31","VIC","65 and over","Police issued",39
+"2023-10-01","2023-10-31","VIC","Unknown","Mobile camera",1786
+"2023-10-01","2023-10-31","VIC","17-25","Police issued",8
+"2023-10-01","2023-10-31","VIC","26-39","Police issued",12
+"2023-10-01","2023-10-31","VIC","40-64","Police issued",18
+"2023-10-01","2023-10-31","VIC","65 and over","Police issued",5
+"2023-10-01","2023-10-31","VIC","26-39","Mobile camera",3
+"2023-10-01","2023-10-31","VIC","26-39","Police issued",6
+"2023-10-01","2023-10-31","VIC","40-64","Mobile camera",21
+"2023-10-01","2023-10-31","VIC","40-64","Police issued",1
+"2023-10-01","2023-10-31","VIC","65 and over","Mobile camera",3
+"2023-10-01","2023-10-31","VIC","Unknown","Mobile camera",8
+"2023-10-01","2023-10-31","WA","17-25","Police issued",52
+"2023-10-01","2023-10-31","WA","26-39","Police issued",92
+"2023-10-01","2023-10-31","WA","40-64","Police issued",101
+"2023-10-01","2023-10-31","WA","65 and over","Police issued",10
+"2023-11-01","2023-11-30","ACT","0-16","Police issued",1
+"2023-11-01","2023-11-30","ACT","17-25","Police issued",6
+"2023-11-01","2023-11-30","ACT","26-39","Police issued",7
+"2023-11-01","2023-11-30","ACT","40-64","Police issued",5
+"2023-11-01","2023-11-30","ACT","65 and over","Police issued",1
+"2023-11-01","2023-11-30","NSW","0-16","Police issued",3
+"2023-11-01","2023-11-30","NSW","17-25","Police issued",53
+"2023-11-01","2023-11-30","NSW","26-39","Police issued",67
+"2023-11-01","2023-11-30","NSW","40-64","Police issued",59
+"2023-11-01","2023-11-30","NSW","65 and over","Police issued",5
+"2023-11-01","2023-11-30","NSW","0-16","Police issued",1
+"2023-11-01","2023-11-30","NSW","17-25","Police issued",237
+"2023-11-01","2023-11-30","NSW","26-39","Police issued",302
+"2023-11-01","2023-11-30","NSW","40-64","Police issued",237
+"2023-11-01","2023-11-30","NSW","65 and over","Police issued",28
+"2023-11-01","2023-11-30","NSW","17-25","Police issued",4
+"2023-11-01","2023-11-30","NSW","26-39","Police issued",9
+"2023-11-01","2023-11-30","NSW","40-64","Police issued",8
+"2023-11-01","2023-11-30","NSW","17-25","Police issued",1
+"2023-11-01","2023-11-30","NSW","26-39","Police issued",3
+"2023-11-01","2023-11-30","NSW","17-25","Police issued",1
+"2023-11-01","2023-11-30","NSW","Unknown","Fixed or mobile camera",15466
+"2023-11-01","2023-11-30","NT","17-25","Police issued",4
+"2023-11-01","2023-11-30","NT","26-39","Police issued",7
+"2023-11-01","2023-11-30","NT","40-64","Police issued",6
+"2023-11-01","2023-11-30","NT","65 and over","Police issued",1
+"2023-11-01","2023-11-30","SA","0-16","Police issued",0
+"2023-11-01","2023-11-30","SA","17-25","Police issued",104
+"2023-11-01","2023-11-30","SA","26-39","Police issued",177
+"2023-11-01","2023-11-30","SA","40-64","Police issued",139
+"2023-11-01","2023-11-30","SA","65 and over","Police issued",21
+"2023-11-01","2023-11-30","SA","Unknown","Police issued",0
+"2023-11-01","2023-11-30","TAS","17-25","Fixed or mobile camera",29
+"2023-11-01","2023-11-30","TAS","17-25","Police issued",34
+"2023-11-01","2023-11-30","TAS","26-39","Fixed or mobile camera",132
+"2023-11-01","2023-11-30","TAS","26-39","Police issued",69
+"2023-11-01","2023-11-30","TAS","40-64","Fixed or mobile camera",146
+"2023-11-01","2023-11-30","TAS","40-64","Police issued",50
+"2023-11-01","2023-11-30","TAS","65 and over","Fixed or mobile camera",21
+"2023-11-01","2023-11-30","TAS","65 and over","Police issued",6
+"2023-11-01","2023-11-30","VIC","17-25","Mobile camera",30
+"2023-11-01","2023-11-30","VIC","17-25","Police issued",37
+"2023-11-01","2023-11-30","VIC","26-39","Mobile camera",213
+"2023-11-01","2023-11-30","VIC","26-39","Police issued",61
+"2023-11-01","2023-11-30","VIC","40-64","Mobile camera",262
+"2023-11-01","2023-11-30","VIC","40-64","Police issued",39
+"2023-11-01","2023-11-30","VIC","65 and over","Mobile camera",48
+"2023-11-01","2023-11-30","VIC","65 and over","Police issued",1
+"2023-11-01","2023-11-30","VIC","Unknown","Mobile camera",142
+"2023-11-01","2023-11-30","VIC","17-25","Mobile camera",220
+"2023-11-01","2023-11-30","VIC","17-25","Police issued",291
+"2023-11-01","2023-11-30","VIC","26-39","Mobile camera",1366
+"2023-11-01","2023-11-30","VIC","26-39","Police issued",681
+"2023-11-01","2023-11-30","VIC","40-64","Mobile camera",1654
+"2023-11-01","2023-11-30","VIC","40-64","Police issued",523
+"2023-11-01","2023-11-30","VIC","65 and over","Mobile camera",247
+"2023-11-01","2023-11-30","VIC","65 and over","Police issued",50
+"2023-11-01","2023-11-30","VIC","Unknown","Mobile camera",1194
+"2023-11-01","2023-11-30","VIC","17-25","Police issued",5
+"2023-11-01","2023-11-30","VIC","26-39","Police issued",26
+"2023-11-01","2023-11-30","VIC","40-64","Mobile camera",3
+"2023-11-01","2023-11-30","VIC","40-64","Police issued",18
+"2023-11-01","2023-11-30","VIC","65 and over","Police issued",5
+"2023-11-01","2023-11-30","VIC","Unknown","Mobile camera",2
+"2023-11-01","2023-11-30","VIC","17-25","Mobile camera",11
+"2023-11-01","2023-11-30","VIC","26-39","Mobile camera",76
+"2023-11-01","2023-11-30","VIC","26-39","Police issued",6
+"2023-11-01","2023-11-30","VIC","40-64","Mobile camera",77
+"2023-11-01","2023-11-30","VIC","40-64","Police issued",2
+"2023-11-01","2023-11-30","VIC","65 and over","Mobile camera",6
+"2023-11-01","2023-11-30","VIC","Unknown","Mobile camera",32
+"2023-11-01","2023-11-30","WA","17-25","Police issued",57
+"2023-11-01","2023-11-30","WA","26-39","Police issued",108
+"2023-11-01","2023-11-30","WA","40-64","Police issued",90
+"2023-11-01","2023-11-30","WA","65 and over","Police issued",6
+"2023-12-01","2023-12-31","ACT","17-25","Police issued",4
+"2023-12-01","2023-12-31","ACT","26-39","Police issued",3
+"2023-12-01","2023-12-31","ACT","40-64","Police issued",1
+"2023-12-01","2023-12-31","ACT","65 and over","Police issued",1
+"2023-12-01","2023-12-31","NSW","0-16","Police issued",2
+"2023-12-01","2023-12-31","NSW","17-25","Police issued",48
+"2023-12-01","2023-12-31","NSW","26-39","Police issued",55
+"2023-12-01","2023-12-31","NSW","40-64","Police issued",38
+"2023-12-01","2023-12-31","NSW","65 and over","Police issued",5
+"2023-12-01","2023-12-31","NSW","0-16","Police issued",2
+"2023-12-01","2023-12-31","NSW","17-25","Police issued",340
+"2023-12-01","2023-12-31","NSW","26-39","Police issued",338
+"2023-12-01","2023-12-31","NSW","40-64","Police issued",223
+"2023-12-01","2023-12-31","NSW","65 and over","Police issued",29
+"2023-12-01","2023-12-31","NSW","17-25","Police issued",10
+"2023-12-01","2023-12-31","NSW","26-39","Police issued",8
+"2023-12-01","2023-12-31","NSW","40-64","Police issued",6
+"2023-12-01","2023-12-31","NSW","65 and over","Police issued",1
+"2023-12-01","2023-12-31","NSW","17-25","Police issued",33
+"2023-12-01","2023-12-31","NSW","26-39","Police issued",57
+"2023-12-01","2023-12-31","NSW","40-64","Police issued",26
+"2023-12-01","2023-12-31","NSW","65 and over","Police issued",2
+"2023-12-01","2023-12-31","NSW","Unknown","Fixed or mobile camera",15188
+"2023-12-01","2023-12-31","NSW","17-25","Police issued",1
+"2023-12-01","2023-12-31","NT","17-25","Police issued",6
+"2023-12-01","2023-12-31","NT","26-39","Police issued",12
+"2023-12-01","2023-12-31","NT","40-64","Police issued",7
+"2023-12-01","2023-12-31","NT","65 and over","Police issued",1
+"2023-12-01","2023-12-31","SA","0-16","Police issued",0
+"2023-12-01","2023-12-31","SA","17-25","Police issued",104
+"2023-12-01","2023-12-31","SA","26-39","Police issued",158
+"2023-12-01","2023-12-31","SA","40-64","Police issued",120
+"2023-12-01","2023-12-31","SA","65 and over","Police issued",21
+"2023-12-01","2023-12-31","SA","Unknown","Police issued",0
+"2023-12-01","2023-12-31","TAS","17-25","Fixed or mobile camera",11
+"2023-12-01","2023-12-31","TAS","17-25","Police issued",23
+"2023-12-01","2023-12-31","TAS","26-39","Fixed or mobile camera",57
+"2023-12-01","2023-12-31","TAS","26-39","Police issued",54
+"2023-12-01","2023-12-31","TAS","40-64","Fixed or mobile camera",48
+"2023-12-01","2023-12-31","TAS","40-64","Police issued",30
+"2023-12-01","2023-12-31","TAS","65 and over","Fixed or mobile camera",12
+"2023-12-01","2023-12-31","TAS","65 and over","Police issued",7
+"2023-12-01","2023-12-31","VIC","17-25","Mobile camera",114
+"2023-12-01","2023-12-31","VIC","17-25","Police issued",37
+"2023-12-01","2023-12-31","VIC","26-39","Mobile camera",462
+"2023-12-01","2023-12-31","VIC","26-39","Police issued",81
+"2023-12-01","2023-12-31","VIC","40-64","Mobile camera",552
+"2023-12-01","2023-12-31","VIC","40-64","Police issued",70
+"2023-12-01","2023-12-31","VIC","65 and over","Mobile camera",95
+"2023-12-01","2023-12-31","VIC","65 and over","Police issued",6
+"2023-12-01","2023-12-31","VIC","Unknown","Mobile camera",308
+"2023-12-01","2023-12-31","VIC","0-16","Police issued",1
+"2023-12-01","2023-12-31","VIC","17-25","Mobile camera",220
+"2023-12-01","2023-12-31","VIC","17-25","Police issued",259
+"2023-12-01","2023-12-31","VIC","26-39","Mobile camera",1102
+"2023-12-01","2023-12-31","VIC","26-39","Police issued",718
+"2023-12-01","2023-12-31","VIC","40-64","Mobile camera",1417
+"2023-12-01","2023-12-31","VIC","40-64","Police issued",547
+"2023-12-01","2023-12-31","VIC","65 and over","Mobile camera",196
+"2023-12-01","2023-12-31","VIC","65 and over","Police issued",48
+"2023-12-01","2023-12-31","VIC","Unknown","Mobile camera",855
+"2023-12-01","2023-12-31","VIC","17-25","Police issued",6
+"2023-12-01","2023-12-31","VIC","26-39","Police issued",9
+"2023-12-01","2023-12-31","VIC","40-64","Police issued",10
+"2023-12-01","2023-12-31","VIC","65 and over","Police issued",3
+"2023-12-01","2023-12-31","VIC","17-25","Police issued",1
+"2023-12-01","2023-12-31","VIC","26-39","Police issued",8
+"2023-12-01","2023-12-31","VIC","40-64","Police issued",2
+"2023-12-01","2023-12-31","WA","17-25","Police issued",35
+"2023-12-01","2023-12-31","WA","26-39","Police issued",78
+"2023-12-01","2023-12-31","WA","40-64","Police issued",55
+"2023-12-01","2023-12-31","WA","65 and over","Police issued",5
