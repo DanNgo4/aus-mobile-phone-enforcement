@@ -196,17 +196,17 @@ d3.csv("data/cleaned_dataset_1.csv", d3.autoType).then(data => {
     xAxisG2.call(d3.axisBottom(x2))
       .selectAll("text")
       .attr("transform", "rotate(-45)")
-      .style("text-anchor", "end");    
+      .style("text-anchor", "end");
     
-      yAxisG1.transition()
-      .duration(500)
-      .call(d3.axisLeft(y1)
-      .tickFormat(d3.format(",")));
-
+    yAxisG1.transition()
+    .duration(500)
+    .call(d3.axisLeft(y1)
+    .tickFormat(d3.format(",")));    
+    
     yAxisG2.transition()
       .duration(500)
       .call(d3.axisLeft(y2)
-      .tickFormat(","));  
+      .tickFormat(d3.format(",")));
 
     updateChart(svg1Large, largeData, x1, y1, selMethods);
     updateChart(svg1Small, smallData, x2, y2, selMethods);
