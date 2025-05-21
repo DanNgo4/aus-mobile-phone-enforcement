@@ -11,19 +11,38 @@ const tooltip = d3.select("body")
   .style("opacity", 0);
 
 d3.csv("data/cleaned_dataset_2.csv", d3.autoType).then(data => {
-  data.forEach(d => {
-    const date = d.START_DATE instanceof Date
-      ? d.START_DATE
-      : d3.timeParse("%Y-%m-%d")(d.START_DATE);
+  const parseDate = d3.timeParse("%Y-%m-%d");
+  const records   = [];
 
-    d.month = date.getMonth();
+  data.forEach(d => {
+    const fines        = +d.FINES;
+    const jurisdiction = d.JURISDICTION;
+
+    if (jurisdiction === "QLD") {
+      // split QLD fines across its full date span
+      const perMonth = fines / 12;
+
+      for (let i = 0; i < 12; i++) {
+        const month = i;
+        
+        records.push({ jurisdiction, month, fines: perMonth });
+      }
+    } else {
+      const date  = d.START_DATE instanceof Date
+        ? d.START_DATE
+        : parseDate(d.START_DATE);
+
+      const month = date.getMonth();
+
+      records.push({ jurisdiction, month, fines });
+    }
   });
 
   const rollup = d3.rollup(
-    data,
-    v => d3.sum(v, d => d.FINES),
-    d => d.JURISDICTION,
-    d => d.month
+    records,
+    v => d3.sum(v, r => r.fines),
+    r => r.jurisdiction,
+    r => r.month
   );
 
   const jurisdictions = Array.from(rollup.keys()).sort();
