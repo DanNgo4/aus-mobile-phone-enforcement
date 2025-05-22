@@ -180,3 +180,9 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.filter-dropdown {
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-radius: 5px;
+}
