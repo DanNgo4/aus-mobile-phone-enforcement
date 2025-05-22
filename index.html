@@ -1,59 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive D3 Charts</title>  <link rel="stylesheet" href="styles/styles.css">
-  <script src="https://d3js.org/d3.v7.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive D3 Charts</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
-<body>  
-  <section class="filters-container">
-    <div class="filter-dropdown">
-      <button class="filter-btn">
+
+<body>
+    <section class="filters-container">
+        <div class="filter-dropdown">
+            <button class="filter-btn">
         Age Groups
 
         <span>&#9660;</span>
       </button>
 
-      <div class="dropdown-content" id="ageGroupFilter"></div>
-    </div>
+            <div class="dropdown-content" id="ageGroupFilter"></div>
+        </div>
 
-    <div class="filter-dropdown">
-      <button class="filter-btn">
+        <div class="filter-dropdown">
+            <button class="filter-btn">
         Detection Methods 
 
         <span>&#9660;</span>
       </button>
 
-      <div class="dropdown-content" id="detectionMethodFilter"></div>
-    </div>
+            <div class="dropdown-content" id="detectionMethodFilter"></div>
+        </div>
 
-    <div class="filter-dropdown">
-      <button class="filter-btn">
+        <div class="filter-dropdown">
+            <button class="filter-btn">
         Jurisdictions 
 
         <span>&#9660;</span>
       </button>
 
-      <div class="dropdown-content" id="jurisdictionFilter"></div>
-    </div>
-  </section>
+            <div class="dropdown-content" id="jurisdictionFilter"></div>
+        </div>
+    </section>
 
-  <main class="slider">
-    <button class="slide-btn prev">‹</button>
+    <main class="slider">
+        <button class="slide-btn prev">‹</button>
 
-    <article class="slides">
-      <section class="slide" id="chart1"></section>
-      <section class="slide" id="chart2"></section>
-      <section class="slide" id="chart3" style="color: black;"><h1>3</h1></section>
-    </article>
+        <article class="slides">
+            <section class="slide" id="chart1"></section>
+            <section class="slide" id="chart2"></section>
+            <section class="slide" id="chart3" style="color: black;">
+                <h1>3</h1>
+            </section>
+        </article>
 
-    <button class="slide-btn next">›</button>
-  </main>
+        <button class="slide-btn next">›</button>
+    </main>
 
-  <script src="scripts/scripts.js"></script>
-  <script src="scripts/constants.js"></script>
-  <script src="scripts/chart1.js"></script>
-  <script src="scripts/chart2.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/constants.js"></script>
+    <script src="scripts/chart1.js"></script>
+    <script src="scripts/chart2.js"></script>
 </body>
+
 </html>
