@@ -84,7 +84,7 @@ d3.csv("data/cleaned_dataset_2.csv", d3.autoType).then(data => {
           .style("opacity", 1)
           .html(
             `<strong>${d.jurisdiction}</strong><br/>
-              ${d3.timeFormat("%B")(new Date(2020, d.month, 1))}: ${d.value}`
+              ${d3.timeFormat("%B")(new Date(2023, d.month, 1))}: ${d.value}`
           )
           .style("left",  (event.pageX + 10) + "px")
           .style("top",   (event.pageY - 28) + "px");
