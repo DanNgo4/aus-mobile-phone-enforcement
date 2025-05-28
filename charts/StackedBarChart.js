@@ -237,6 +237,8 @@ d3.csv("data/cleaned_dataset_1.csv", d3.autoType).then(data => {
           .style("top", `${ev.pageY - 28}px`);
       })
       .on("mouseleave", () => tooltip1.style("opacity", 0))
+      .transition()
+      .duration(500)
       .attr("x", d => x(d.data.JURISDICTION))
       .attr("y", d => y(d[1]))
       .attr("height", d => Math.max(0, y(d[0]) - y(d[1])))

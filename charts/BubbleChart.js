@@ -139,7 +139,7 @@ Promise.all([
           Licenses: ${d.licenses.toLocaleString()}<br/>
           Fines per 10,000 drivers: ${d.finesPer10k}
         `)
-        .style("left", (event.pageX + 20) + "px")
+        .style("left", (event.pageX - 225) + "px")
         .style("top", (event.pageY - 28) + "px");
       
       d3.select(this)
@@ -162,7 +162,7 @@ Promise.all([
     .data(bubbleData)
     .enter().append("g")
     .attr("class", "legend-item")
-    .attr("transform", (d, i) => `translate(0, ${i * 25})`);
+    .attr("transform", (_, i) => `translate(0, ${i * 25})`);
 
   legendItems.append("circle")
     .attr("cx", 8)
@@ -221,7 +221,7 @@ Promise.all([
           Licenses: ${bubbleData.licenses.toLocaleString()}<br/>
           Fines per 10,000 drivers: ${bubbleData.finesPer10k}
         `)
-          .style("left", (pageX + 20) + "px")
+          .style("left", (pageX - 250) + "px")
           .style("top", (pageY - 28) + "px");
         
         bubbles.style("opacity", 0.3);
