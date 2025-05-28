@@ -1,16 +1,14 @@
+const margin3 = { top: 50, right: 120, bottom: 100, left: 80 };
+const width3 = 800 - margin3.left - margin3.right;
+const height3 = 600 - margin3.top - margin3.bottom;
+
 const container3 = d3.select("#chart3");
 container3.select("svg").remove();
-
-d3.select(".tooltip3").remove();
 
 const tooltip3 = d3.select("body")
   .append("div")
   .attr("class", "tooltip")
   .style("opacity", 0);
- 
-const margin3 = { top: 50, right: 120, bottom: 100, left: 80 };
-const width3 = 800 - margin3.left - margin3.right;
-const height3 = 600 - margin3.top - margin3.bottom;
 
 const svg3 = container3.append("svg")
   .attr("width", width3 + margin3.left + margin3.right)
@@ -132,17 +130,15 @@ Promise.all([
 
   bubbles
     .on("mousemove", function(event, d) {
-      tooltip3.transition()
-        .duration(200)
-        .style("opacity", .9);
-      
-      tooltip3.html(`
-        <strong>${d.jurisdiction}</strong><br/>
-        Road Deaths: ${d.roadDeaths}<br/>
-        Total Fines: ${d.totalFines.toLocaleString()}<br/>
-        Licenses: ${d.licenses.toLocaleString()}<br/>
-        Fines per 10,000 drivers: ${d.finesPer10k}
-      `)
+      tooltip3
+        .style("opacity", 1)
+        .html(`
+          <strong>${d.jurisdiction}</strong><br/>
+          Road Deaths: ${d.roadDeaths}<br/>
+          Total Fines: ${d.totalFines.toLocaleString()}<br/>
+          Licenses: ${d.licenses.toLocaleString()}<br/>
+          Fines per 10,000 drivers: ${d.finesPer10k}
+        `)
         .style("left", (event.pageX + 20) + "px")
         .style("top", (event.pageY - 28) + "px");
       
@@ -150,7 +146,13 @@ Promise.all([
         .style("opacity", 1)
         .style("stroke-width", 2);
     })
-    .on("mouseout", () => tooltip3.style("opacity", 0));
+    .on("mouseleave", function() {
+      tooltip3.style("opacity", 0);
+      
+      d3.select(this)
+        .style("opacity", 0.7)
+        .style("stroke-width", 1);
+    });
 
   const legend = svg3.append("g")
     .attr("class", "legend")
@@ -194,7 +196,7 @@ Promise.all([
     .on("mouseout", function() {
       d3.select(this).select(".legend-hover-bg").remove();
     })
-    .on("click", function(event, d) {
+    .on("click", function(_, d) {
       const bubble = bubbles.filter(
         bubbleData => bubbleData.jurisdiction === d.jurisdiction
       );
@@ -210,9 +212,7 @@ Promise.all([
         const pageX = rect.left + cx + margin3.left;
         const pageY = rect.top + cy + margin3.top;
         
-        tooltip3.transition()
-          .duration(200)
-          .style("opacity", .9);
+        tooltip3.style("opacity", 1);
         
         tooltip3.html(`
           <strong>${bubbleData.jurisdiction}</strong><br/>
@@ -225,7 +225,8 @@ Promise.all([
           .style("top", (pageY - 28) + "px");
         
         bubbles.style("opacity", 0.3);
-        bubble.style("opacity", 1).style("stroke-width", 3);
+        bubble.style("opacity", 1)
+              .style("stroke-width", 3);
       }
     });
 }).catch(error => {

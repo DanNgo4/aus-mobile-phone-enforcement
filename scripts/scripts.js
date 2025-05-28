@@ -51,3 +51,5 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".next")
     .addEventListener("click", () => slideTo(index + 1));
 });
+
+d3.select(".tooltip").remove();

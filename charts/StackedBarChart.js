@@ -1,8 +1,6 @@
 const container = d3.select("#chart1");
 container.select("svg").remove();
 
-d3.select(".tooltip").remove();
-
 const tooltip1 = d3.select("body")
   .append("div")
   .attr("class", "tooltip")
@@ -36,19 +34,17 @@ const y2 = d3.scaleLinear().range([height, 0]);
 
 const color = d3.scaleOrdinal()
   .domain(["Camera issued", "Police issued"])
-  .range(["#1f77b4", "#ff7f0e"]);
+  .range(["#1F77B4", "#FF7F0E"]);
 
 const xAxisG1 = svg1Large.append("g")
   .attr("class", "x-axis")
   .attr("transform", `translate(0,${height})`);
-
 const yAxisG1 = svg1Large.append("g")
   .attr("class", "y-axis");
 
 const xAxisG2 = svg1Small.append("g")
   .attr("class", "x-axis")
   .attr("transform", `translate(0,${height})`);
-
 const yAxisG2 = svg1Small.append("g")
   .attr("class", "y-axis");
 
@@ -228,22 +224,19 @@ d3.csv("data/cleaned_dataset_1.csv", d3.autoType).then(data => {
             ${row.JURISDICTION}
           </strong>
           <br />
-          Total: ${d3.format(",")(row.total)}
+          Total fines: ${d3.format(",")(row.total)}
         `;
 
         methods.forEach(m => {
-          tooltipHtml += `<br />${m}: ${d3.format(",")(row[m])}`;
+          tooltipHtml += `<br />${m} fines: ${d3.format(",")(row[m])}`;
         });
 
-        tooltip1
-          .style("opacity", 0.9)
+        tooltip1.style("opacity", 0.9)
           .html(tooltipHtml)
           .style("left", `${ev.pageX + 5}px`)
           .style("top", `${ev.pageY - 28}px`);
       })
-      .on("mouseout", () => tooltip1.style("opacity", 0))
-      .transition()
-      .duration(500)
+      .on("mouseleave", () => tooltip1.style("opacity", 0))
       .attr("x", d => x(d.data.JURISDICTION))
       .attr("y", d => y(d[1]))
       .attr("height", d => Math.max(0, y(d[0]) - y(d[1])))
