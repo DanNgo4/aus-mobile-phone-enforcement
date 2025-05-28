@@ -150,15 +150,7 @@ Promise.all([
         .style("opacity", 1)
         .style("stroke-width", 2);
     })
-    .on("mouseout", function(d) {
-      tooltip3.transition()
-        .duration(500)
-        .style("opacity", 0);
-      
-      d3.select(this)
-        .style("opacity", 0.7)
-        .style("stroke-width", 1);
-    });
+    .on("mouseout", () => tooltip3.style("opacity", 0));
 
   const legend = svg3.append("g")
     .attr("class", "legend")
@@ -236,7 +228,6 @@ Promise.all([
         bubble.style("opacity", 1).style("stroke-width", 3);
       }
     });
-
 }).catch(error => {
   console.error("Error loading data:", error);
 }); 

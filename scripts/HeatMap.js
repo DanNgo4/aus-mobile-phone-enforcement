@@ -1,4 +1,9 @@
-const svg = d3.select("#chart2")
+const container2 = d3.select("#chart2");
+container2.select("svg").remove();
+
+d3.select(".tooltip2").remove();
+
+const svg = container2
   .append("svg")
     .attr("width",  width + margin.left + margin.right)
     .attr("height", height + margin.top  + margin.bottom)
