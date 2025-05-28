@@ -79,6 +79,8 @@ d3.csv("data/cleaned_dataset_2.csv", d3.autoType).then(data => {
       .attr("width",  x.bandwidth())
       .attr("height", y.bandwidth())
       .attr("fill",   d => color(d.value))
+      .attr("stroke", "#333")
+      .attr("stroke-width", 0.5)
       .on("mousemove", (event, d) => {
         tooltip
           .style("opacity", 1)

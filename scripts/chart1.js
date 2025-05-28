@@ -220,7 +220,7 @@ d3.csv("data/cleaned_dataset_1.csv", d3.autoType).then(data => {
     bars.enter()
       .append("rect")
       .merge(bars)
-      .on("mouseover", (ev, d) => {
+      .on("mousemove", (ev, d) => {
         const row = d.data;
 
         let tooltipHtml = `
