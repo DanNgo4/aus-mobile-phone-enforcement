@@ -209,7 +209,7 @@ function updateBubbleChart() {
           Licenses: ${d.licenses.toLocaleString()}<br/>
           Fines per 10,000 drivers: ${d.finesPer10k}`
         )
-        .style("left", (event.pageX + 15) + "px") // Adjusted for better positioning
+        .style("left", (event.pageX + 15) + "px")
         .style("top", (event.pageY - 28) + "px");
       d3.select(this).style("opacity", 1).style("stroke-width", 2);
     })
@@ -219,15 +219,15 @@ function updateBubbleChart() {
     })
     .transition().duration(500)
     .attr("cx", d => {
-      d.cx = xScale(d.roadDeaths); // Store cx on datum
+      d.cx = xScale(d.roadDeaths);
       return d.cx;
     })
     .attr("cy", d => {
-      d.cy = yScale(d.totalFines); // Store cy on datum
+      d.cy = yScale(d.totalFines);
       return d.cy;
     })
     .attr("r", d => {
-      d.r = Math.max(3, radiusScale(d.finesPer10k) || 3); // Store r on datum
+      d.r = Math.max(3, radiusScale(d.finesPer10k) || 3);
       return d.r;
     });
 
@@ -244,8 +244,8 @@ function updateBubbleChart() {
     .style("fill", "#fff")
     .style("pointer-events", "none")
     .transition().duration(500)
-    .attr("x", d => d.cx) // Use stored cx
-    .attr("y", d => d.cy + 4) // Use stored cy, adjust for label positioning
+    .attr("x", d => d.cx)
+    .attr("y", d => d.cy + 4)
     .text(d => d.jurisdiction);
 
   svg3.selectAll(".legend").remove();
@@ -288,17 +288,16 @@ function updateBubbleChart() {
     .on("mouseout", function() {
       d3.select(this).select(".legend-hover-bg").remove();
     })
-    .on("click", function(event, jurisdiction) {
+    .on("click", function(_, jurisdiction) {
       const clickedLegendItem = d3.select(this);
       const isCurrentlyActive = clickedLegendItem.classed("active-legend");
 
-      // Reset styles for all bubbles and legend items first
       svg3.selectAll(".bubble")
-        .style("opacity", 0.7) // Keep normal opacity for non-highlighted
+        .style("opacity", 0.7)
         .style("stroke-width", 1)
         .style("stroke", "#333");
       svg3.selectAll(".bubble-label")
-        .style("opacity", 1); // Ensure all labels are visible initially
+        .style("opacity", 1);
       
       legend.selectAll(".legend-item")
         .classed("active-legend", false)
@@ -313,30 +312,24 @@ function updateBubbleChart() {
         const bubbleLabel = svg3.selectAll(".bubble-label").filter(l => l.jurisdiction === jurisdiction);
 
         if (!bubble.empty()) {
-          // Explicitly keep all other bubbles at normal opacity
           svg3.selectAll(".bubble").filter(b => b.jurisdiction !== jurisdiction)
             .style("opacity", 0.3)
             .style("stroke-width", 1)
             .style("stroke", "#333");
 
-          // Highlight the selected bubble
-          bubble.raise() // Bring bubble to front
-            .style("opacity", 1) // Highlighted bubble fully opaque
+          bubble.raise()
+            .style("opacity", 1)
             .style("stroke-width", 3)
-            .style("stroke", "black"); // Prominent stroke for highlight
+            .style("stroke", "black");
           
           if (!bubbleLabel.empty()){
-            bubbleLabel.raise().style("opacity", 1); // Ensure label is visible and on top
+            bubbleLabel.raise().style("opacity", 1);
           }
 
           const bubbleData = bubble.datum();
-          const bubbleNode = bubble.node();
           
-          // Tooltip positioning logic (relative to the SVG container)
-          const svgRect = svg3.node().getBoundingClientRect(); // Get SVG container's position
-          const bubbleBoundingBox = bubbleNode.getBBox(); // Get bubble's bounding box in its own coordinate system
+          const svgRect = svg3.node().getBoundingClientRect();
           
-          // Calculate center of the bubble within the <g> element that has the main transform
           const gTransform = d3.select(svg3.node().parentNode).attr("transform");
           let gOffsetX = 0;
           let gOffsetY = 0;
@@ -348,13 +341,12 @@ function updateBubbleChart() {
               }
           }
 
-          const bubbleCenterX = bubbleData.cx || xScale(bubbleData.roadDeaths); // Use pre-calculated cx if available, else calculate
+          const bubbleCenterX = bubbleData.cx || xScale(bubbleData.roadDeaths);
           const bubbleCenterY = bubbleData.cy || yScale(bubbleData.totalFines);
-          const bubbleRadius = bubbleData.r || (radiusScale(bubbleData.finesPer10k) || 0); // Use pre-calculated r if available
+          const bubbleRadius = bubbleData.r || (radiusScale(bubbleData.finesPer10k) || 0);
 
-          // Position tooltip above the bubble
-          let tooltipX = svgRect.left + gOffsetX + bubbleCenterX;
-          let tooltipY = svgRect.top + gOffsetY + bubbleCenterY - bubbleRadius - 10; // 10px offset above bubble
+          let tooltipX = svgRect.left + gOffsetX + bubbleCenterX - 100;
+          let tooltipY = svgRect.top + gOffsetY + bubbleCenterY - bubbleRadius - 10;
 
           tooltip3.style("opacity", 1)
             .html(
@@ -366,13 +358,12 @@ function updateBubbleChart() {
             )
             .style("left", tooltipX + "px")
             .style("top", tooltipY + "px")
-            .style("transform", "translateX(-50%)"); // Center tooltip horizontally
+            .style("transform", "translateX(-50%)"); 
 
         } else {
           console.warn("No bubble data for legend item:", jurisdiction);
         }
       } 
-      // If it was active, clicking again effectively deselects it (already handled by reset above)
     });
 
   legendItems.append("circle")
