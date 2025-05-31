@@ -103,7 +103,7 @@ d3.csv("data/cleaned_dataset_1.csv", d3.autoType).then(data => {
   buildFilterDropdown("detectionMethodFilter", methods);
   buildFilterDropdown("jurisdictionFilter", jurisdictions); 
 
-  document.querySelectorAll(".filter-btn").forEach(btn => {
+  document.querySelectorAll("#chart1 .filter-btn").forEach(btn => {
     btn.addEventListener("click", (e) => {
       const dropdown = e.target.closest(".filter-dropdown");
       e.stopPropagation();
@@ -111,10 +111,9 @@ d3.csv("data/cleaned_dataset_1.csv", d3.autoType).then(data => {
     });
   });
 
-  // Close dropdowns only when clicking outside any dropdown
   document.addEventListener("click", (e) => {
-    if (!e.target.closest(".filter-dropdown")) {
-      document.querySelectorAll(".filter-dropdown").forEach(d => {
+    if (!e.target.closest("#chart1 .filter-dropdown")) {
+      document.querySelectorAll("#chart1 .filter-dropdown").forEach(d => {
         d.classList.remove("active");
       });
     }

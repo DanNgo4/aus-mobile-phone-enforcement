@@ -33,97 +33,178 @@ svg.append("text")
 
 d3.csv("data/cleaned_dataset_2.csv", d3.autoType).then(data => {
   const parseDate = d3.timeParse("%Y-%m-%d");
-  const records   = [];
+  
+  const jurisdictions = Array.from(new Set(data.map(d => d.JURISDICTION))).sort();
+  const ageGroups = Array.from(new Set(data.map(d => d.AGE_GROUP))).sort();
+  const methods = Array.from(new Set(data.map(d => d.DETECTION_METHOD))).sort();
+  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-  data.forEach(d => {
-    const fines        = +d.FINES;
-    const jurisdiction = d.JURISDICTION;
+  function buildHeatmapFilterDropdown(id, values) {
+    const container = d3.select(`#${id}`);
+    values.forEach(v => {
+      const label = container.append("label");
 
-    if (jurisdiction === "QLD") {
-      // split QLD fines across its full date span
-      const perMonth = fines / 12;
+      label.append("input")
+        .attr("type", "checkbox")
+        .attr("value", v)
+        .property("checked", true)
+        .on("change", updateHeatmap);
 
-      for (let i = 0; i < 12; i++) {
-        const month = i;
-        
-        records.push({ jurisdiction, month, fines: perMonth });
-      }
-    } else {
-      const date  = d.START_DATE instanceof Date
-        ? d.START_DATE
-        : parseDate(d.START_DATE);
+      label.append("span").text(v);
+    });
+  }
 
-      const month = date.getMonth();
+  buildHeatmapFilterDropdown("heatmapAgeGroupFilter", ageGroups);
+  buildHeatmapFilterDropdown("heatmapDetectionMethodFilter", methods);
+  buildHeatmapFilterDropdown("heatmapJurisdictionFilter", jurisdictions);
+  buildHeatmapFilterDropdown("heatmapMonthFilter", monthNames);
 
-      records.push({ jurisdiction, month, fines });
-    }
-  });
-
-  const rollup = d3.rollup(
-    records,
-    v => d3.sum(v, r => r.fines),
-    r => r.jurisdiction,
-    r => r.month
-  );
-
-  const jurisdictions = Array.from(rollup.keys()).sort();
-  const months        = d3.range(0, 12);
-
-  const cells = [];
-  jurisdictions.forEach(j => {
-    months.forEach(m => {
-      const val = rollup.get(j).get(m) ?? 0;
-      cells.push({ jurisdiction: j, month: m, value: val });
+  document.querySelectorAll("#chart2 .filter-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const dropdown = e.target.closest(".filter-dropdown");
+      e.stopPropagation();
+      dropdown.classList.toggle("active");
     });
   });
 
-  const x = d3.scaleBand()
-    .domain(months)
-    .range([0, width])
-    .padding(0.05);
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest("#chart2 .filter-dropdown")) {
+      document.querySelectorAll("#chart2 .filter-dropdown").forEach(d => {
+        d.classList.remove("active");
+      });
+    }
+  });
 
-  const y = d3.scaleBand()
-    .domain(jurisdictions)
-    .range([0, height])
-    .padding(0.05);
+  function updateHeatmap() {
+    const selectedAges = Array.from(document.querySelectorAll("#heatmapAgeGroupFilter input:checked"))
+                              .map(n => n.value);
+    const selectedMethods = Array.from(document.querySelectorAll("#heatmapDetectionMethodFilter input:checked"))
+                                 .map(n => n.value);
+    const selectedJurisdictions = Array.from(document.querySelectorAll("#heatmapJurisdictionFilter input:checked"))
+                                      .map(n => n.value);
+    const selectedMonthNames = Array.from(document.querySelectorAll("#heatmapMonthFilter input:checked"))
+                                   .map(n => n.value);
+    
+    const selectedMonths = selectedMonthNames.map(name => monthNames.indexOf(name));
 
-  const color = d3.scaleSequential()
-    .interpolator(d3.interpolateBlues)
-    .domain([0, d3.max(cells, d => d.value)]);
+    const filteredData = data.filter(d =>
+      selectedAges.includes(d.AGE_GROUP) &&
+      selectedMethods.includes(d.DETECTION_METHOD) &&
+      selectedJurisdictions.includes(d.JURISDICTION)
+    );
 
-  svg.selectAll("rect.cell")
-    .data(cells)
-    .join("rect")
+    const records = [];
+    filteredData.forEach(d => {
+      const fines = +d.FINES;
+      const jurisdiction = d.JURISDICTION;
+
+      if (jurisdiction === "QLD") {
+        // split QLD fines across its full date span
+        const perMonth = fines / 12;
+
+        for (let i = 0; i < 12; i++) {
+          const month = i;
+          
+          if (selectedMonths.includes(month)) {
+            records.push({ jurisdiction, month, fines: perMonth });
+          }
+        }
+      } else {
+        const date = d.START_DATE instanceof Date
+          ? d.START_DATE
+          : parseDate(d.START_DATE);
+
+        const month = date.getMonth();
+
+        if (selectedMonths.includes(month)) {
+          records.push({ jurisdiction, month, fines });
+        }
+      }
+    });
+
+    const rollup = d3.rollup(
+      records,
+      v => d3.sum(v, r => r.fines),
+      r => r.jurisdiction,
+      r => r.month
+    );
+
+    const filteredJurisdictions = selectedJurisdictions.filter(
+      j => rollup.has(j)
+    );
+    const months = selectedMonths;
+
+    const cells = [];
+    filteredJurisdictions.forEach(j => {
+      months.forEach(m => {
+        const val = rollup.get(j).get(m) ?? 0;
+        cells.push({ jurisdiction: j, month: m, value: val });
+      });
+    });
+
+    const x = d3.scaleBand()
+      .domain(months)
+      .range([0, width])
+      .padding(0.05);
+
+    const y = d3.scaleBand()
+      .domain(filteredJurisdictions)
+      .range([0, height])
+      .padding(0.05);
+
+    const color = d3.scaleSequential()
+      .interpolator(d3.interpolateBlues)
+      .domain([0, d3.max(cells, d => d.value)]);
+
+    const cellSelection = svg.selectAll("rect.cell")
+      .data(cells, d => `${d.jurisdiction}-${d.month}`);
+
+    cellSelection.exit().remove();
+
+    cellSelection.enter()
+      .append("rect")
       .attr("class", "cell")
+      .merge(cellSelection)
+      .transition()
+      .duration(500)
       .attr("x", d => x(d.month))
       .attr("y", d => y(d.jurisdiction))
-      .attr("width",  x.bandwidth())
+      .attr("width", x.bandwidth())
       .attr("height", y.bandwidth())
-      .attr("fill",   d => color(d.value))
+      .attr("fill", d => color(d.value))
       .attr("stroke", "#333")
-      .attr("stroke-width", 0.5)
+      .attr("stroke-width", 0.5);
+
+    svg.selectAll("rect.cell")
       .on("mousemove", (event, d) => {
         tooltip2
           .style("opacity", 1)
           .html(
-            `<strong>${d.jurisdiction}</strong><br/>
-              ${d3.timeFormat("%B")(new Date(2023, d.month, 1))}: ${d.value}`
+            `<strong>${d.jurisdiction}</strong>
+            <br/>
+            ${d3.timeFormat("%B")(new Date(2023, d.month, 1))}: ${d3.format(",")(d.value)}`
           )
           .style("left", (event.pageX + 10) + "px")
-          .style("top" , (event.pageY - 28) + "px");
+          .style("top", (event.pageY - 28) + "px");
       })
       .on("mouseleave", () => tooltip2.style("opacity", 0));
 
-  const xAxis = d3.axisTop(x)
-    .tickFormat(m => d3.timeFormat("%b")(new Date(2023, m, 1)));
+    const xAxis = d3.axisTop(x)
+      .tickFormat(m => d3.timeFormat("%b")(new Date(2023, m, 1)));
 
-  const yAxis = d3.axisLeft(y);
+    const yAxis = d3.axisLeft(y);
 
-  svg.append("g")
-    .attr("class", "axis")
-    .call(xAxis);
+    svg.select(".x-axis").remove();
+    svg.select(".y-axis").remove();
 
-  svg.append("g")
-    .attr("class", "axis")
-    .call(yAxis);
+    svg.append("g")
+      .attr("class", "x-axis")
+      .call(xAxis);
+
+    svg.append("g")
+      .attr("class", "y-axis")
+      .call(yAxis);
+  }
+
+  updateHeatmap();
 });

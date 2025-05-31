@@ -18,7 +18,41 @@
     <button class="slide-btn prev">‹</button>
 
     <article class="slides">
-      <section class="slide" id="chart2"></section>
+      <section class="slide" id="chart2">
+        <section class="filters-container">
+          <div class="filter-dropdown">
+            <button class="filter-btn">
+              Age Groups <span>&#9660;</span>
+            </button>
+      
+            <div class="dropdown-content" id="heatmapAgeGroupFilter"></div>
+          </div>
+      
+          <div class="filter-dropdown">
+            <button class="filter-btn">
+              Detection Methods <span>&#9660;</span>
+            </button>
+      
+            <div class="dropdown-content" id="heatmapDetectionMethodFilter"></div>
+          </div>
+      
+          <div class="filter-dropdown">
+            <button class="filter-btn">
+              Jurisdictions <span>&#9660;</span>
+            </button>
+      
+            <div class="dropdown-content" id="heatmapJurisdictionFilter"></div>
+          </div>
+
+          <div class="filter-dropdown">
+            <button class="filter-btn">
+              Months <span>&#9660;</span>
+            </button>
+      
+            <div class="dropdown-content" id="heatmapMonthFilter"></div>
+          </div>
+        </section>
+      </section>
 
       <section class="slide" id="chart1">
         <section class="filters-container">
@@ -47,8 +81,6 @@
           </div>
         </section>
       </section>
-
-
 
       <section class="slide" id="chart3"></section>
     </article>
