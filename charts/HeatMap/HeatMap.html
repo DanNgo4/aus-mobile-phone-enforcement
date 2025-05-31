@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heatmap Chart - Fines Data</title>
+  <link rel="stylesheet" href="../../styles/styles.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Fines For Mobile Phone Use 2023</h1>
+    <nav class="main-nav">
+      <a href="../../index.html">Home Page</a>
+      <a href="../StackedBarChart/StackedBarChart.html">Stacked Bar Chart</a>
+      <a href="../BubbleChart/BubbleChart.html">Bubble Chart</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="chart2" class="chart-container">
+      <section class="filters-container">
+        <div class="filter-dropdown">
+          <button class="filter-btn">
+            Age Groups <span>&#9660;</span>
+          </button>
+          <div class="dropdown-content" id="heatmapAgeGroupFilter"></div>
+        </div>
+        <div class="filter-dropdown">
+          <button class="filter-btn">
+            Detection Methods <span>&#9660;</span>
+          </button>
+          <div class="dropdown-content" id="heatmapDetectionMethodFilter"></div>
+        </div>
+        <div class="filter-dropdown">
+          <button class="filter-btn">
+            Jurisdictions <span>&#9660;</span>
+          </button>
+          <div class="dropdown-content" id="heatmapJurisdictionFilter"></div>
+        </div>
+        <div class="filter-dropdown">
+          <button class="filter-btn">
+            Months <span>&#9660;</span>
+          </button>
+          <div class="dropdown-content" id="heatmapMonthFilter"></div>
+        </div>
+        <button class="reset-filters-btn">Reset Filters</button>
+      </section>
+    </section>
+  </main>
+
+  <script src="../../scripts/constants.js"></script>
+  <script src="HeatMap.js"></script>
+  
+  <footer>@Data Visulisation</footer>
+</body>
+</html> 

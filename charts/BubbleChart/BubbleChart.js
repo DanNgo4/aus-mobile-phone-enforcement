@@ -1,0 +1,385 @@
+const margin3 = { top: 50, right: 120, bottom: 100, left: 80 };
+const width3 = 800 - margin3.left - margin3.right;
+const height3 = 600 - margin3.top - margin3.bottom;
+
+const container3 = d3.select("#chart3");
+container3.select("svg").remove();
+
+const tooltip3 = d3.select("body")
+  .append("div")
+  .attr("class", "tooltip")
+  .style("opacity", 0);
+
+const svg3 = container3.append("svg")
+  .attr("width", width3 + margin3.left + margin3.right)
+  .attr("height", height3 + margin3.top + margin3.bottom)
+  .append("g")
+  .attr("transform", `translate(${margin3.left},${margin3.top})`);
+
+container3.insert("h2", ":first-child")
+  .style("text-align", "center")
+  .style("margin-bottom", "20px")
+  .text("Road Deaths vs Total Fines by Jurisdiction");
+
+const xScale = d3.scaleLinear().range([0, width3]);
+const yScale = d3.scaleLinear().range([height3, 0]);
+const radiusScale = d3.scaleSqrt().range([5, 40]);
+
+const colorScale = d3.scaleOrdinal()
+  .domain(["NSW",     "QLD",     "VIC",     "TAS",     "SA",      "WA",      "NT",      "ACT"])
+  .range([ "#FF69B4", "#FF7F0E", "#2CA02C", "#D62728", "#9467BD", "#8C564B", "#1F77B4", "#7F7F7F"]);
+
+let originalRoadData, originalFinesData;
+
+Promise.all([
+  d3.csv("../../data/license_and_road_death.csv", d3.autoType),
+  d3.csv("../../data/cleaned_dataset_1.csv", d3.autoType)
+]).then(([roadDataLoaded, finesDataLoaded]) => {
+  originalRoadData = roadDataLoaded;
+  originalFinesData = finesDataLoaded;
+  
+  const ageGroups = Array.from(new Set(originalFinesData.map(d => d.AGE_GROUP))).sort();
+  const methods = Array.from(new Set(originalFinesData.map(d => d.DETECTION_METHOD))).sort();
+
+  buildBubbleFilterDropdown("bubbleAgeGroupFilter", ageGroups, updateBubbleChart);
+  buildBubbleFilterDropdown("bubbleDetectionMethodFilter", methods, updateBubbleChart);
+
+  if (svg3.select(".x-axis").empty()) {
+    svg3.append("g")
+      .attr("class", "x-axis")
+      .attr("transform", `translate(0,${height3})`);
+  }
+  if (svg3.select(".y-axis").empty()) {
+    svg3.append("g")
+      .attr("class", "y-axis");
+  }
+  if (svg3.select(".x-label").empty()) {
+    svg3.append("text")
+      .attr("class", "x-label")
+      .attr("x", width3 / 2)
+      .attr("y", height3 + 50)
+      .attr("text-anchor", "middle")
+      .style("font-size", "14px")
+      .text("Number of Road Deaths");
+  }
+  if (svg3.select(".y-label").empty()) {
+    svg3.append("text")
+      .attr("class", "y-label")
+      .attr("transform", "rotate(-90)")
+      .attr("y", -60)
+      .attr("x", -height3 / 2)
+      .attr("text-anchor", "middle")
+      .style("font-size", "14px")
+      .text("Total Number of Fines");
+  }
+  
+  setupBubbleChartEventListeners();
+  updateBubbleChart();
+
+}).catch(error => {
+  console.error("Error loading data for Bubble Chart:", error);
+});
+
+function buildBubbleFilterDropdown(id, values, changeCallback) {
+  const dropdownContainer = d3.select(`#${id}`);
+  dropdownContainer.selectAll("*").remove();
+  values.forEach(v => {
+    const label = dropdownContainer.append("label");
+    label.append("input")
+      .attr("type", "checkbox")
+      .attr("value", v)
+      .property("checked", true)
+      .on("change", changeCallback);
+    label.append("span").text(v);
+  });
+}
+
+function setupBubbleChartEventListeners() {
+  const resetButton = document.querySelector("#chart3 .filters-container .reset-filters-btn");
+  if (resetButton) {
+    resetButton.addEventListener("click", () => {
+      document.querySelectorAll("#chart3 input[type='checkbox']").forEach(checkbox => {
+        checkbox.checked = true;
+      });
+      updateBubbleChart();
+    });
+  } else {
+    console.warn("Reset button for chart 3 not found.");
+  }
+
+  document.querySelectorAll("#chart3 .filter-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const dropdown = e.target.closest(".filter-dropdown");
+      e.stopPropagation();
+      document.querySelectorAll("#chart3 .filter-dropdown").forEach(d => {
+        if (d !== dropdown) {
+          d.classList.remove("active");
+        }
+      });
+      dropdown.classList.toggle("active");
+    });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest("#chart3 .filter-dropdown")) {
+      document.querySelectorAll("#chart3 .filter-dropdown.active").forEach(d => {
+        d.classList.remove("active");
+      });
+    }
+  });
+
+  d3.select("body").on("click.bubble-chart-interactions", function(event) {
+    if (!event.target.closest("#chart3 .legend-item") && !event.target.closest("#chart3 .bubble")) {
+      svg3.selectAll(".bubble")
+        .style("opacity", 0.7)
+        .style("stroke-width", 1);
+      tooltip3.style("opacity", 0);
+    }
+  });
+}
+
+function updateBubbleChart() {
+  if (!originalRoadData || !originalFinesData) return;
+
+  const selectedAges = Array.from(document.querySelectorAll("#bubbleAgeGroupFilter input:checked")).map(n => n.value);
+  const selectedMethods = Array.from(document.querySelectorAll("#bubbleDetectionMethodFilter input:checked")).map(n => n.value);
+
+  const filteredFinesData = originalFinesData.filter(d =>
+    selectedAges.includes(d.AGE_GROUP) &&
+    selectedMethods.includes(d.DETECTION_METHOD)
+  );
+
+  const finesByJurisdiction = d3.rollup(
+    filteredFinesData,
+    v => d3.sum(v, d => d.FINES),
+    d => d.JURISDICTION
+  );
+
+  const bubbleData = originalRoadData.map(d => {
+    const totalFines = finesByJurisdiction.get(d.JURISDICTION) || 0;
+    const finesPer10k = Math.floor((totalFines / d.LICENSES) * 10000);
+    return {
+      jurisdiction: d.JURISDICTION,
+      roadDeaths: d.ROAD_DEATHS,
+      totalFines: totalFines,
+      licenses: d.LICENSES,
+      finesPer10k: finesPer10k
+    };
+  });
+
+  xScale.domain([0, d3.max(bubbleData, d => d.roadDeaths) * 1.1 || 10]);
+  const maxFines = d3.max(bubbleData, d => d.totalFines);
+  yScale.domain([0, Math.max(1, maxFines * 1.1 || 10)]);
+  radiusScale.domain([0, d3.max(bubbleData, d => d.finesPer10k) || 1]);
+
+  svg3.select(".x-axis")
+    .transition()
+    .duration(500)
+    .call(d3.axisBottom(xScale));
+
+  svg3.select(".y-axis")
+    .transition()
+    .duration(500)
+    .call(d3.axisLeft(yScale).tickFormat(d3.format(",")));
+
+  const bubbles = svg3.selectAll(".bubble")
+    .data(bubbleData, d => d.jurisdiction);
+
+  bubbles.exit().remove();
+
+  const bubblesEnter = bubbles.enter()
+    .append("circle")
+    .attr("class", "bubble")
+    .style("fill", d => colorScale(d.jurisdiction))
+    .style("opacity", 0.7)
+    .style("stroke", "#333")
+    .style("stroke-width", 1);
+
+  bubbles.merge(bubblesEnter)
+    .style("fill", d => colorScale(d.jurisdiction))
+    .style("opacity", 0.7)
+    .style("stroke", "#333")
+    .style("stroke-width", 1)
+    .on("mousemove", function(event, d) {
+      tooltip3.style("opacity", 1)
+        .html(
+          `<strong>${d.jurisdiction}</strong><br/>
+          Road Deaths: ${d.roadDeaths}<br/>
+          Total Fines: ${d.totalFines.toLocaleString()}<br/>
+          Licenses: ${d.licenses.toLocaleString()}<br/>
+          Fines per 10,000 drivers: ${d.finesPer10k}`
+        )
+        .style("left", (event.pageX + 15) + "px") // Adjusted for better positioning
+        .style("top", (event.pageY - 28) + "px");
+      d3.select(this).style("opacity", 1).style("stroke-width", 2);
+    })
+    .on("mouseleave", function() {
+      tooltip3.style("opacity", 0);
+      d3.select(this).style("opacity", 0.7).style("stroke-width", 1);
+    })
+    .transition().duration(500)
+    .attr("cx", d => {
+      d.cx = xScale(d.roadDeaths); // Store cx on datum
+      return d.cx;
+    })
+    .attr("cy", d => {
+      d.cy = yScale(d.totalFines); // Store cy on datum
+      return d.cy;
+    })
+    .attr("r", d => {
+      d.r = Math.max(3, radiusScale(d.finesPer10k) || 3); // Store r on datum
+      return d.r;
+    });
+
+  const labels = svg3.selectAll(".bubble-label").data(bubbleData, d => d.jurisdiction);
+
+  labels.exit().remove();
+
+  const labelsEnter = labels.enter().append("text").attr("class", "bubble-label");
+  
+  labels.merge(labelsEnter)
+    .attr("text-anchor", "middle")
+    .style("font-size", "10px")
+    .style("font-weight", "bold")
+    .style("fill", "#fff")
+    .style("pointer-events", "none")
+    .transition().duration(500)
+    .attr("x", d => d.cx) // Use stored cx
+    .attr("y", d => d.cy + 4) // Use stored cy, adjust for label positioning
+    .text(d => d.jurisdiction);
+
+  svg3.selectAll(".legend").remove();
+  const allJurisdictions = originalRoadData.map(d => d.JURISDICTION).sort((a, b) => a.localeCompare(b));
+  const legend = svg3.append("g")
+    .attr("class", "legend")
+    .attr("transform", `translate(${width3 + 20}, 20)`);
+  const legendItems = legend.selectAll(".legend-item")
+    .data(allJurisdictions, d => d)
+    .enter().append("g")
+    .attr("class", "legend-item")
+    .attr("transform", (_, i) => `translate(0, ${i * 25})`);
+  legendItems.append("circle")
+    .attr("cx", 8)
+    .attr("cy", 8)
+    .attr("r", 8)
+    .style("fill", d => colorScale(d))
+    .style("opacity", 0.7);
+  legendItems.append("text")
+    .attr("x", 20)
+    .attr("y", 8)
+    .attr("dy", "0.35em")
+    .style("font-size", "12px")
+    .style("text-decoration", "underline")
+    .text(d => d);
+  legendItems
+    .style("cursor", "pointer")
+    .on("mouseover", function() {
+      d3.select(this)
+        .append("rect")
+        .attr("class", "legend-hover-bg")
+        .attr("x", -5)
+        .attr("y", -5)
+        .attr("width", 100)
+        .attr("height", 20)
+        .style("fill", "#f0f0f0")
+        .style("opacity", 0.5)
+        .lower();
+    })
+    .on("mouseout", function() {
+      d3.select(this).select(".legend-hover-bg").remove();
+    })
+    .on("click", function(event, jurisdiction) {
+      const clickedLegendItem = d3.select(this);
+      const isCurrentlyActive = clickedLegendItem.classed("active-legend");
+
+      // Reset styles for all bubbles and legend items first
+      svg3.selectAll(".bubble")
+        .style("opacity", 0.7) // Keep normal opacity for non-highlighted
+        .style("stroke-width", 1)
+        .style("stroke", "#333");
+      svg3.selectAll(".bubble-label")
+        .style("opacity", 1); // Ensure all labels are visible initially
+      
+      legend.selectAll(".legend-item")
+        .classed("active-legend", false)
+        .select("circle").style("opacity", 0.7);
+      tooltip3.style("opacity", 0);
+
+      if (!isCurrentlyActive) {
+        clickedLegendItem.classed("active-legend", true);
+        clickedLegendItem.select("circle").style("opacity", 1);
+
+        const bubble = svg3.selectAll(".bubble").filter(b => b.jurisdiction === jurisdiction);
+        const bubbleLabel = svg3.selectAll(".bubble-label").filter(l => l.jurisdiction === jurisdiction);
+
+        if (!bubble.empty()) {
+          // Explicitly keep all other bubbles at normal opacity
+          svg3.selectAll(".bubble").filter(b => b.jurisdiction !== jurisdiction)
+            .style("opacity", 0.3)
+            .style("stroke-width", 1)
+            .style("stroke", "#333");
+
+          // Highlight the selected bubble
+          bubble.raise() // Bring bubble to front
+            .style("opacity", 1) // Highlighted bubble fully opaque
+            .style("stroke-width", 3)
+            .style("stroke", "black"); // Prominent stroke for highlight
+          
+          if (!bubbleLabel.empty()){
+            bubbleLabel.raise().style("opacity", 1); // Ensure label is visible and on top
+          }
+
+          const bubbleData = bubble.datum();
+          const bubbleNode = bubble.node();
+          
+          // Tooltip positioning logic (relative to the SVG container)
+          const svgRect = svg3.node().getBoundingClientRect(); // Get SVG container's position
+          const bubbleBoundingBox = bubbleNode.getBBox(); // Get bubble's bounding box in its own coordinate system
+          
+          // Calculate center of the bubble within the <g> element that has the main transform
+          const gTransform = d3.select(svg3.node().parentNode).attr("transform");
+          let gOffsetX = 0;
+          let gOffsetY = 0;
+          if (gTransform) {
+              const parts = /translate\(([^,]+),([^)]+)\)/.exec(gTransform);
+              if (parts && parts.length === 3) {
+                  gOffsetX = parseFloat(parts[1]);
+                  gOffsetY = parseFloat(parts[2]);
+              }
+          }
+
+          const bubbleCenterX = bubbleData.cx || xScale(bubbleData.roadDeaths); // Use pre-calculated cx if available, else calculate
+          const bubbleCenterY = bubbleData.cy || yScale(bubbleData.totalFines);
+          const bubbleRadius = bubbleData.r || (radiusScale(bubbleData.finesPer10k) || 0); // Use pre-calculated r if available
+
+          // Position tooltip above the bubble
+          let tooltipX = svgRect.left + gOffsetX + bubbleCenterX;
+          let tooltipY = svgRect.top + gOffsetY + bubbleCenterY - bubbleRadius - 10; // 10px offset above bubble
+
+          tooltip3.style("opacity", 1)
+            .html(
+              `<strong>${bubbleData.jurisdiction}</strong><br/>
+              Road Deaths: ${bubbleData.roadDeaths}<br/>
+              Total Fines: ${bubbleData.totalFines.toLocaleString()}<br/>
+              Licenses: ${bubbleData.licenses.toLocaleString()}<br/>
+              Fines per 10,000 drivers: ${bubbleData.finesPer10k}`
+            )
+            .style("left", tooltipX + "px")
+            .style("top", tooltipY + "px")
+            .style("transform", "translateX(-50%)"); // Center tooltip horizontally
+
+        } else {
+          console.warn("No bubble data for legend item:", jurisdiction);
+        }
+      } 
+      // If it was active, clicking again effectively deselects it (already handled by reset above)
+    });
+
+  legendItems.append("circle")
+    .attr("cx", 8).attr("cy", 8).attr("r", 8)
+    .style("fill", d => colorScale(d));
+
+  legendItems.append("text")
+    .attr("x", 20).attr("y", 8).attr("dy", "0.35em")
+    .style("font-size", "12px").text(d => d);
+} 

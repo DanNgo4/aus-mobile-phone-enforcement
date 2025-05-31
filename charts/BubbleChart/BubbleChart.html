@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubble Chart - Fines Data</title>
+  <link rel="stylesheet" href="../../styles/styles.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Fines For Mobile Phone Use 2023</h1>
+    <nav class="main-nav">
+      <a href="../../index.html">Home Page</a>
+      <a href="../StackedBarChart/StackedBarChart.html">Stacked Bar Chart</a>
+      <a href="../HeatMap/HeatMap.html">Heatmap Chart</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="chart3" class="chart-container">
+      <section class="filters-container">
+        <div class="filter-dropdown">
+          <button class="filter-btn">
+            Age Groups <span>&#9660;</span>
+          </button>
+          <div class="dropdown-content" id="bubbleAgeGroupFilter"></div>
+        </div>
+        <div class="filter-dropdown">
+          <button class="filter-btn">
+            Detection Methods <span>&#9660;</span>
+          </button>
+          <div class="dropdown-content" id="bubbleDetectionMethodFilter"></div>
+        </div>
+        <button class="reset-filters-btn">Reset Filters</button>
+      </section>
+    </section>
+  </main>
+
+  <script src="../../scripts/constants.js"></script>
+  <script src="BubbleChart.js"></script>
+  
+  <footer>@Data Visulisation</footer>
+</body>
+</html> 
