@@ -248,5 +248,4 @@ d3.csv("data/cleaned_dataset_1.csv", d3.autoType).then(data => {
   }
 
   update();
-
 }).catch(err => console.error("Error loading CSV:", err));

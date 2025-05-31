@@ -2,70 +2,66 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive D3 Charts</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive D3 Charts</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 
 <body>
+  <header>
+    <h1>Fines For Mobile Phone Use 2023</h1>
+  </header>
 
-    <header>
-        <h1>Fines For Mobile Phone Use 2023</h1>
-    </header>
-    <nav>
-        <section class="filters-container">
-            <div class="filter-dropdown">
-                <button class="filter-btn">
-        Age Groups
-
-        <span>&#9660;</span>
-      </button>
-
-                <div class="dropdown-content" id="ageGroupFilter"></div>
-            </div>
-
-            <div class="filter-dropdown">
-                <button class="filter-btn">
-        Detection Methods 
-
-        <span>&#9660;</span>
-      </button>
-
-                <div class="dropdown-content" id="detectionMethodFilter"></div>
-            </div>
-
-            <div class="filter-dropdown">
-                <button class="filter-btn">
-        Jurisdictions 
-
-        <span>&#9660;</span>
-      </button>
-
-                <div class="dropdown-content" id="jurisdictionFilter"></div>
-            </div>
-        </section>
-    </nav>
-
-    <main class="slider">
-        <button class="slide-btn prev">‹</button>
+  <main class="slider">
+    <button class="slide-btn prev">‹</button>
 
     <article class="slides">
-      <section class="slide" id="chart3"></section>
-      <section class="slide" id="chart1"></section>
       <section class="slide" id="chart2"></section>
+
+      <section class="slide" id="chart1">
+        <section class="filters-container">
+          <div class="filter-dropdown">
+            <button class="filter-btn">
+              Age Groups <span>&#9660;</span>
+            </button>
+      
+            <div class="dropdown-content" id="ageGroupFilter"></div>
+          </div>
+      
+          <div class="filter-dropdown">
+            <button class="filter-btn">
+              Detection Methods <span>&#9660;</span>
+            </button>
+      
+            <div class="dropdown-content" id="detectionMethodFilter"></div>
+          </div>
+      
+          <div class="filter-dropdown">
+            <button class="filter-btn">
+              Jurisdictions <span>&#9660;</span>
+            </button>
+      
+            <div class="dropdown-content" id="jurisdictionFilter"></div>
+          </div>
+        </section>
+      </section>
+
+
+
+      <section class="slide" id="chart3"></section>
     </article>
 
-        <button class="slide-btn next">›</button>
-    </main>
+    <button class="slide-btn next">›</button>
+  </main>
 
-    <script src="scripts/scripts.js"></script>
-    <script src="scripts/constants.js"></script>
-    <script src="charts/StackedBarChart.js"></script>
-    <script src="charts/HeatMap.js"></script>
-    <script src="charts/BubbleChart.js"></script>
-    <footer>@Data Visulisation</footer>
+  <script src="scripts/scripts.js"></script>
+  <script src="scripts/constants.js"></script>
+  <script src="charts/StackedBarChart.js"></script>
+  <script src="charts/HeatMap.js"></script>
+  <script src="charts/BubbleChart.js"></script>
+  <footer>@Data Visulisation</footer>
 </body>
 
 </html>
