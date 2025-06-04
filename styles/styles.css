@@ -349,3 +349,12 @@ footer {
 .chart-description strong {
   color: #2c3e50;
 }
+
+.chart-legend-container {
+  background: #fff;
+  margin: 0 auto 32px auto;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+}

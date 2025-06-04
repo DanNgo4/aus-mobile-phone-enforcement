@@ -376,4 +376,46 @@ function updateBubbleChart() {
   legendItems.append("text")
     .attr("x", 20).attr("y", 8).attr("dy", "0.35em")
     .style("font-size", "12px").text(d => d);
+
+  renderSizeLegend();
+}
+
+function renderSizeLegend() {
+  const legendDiv = d3.select("#bubble-size-legend");
+  legendDiv.html("");
+
+  const legendSvg = legendDiv.append("svg")
+    .attr("width", 300)
+    .attr("height", 100);
+
+  legendSvg.append("text")
+    .attr("x", 150)
+    .attr("y", 10)
+    .attr("text-anchor", "middle")
+    .style("font-size", "12px")
+    .style("font-weight", "bold")
+    .text("Fines per 10,000 licenses");
+
+  const sizeValues = [100, 200, 300];
+  const circleSpacing = 80;
+  const startX = (300 - (sizeValues.length - 1) * circleSpacing) / 2;
+  
+  sizeValues.forEach((d, i) => {
+    const cx = startX + i * circleSpacing;
+    
+    legendSvg.append("circle")
+      .attr("cx", cx)
+      .attr("cy", 50)
+      .attr("r", radiusScale(d))
+      .style("fill", "#ccc")
+      .style("opacity", 0.7)
+      .style("stroke", "#333");
+
+    legendSvg.append("text")
+      .attr("x", cx)
+      .attr("y", 65)
+      .attr("text-anchor", "middle")
+      .style("font-size", "12px")
+      .text(d.toLocaleString());
+  });
 } 
