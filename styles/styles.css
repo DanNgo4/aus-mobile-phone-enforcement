@@ -1,5 +1,12 @@
 body {
   overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e9ecef;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .slider {
@@ -165,20 +172,13 @@ header {
   text-align: center;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #e9ecef;
-}
-
 footer {
   background-color: #2c3e50;
   color: white;
   padding: 20px;
-  position: relative;
-  bottom: 0;
   width: 100%;
+  text-align: center;
+  margin-top: auto;
 }
 
 .filter-dropdown {
@@ -286,4 +286,46 @@ footer {
 .reset-filters-btn:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.3);
+}
+
+.main-content-area {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.main-content-area h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.main-content-area p {
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+
+.main-content-area h3 {
+  color: #2c3e50;
+  margin: 1.5rem 0 1rem;
+}
+
+.main-content-area ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.main-content-area li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.main-content-area li:before {
+  content: "•";
+  color: #3498db;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
 }
