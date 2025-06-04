@@ -103,23 +103,18 @@ function setupBubbleChartEventListeners() {
       });
       updateBubbleChart();
     });
-  } else {
-    console.warn("Reset button for chart 3 not found.");
   }
 
+  // Handle filter button clicks
   document.querySelectorAll("#chart3 .filter-btn").forEach(btn => {
     btn.addEventListener("click", (e) => {
       const dropdown = e.target.closest(".filter-dropdown");
       e.stopPropagation();
-      document.querySelectorAll("#chart3 .filter-dropdown").forEach(d => {
-        if (d !== dropdown) {
-          d.classList.remove("active");
-        }
-      });
       dropdown.classList.toggle("active");
     });
   });
 
+  // Close dropdowns when clicking outside
   document.addEventListener("click", (e) => {
     if (!e.target.closest("#chart3 .filter-dropdown")) {
       document.querySelectorAll("#chart3 .filter-dropdown.active").forEach(d => {
@@ -128,6 +123,14 @@ function setupBubbleChartEventListeners() {
     }
   });
 
+  // Handle checkbox changes
+  document.querySelectorAll("#chart3 input[type='checkbox']").forEach(checkbox => {
+    checkbox.addEventListener("change", () => {
+      updateBubbleChart();
+    });
+  });
+
+  // Handle bubble interactions
   d3.select("body").on("click.bubble-chart-interactions", function(event) {
     if (!event.target.closest("#chart3 .legend-item") && !event.target.closest("#chart3 .bubble")) {
       svg3.selectAll(".bubble")

@@ -329,3 +329,52 @@ footer {
   position: absolute;
   left: 0;
 }
+
+.chart-description {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.chart-description h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.chart-description h3 {
+  color: #2c3e50;
+  margin: 1.5rem 0 1rem;
+  font-size: 1.4rem;
+}
+
+.chart-description p {
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.chart-description ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.chart-description li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #34495e;
+}
+
+.chart-description li:before {
+  content: "•";
+  color: #3498db;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.chart-description strong {
+  color: #2c3e50;
+}

@@ -118,35 +118,33 @@ function setupEventListeners() {
       document.querySelectorAll("#chart1 input[type='checkbox']").forEach(checkbox => {
         checkbox.checked = true;
       });
-
       update();
     });
-  } else {
-    console.warn("Reset button for chart 1 not found.");
   }
 
+  // Handle filter button clicks
   document.querySelectorAll("#chart1 .filter-btn").forEach(btn => {
     btn.addEventListener("click", (e) => {
       const dropdown = e.target.closest(".filter-dropdown");
-
       e.stopPropagation();
-
-      document.querySelectorAll("#chart1 .filter-dropdown").forEach(d => {
-        if (d !== dropdown) {
-          d.classList.remove("active");
-        }
-      });
-
       dropdown.classList.toggle("active");
     });
   });
 
+  // Close dropdowns when clicking outside
   document.addEventListener("click", (e) => {
     if (!e.target.closest("#chart1 .filter-dropdown")) {
       document.querySelectorAll("#chart1 .filter-dropdown.active").forEach(d => {
         d.classList.remove("active");
       });
     }
+  });
+
+  // Handle checkbox changes
+  document.querySelectorAll("#chart1 input[type='checkbox']").forEach(checkbox => {
+    checkbox.addEventListener("change", () => {
+      update();
+    });
   });
 }
 
