@@ -219,6 +219,15 @@ footer {
   transform: translateY(0);
 }
 
+.main-nav a.active {
+  background-color: #2980b9;
+  color: #fff;
+  border-color: #21618c;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(41, 128, 185, 0.2);
+  cursor: default;
+}
+
 .reset-filters-btn {
   background-color: #3498db;
   color: white;
