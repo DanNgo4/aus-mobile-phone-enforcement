@@ -9,36 +9,6 @@ body {
   flex-direction: column;
 }
 
-.slider {
-  position: relative;
-  width: 100vw;
-  overflow: hidden;
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.4s ease;
-}
-
-.slide {
-  box-sizing: border-box;
-  padding: 1rem;
-  flex: 0 0 100%;
-}
-
-.slide-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.3);
-  color: white;
-  border: none;
-  font-size: 2rem;
-  padding: 0 .5rem;
-  cursor: pointer;
-  z-index: 10;
-}
-
 .prev {
   left: 1rem;
 }
@@ -188,14 +158,6 @@ footer {
 }
 
 @media (max-width: 800px) {
-  .slide {
-    padding: 0.5rem;
-    flex: 0 0 100%;
-  }
-  .slide-btn {
-    font-size: 1.5rem;
-    padding: 0 0.3rem;
-  }
   .filter-group {
     display: block;
     margin-bottom: 1rem;
