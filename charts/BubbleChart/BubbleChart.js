@@ -26,8 +26,26 @@ const yScale = d3.scaleLinear().range([height3, 0]);
 const radiusScale = d3.scaleSqrt().range([5, 40]);
 
 const colorScale = d3.scaleOrdinal()
-  .domain(["NSW",     "QLD",     "VIC",     "TAS",     "SA",      "WA",      "NT",      "ACT"])
-  .range([ "#FF69B4", "#FF7F0E", "#2CA02C", "#D62728", "#9467BD", "#8C564B", "#1F77B4", "#7F7F7F"]);
+  .domain([
+    "NSW",
+    "QLD",
+    "VIC",
+    "TAS",
+    "SA",
+    "WA",
+    "NT",
+    "ACT"
+  ])
+  .range([
+    "rgba(34, 0, 255, 0.8)",
+    "rgb(0, 98, 255)",
+    "rgba(33, 51, 209, 0.8)",
+    "rgba(0, 255, 255, 0.7)",
+    "rgb(83, 189, 201)",
+    "rgba(0, 120, 255, 0.9)",
+    "rgb(7, 57, 137)", 
+    "rgba(0, 157, 255, 0.9)"
+  ]);
 
 let originalRoadData, originalFinesData;
 

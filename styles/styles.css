@@ -90,6 +90,8 @@ svg {
 
 .filter-btn:hover {
   background-color: #e9ecef;
+  transform: translateY(-0.5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content {

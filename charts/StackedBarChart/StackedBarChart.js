@@ -32,8 +32,8 @@ const y1 = d3.scaleLinear().range([height, 0]);
 const y2 = d3.scaleLinear().range([height, 0]);
 
 const color = d3.scaleOrdinal()
-  .domain(["Camera issued", "Police issued"])
-  .range(["#1F77B4", "#FF7F0E"]);
+  .domain(["Camera issued",     "Police issued"])
+  .range(["rgb(7, 57, 137)", "rgba(28, 187, 255, 0.6)"]);
 
 const xAxisG1 = svg1Large.append("g")
   .attr("class", "x-axis")
