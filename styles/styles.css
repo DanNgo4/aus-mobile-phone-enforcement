@@ -253,6 +253,7 @@ footer {
   }
   svg {
     width: 100%;
+    max-width: 100%;
   }
   
   .main-content-area {
@@ -289,6 +290,20 @@ footer {
   
   #chart1 > div > div {
     margin-bottom: 1.5rem;
+  }
+  
+  #chart2 svg {
+    width: 100%;
+    height: auto;
+  }
+  
+  #chart3 svg {
+    width: 100%;
+    height: auto;
+  }
+  
+  #chart3 .legend {
+    transform: translate(10px, 350px) !important;
   }
 }
 
