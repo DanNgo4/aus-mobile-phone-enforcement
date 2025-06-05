@@ -35,7 +35,6 @@ let monthNames = ["January", "February", "March", "April", "May", "June", "July"
 
 d3.csv("../../data/cleaned_dataset_2.csv", d3.autoType).then(data => {
   originalHeatmapData = data;
-  const parseDate = d3.timeParse("%Y-%m-%d"); 
   
   const jurisdictions = Array.from(new Set(data.map(d => d.JURISDICTION))).sort();
   const ageGroups = Array.from(new Set(data.map(d => d.AGE_GROUP))).sort();
