@@ -479,3 +479,33 @@ footer {
   max-width: 100%;
   height: auto;
 }
+
+.bar-legend {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin: 16px 0 8px 0;
+  justify-content: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-color-box {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: 1px solid #333;
+}
+
+.camera-color {
+  background: rgb(7, 57, 137);
+}
+
+.police-color {
+  background: rgba(28, 187, 255, 0.6);
+}
