@@ -1,3 +1,21 @@
+a {
+  color: #00FFFF;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+a:visited {
+  color: #00b3b3;
+}
+
+a:hover, a:focus {
+  color: #00b3b3;
+}
+
+a:active {
+  color: #009999;
+}
+
 body {
   overflow-x: hidden;
   font-family: Arial, sans-serif;
