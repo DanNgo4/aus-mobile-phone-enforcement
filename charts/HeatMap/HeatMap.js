@@ -203,6 +203,13 @@ function updateHeatmap() {
     .attr("class", "cell")
     .merge(cellSelection)
     .on("mousemove", (event, d) => {
+      svg.selectAll("rect.cell")
+        .style("opacity", 0.7);
+      
+      d3.select(event.target)
+        .style("opacity", 1)
+        .style("stroke-width", 1);
+      
       tooltip2
         .style("opacity", 1)
         .html(
@@ -212,7 +219,13 @@ function updateHeatmap() {
         .style("left", (event.pageX + 10) + "px")
         .style("top", (event.pageY - 28) + "px");
     })
-    .on("mouseleave", () => tooltip2.style("opacity", 0));
+    .on("mouseleave", () => {
+      svg.selectAll("rect.cell")
+        .style("opacity", 1)
+        .style("stroke-width", 0.5);
+      
+      tooltip2.style("opacity", 0);
+    });
 
   if (isInitialHeatmapRender) {
     cellEnterMerge

@@ -349,6 +349,14 @@ function updateChart(svg, data, x, y, methods) {
     .append("rect")
     .merge(bars)
     .on("mousemove", (ev, d) => {
+      svg.selectAll("rect")
+        .style("opacity", 0.5);
+      
+      d3.select(ev.target)
+        .style("opacity", 1)
+        .style("stroke", "#333")
+        .style("stroke-width", 1);
+      
       const row = d.data;
       let tooltipHtml = `<strong>${row.JURISDICTION}</strong><br />Total fines: ${d3.format(",")(row.total)}`;
       methods.forEach(m => {
@@ -359,7 +367,14 @@ function updateChart(svg, data, x, y, methods) {
         .style("left", `${ev.pageX + 5}px`)
         .style("top", `${ev.pageY - 28}px`);
     })
-    .on("mouseleave", () => tooltip1.style("opacity", 0));
+    .on("mouseleave", () => {
+      svg.selectAll("rect")
+        .style("opacity", 1)
+        .style("stroke", "none")
+        .style("stroke-width", 0);
+      
+      tooltip1.style("opacity", 0);
+    });
 
   if (isInitialRender) {
     barsEnterMerge
