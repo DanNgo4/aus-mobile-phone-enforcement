@@ -115,6 +115,7 @@ svg1Small.append("text")
   .text("Jurisdiction");
 
 let originalData;
+let isInitialRender = true;
 
 d3.csv("../../data/cleaned_dataset_1.csv", d3.autoType).then(data => {
   originalData = data;
@@ -128,6 +129,7 @@ d3.csv("../../data/cleaned_dataset_1.csv", d3.autoType).then(data => {
 
   setupEventListeners();
   update();
+  isInitialRender = false;
 
 }).catch(err => console.error("Error loading CSV for Stacked Bar Chart:", err));
 
@@ -313,11 +315,16 @@ function update() {
     .attr("transform", "rotate(-45)")
     .style("text-anchor", "end");
   
-  yAxisG1.transition().duration(500)
-    .call(d3.axisLeft(y1).tickFormat(d3.format(",")));    
-  
-  yAxisG2.transition().duration(500)
-    .call(d3.axisLeft(y2).tickFormat(d3.format(",")));
+  if (isInitialRender) {
+    yAxisG1.call(d3.axisLeft(y1).tickFormat(d3.format(",")));
+    yAxisG2.call(d3.axisLeft(y2).tickFormat(d3.format(",")));
+  } else {
+    yAxisG1.transition().duration(500)
+      .call(d3.axisLeft(y1).tickFormat(d3.format(",")));    
+    
+    yAxisG2.transition().duration(500)
+      .call(d3.axisLeft(y2).tickFormat(d3.format(",")));
+  }
 
   updateChart(svg1Large, largeData, x1, y1, selectedMethods);
   updateChart(svg1Small, smallData, x2, y2, selectedMethods);
@@ -338,7 +345,7 @@ function updateChart(svg, data, x, y, methods) {
 
   const bars = layers.merge(layersEnter).selectAll("rect").data(d => d);
 
-  bars.enter()
+  const barsEnterMerge = bars.enter()
     .append("rect")
     .merge(bars)
     .on("mousemove", (ev, d) => {
@@ -352,13 +359,23 @@ function updateChart(svg, data, x, y, methods) {
         .style("left", `${ev.pageX + 5}px`)
         .style("top", `${ev.pageY - 28}px`);
     })
-    .on("mouseleave", () => tooltip1.style("opacity", 0))
-    .transition()
-    .duration(500)
-    .attr("x", d => x(d.data.JURISDICTION))
-    .attr("y", d => y(d[1]))
-    .attr("height", d => Math.max(0, y(d[0]) - y(d[1])))
-    .attr("width", x.bandwidth());
+    .on("mouseleave", () => tooltip1.style("opacity", 0));
+
+  if (isInitialRender) {
+    barsEnterMerge
+      .attr("x", d => x(d.data.JURISDICTION))
+      .attr("y", d => y(d[1]))
+      .attr("height", d => Math.max(0, y(d[0]) - y(d[1])))
+      .attr("width", x.bandwidth());
+  } else {
+    barsEnterMerge
+      .transition()
+      .duration(500)
+      .attr("x", d => x(d.data.JURISDICTION))
+      .attr("y", d => y(d[1]))
+      .attr("height", d => Math.max(0, y(d[0]) - y(d[1])))
+      .attr("width", x.bandwidth());
+  }
 
   bars.exit().remove();
 }

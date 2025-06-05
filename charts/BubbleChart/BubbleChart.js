@@ -48,6 +48,7 @@ const colorScale = d3.scaleOrdinal()
   ]);
 
 let originalRoadData, originalFinesData;
+let isInitialBubbleRender = true;
 
 Promise.all([
   d3.csv("../../data/license_and_road_death.csv", d3.autoType),
@@ -93,6 +94,7 @@ Promise.all([
   
   setupBubbleChartEventListeners();
   updateBubbleChart();
+  isInitialBubbleRender = false;
 
 }).catch(error => {
   console.error("Error loading data for Bubble Chart:", error);
@@ -193,15 +195,21 @@ function updateBubbleChart() {
   yScale.domain([0, Math.max(1, maxFines * 1.1 || 10)]);
   radiusScale.domain([0, d3.max(bubbleData, d => d.finesPer10k) || 1]);
 
-  svg3.select(".x-axis")
-    .transition()
-    .duration(500)
-    .call(d3.axisBottom(xScale));
-
-  svg3.select(".y-axis")
-    .transition()
-    .duration(500)
-    .call(d3.axisLeft(yScale).tickFormat(d3.format(",")));
+  if (isInitialBubbleRender) {
+    svg3.select(".x-axis")
+      .call(d3.axisBottom(xScale));
+    svg3.select(".y-axis")
+      .call(d3.axisLeft(yScale).tickFormat(d3.format(",")));
+  } else {
+    svg3.select(".x-axis")
+      .transition()
+      .duration(500)
+      .call(d3.axisBottom(xScale));
+    svg3.select(".y-axis")
+      .transition()
+      .duration(500)
+      .call(d3.axisLeft(yScale).tickFormat(d3.format(",")));
+  }
 
   const bubbles = svg3.selectAll(".bubble")
     .data(bubbleData, d => d.jurisdiction);
@@ -216,7 +224,7 @@ function updateBubbleChart() {
     .style("stroke", "#333")
     .style("stroke-width", 1);
 
-  bubbles.merge(bubblesEnter)
+  const bubblesEnterMerge = bubbles.merge(bubblesEnter)
     .style("fill", d => colorScale(d.jurisdiction))
     .style("opacity", 0.7)
     .style("stroke", "#333")
@@ -237,20 +245,38 @@ function updateBubbleChart() {
     .on("mouseleave", function() {
       tooltip3.style("opacity", 0);
       d3.select(this).style("opacity", 0.7).style("stroke-width", 1);
-    })
-    .transition().duration(500)
-    .attr("cx", d => {
-      d.cx = xScale(d.roadDeaths);
-      return d.cx;
-    })
-    .attr("cy", d => {
-      d.cy = yScale(d.totalFines);
-      return d.cy;
-    })
-    .attr("r", d => {
-      d.r = Math.max(3, radiusScale(d.finesPer10k) || 3);
-      return d.r;
     });
+
+  if (isInitialBubbleRender) {
+    bubblesEnterMerge
+      .attr("cx", d => {
+        d.cx = xScale(d.roadDeaths);
+        return d.cx;
+      })
+      .attr("cy", d => {
+        d.cy = yScale(d.totalFines);
+        return d.cy;
+      })
+      .attr("r", d => {
+        d.r = Math.max(3, radiusScale(d.finesPer10k) || 3);
+        return d.r;
+      });
+  } else {
+    bubblesEnterMerge
+      .transition().duration(500)
+      .attr("cx", d => {
+        d.cx = xScale(d.roadDeaths);
+        return d.cx;
+      })
+      .attr("cy", d => {
+        d.cy = yScale(d.totalFines);
+        return d.cy;
+      })
+      .attr("r", d => {
+        d.r = Math.max(3, radiusScale(d.finesPer10k) || 3);
+        return d.r;
+      });
+  }
 
   const labels = svg3.selectAll(".bubble-label").data(bubbleData, d => d.jurisdiction);
 
@@ -258,16 +284,25 @@ function updateBubbleChart() {
 
   const labelsEnter = labels.enter().append("text").attr("class", "bubble-label");
   
-  labels.merge(labelsEnter)
+  const labelsEnterMerge = labels.merge(labelsEnter)
     .attr("text-anchor", "middle")
     .style("font-size", "10px")
     .style("font-weight", "bold")
     .style("fill", "#fff")
-    .style("pointer-events", "none")
-    .transition().duration(500)
-    .attr("x", d => d.cx)
-    .attr("y", d => d.cy + 4)
-    .text(d => d.jurisdiction);
+    .style("pointer-events", "none");
+
+  if (isInitialBubbleRender) {
+    labelsEnterMerge
+      .attr("x", d => d.cx)
+      .attr("y", d => d.cy + 4)
+      .text(d => d.jurisdiction);
+  } else {
+    labelsEnterMerge
+      .transition().duration(500)
+      .attr("x", d => d.cx)
+      .attr("y", d => d.cy + 4)
+      .text(d => d.jurisdiction);
+  }
 
   svg3.selectAll(".legend").remove();
   const allJurisdictions = originalRoadData.map(d => d.JURISDICTION).sort((a, b) => a.localeCompare(b));

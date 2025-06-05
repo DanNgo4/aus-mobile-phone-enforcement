@@ -32,6 +32,7 @@ svg.append("text")
 
 let originalHeatmapData; 
 let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+let isInitialHeatmapRender = true;
 
 d3.csv("../../data/cleaned_dataset_2.csv", d3.autoType).then(data => {
   originalHeatmapData = data;
@@ -46,7 +47,8 @@ d3.csv("../../data/cleaned_dataset_2.csv", d3.autoType).then(data => {
   buildHeatmapFilterDropdown("heatmapMonthFilter", monthNames, updateHeatmap);
 
   setupHeatmapEventListeners(); 
-  updateHeatmap(); 
+  updateHeatmap();
+  isInitialHeatmapRender = false; 
 
 }).catch(err => console.error("Error loading CSV for Heatmap:", err));
 
@@ -196,7 +198,7 @@ function updateHeatmap() {
 
   cellSelection.exit().remove();
 
-  cellSelection.enter()
+  const cellEnterMerge = cellSelection.enter()
     .append("rect")
     .attr("class", "cell")
     .merge(cellSelection)
@@ -210,14 +212,27 @@ function updateHeatmap() {
         .style("left", (event.pageX + 10) + "px")
         .style("top", (event.pageY - 28) + "px");
     })
-    .on("mouseleave", () => tooltip2.style("opacity", 0))
-    .transition()
-    .duration(500)
-    .attr("x", d => x(d.month))
-    .attr("y", d => y(d.jurisdiction))
-    .attr("width", x.bandwidth())
-    .attr("height", y.bandwidth())
-    .attr("fill", d => color(d.value))
-    .attr("stroke", "#333")
-    .attr("stroke-width", 0.5);
+    .on("mouseleave", () => tooltip2.style("opacity", 0));
+
+  if (isInitialHeatmapRender) {
+    cellEnterMerge
+      .attr("x", d => x(d.month))
+      .attr("y", d => y(d.jurisdiction))
+      .attr("width", x.bandwidth())
+      .attr("height", y.bandwidth())
+      .attr("fill", d => color(d.value))
+      .attr("stroke", "#333")
+      .attr("stroke-width", 0.5);
+  } else {
+    cellEnterMerge
+      .transition()
+      .duration(500)
+      .attr("x", d => x(d.month))
+      .attr("y", d => y(d.jurisdiction))
+      .attr("width", x.bandwidth())
+      .attr("height", y.bandwidth())
+      .attr("fill", d => color(d.value))
+      .attr("stroke", "#333")
+      .attr("stroke-width", 0.5);
+  }
 }
