@@ -5,31 +5,67 @@ const tooltip1 = d3.select("body")
   .attr("class", "tooltip")
   .style("opacity", 0);
 
+function getResponsiveDimensions() {
+  const screenWidth = window.innerWidth;
+  
+  if (screenWidth <= 768) {
+    // Mobile
+    return {
+      fullWidth: Math.min(screenWidth - 40, 600),
+      width: Math.min(screenWidth - 40, 600) - margin.left - margin.right,
+      height: 400 - margin.top - margin.bottom,
+      isStacked: true
+    };
+  } else if (screenWidth <= 1024) {
+    // Tablet
+    return {
+      fullWidth: Math.min(screenWidth - 60, 800),
+      width: Math.min(screenWidth - 60, 800) - margin.left - margin.right,
+      height: 500 - margin.top - margin.bottom,
+      isStacked: true
+    };
+  } else {
+    // Desktop
+    return {
+      fullWidth: fullWidth,
+      width: (fullWidth / 2) - margin.left - margin.right,
+      height: 600 - margin.top - margin.bottom,
+      isStacked: false
+    };
+  }
+}
+
+let responsiveDims = getResponsiveDimensions();
+
 const chartsContainer = container.append("div")
   .style("display", "flex")
-  .style("justify-content", "space-between")
-  .style("width", fullWidth + "px")
+  .style("justify-content", responsiveDims.isStacked ? "center" : "space-between")
+  .style("flex-direction", responsiveDims.isStacked ? "column" : "row")
+  .style("align-items", responsiveDims.isStacked ? "center" : "stretch")
+  .style("width", responsiveDims.fullWidth + "px")
   .style("margin", "0 auto");
 
 const svg1Large = chartsContainer.append("div")
+  .style("margin-bottom", responsiveDims.isStacked ? "2rem" : "0")
   .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", responsiveDims.width + margin.left + margin.right)
+    .attr("height", responsiveDims.height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
 const svg1Small = chartsContainer.append("div")
+  .style("margin-bottom", responsiveDims.isStacked ? "2rem" : "0")
   .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", responsiveDims.width + margin.left + margin.right)
+    .attr("height", responsiveDims.height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
 const x1 = d3.scaleBand().padding(0.2);
 const x2 = d3.scaleBand().padding(0.2);
 
-const y1 = d3.scaleLinear().range([height, 0]);
-const y2 = d3.scaleLinear().range([height, 0]);
+const y1 = d3.scaleLinear().range([responsiveDims.height, 0]);
+const y2 = d3.scaleLinear().range([responsiveDims.height, 0]);
 
 const color = d3.scaleOrdinal()
   .domain(["Camera issued",     "Police issued"])
@@ -37,13 +73,13 @@ const color = d3.scaleOrdinal()
 
 const xAxisG1 = svg1Large.append("g")
   .attr("class", "x-axis")
-  .attr("transform", `translate(0,${height})`);
+  .attr("transform", `translate(0,${responsiveDims.height})`);
 const yAxisG1 = svg1Large.append("g")
   .attr("class", "y-axis");
 
 const xAxisG2 = svg1Small.append("g")
   .attr("class", "x-axis")
-  .attr("transform", `translate(0,${height})`);
+  .attr("transform", `translate(0,${responsiveDims.height})`);
 const yAxisG2 = svg1Small.append("g")
   .attr("class", "y-axis");
 
@@ -55,26 +91,26 @@ container.insert("h2", ":first-child")
 svg1Large.append("text")
   .attr("transform", "rotate(-90)")
   .attr("y", -60)
-  .attr("x", -height / 2)
+  .attr("x", -responsiveDims.height / 2)
   .attr("text-anchor", "middle")
   .text("Number of Fines");
 
 svg1Small.append("text")
   .attr("transform", "rotate(-90)")
   .attr("y", -60)
-  .attr("x", -height / 2)
+  .attr("x", -responsiveDims.height / 2)
   .attr("text-anchor", "middle")
   .text("Number of Fines");
 
 svg1Large.append("text")
-  .attr("x", width / 2)
-  .attr("y", height + 60)
+  .attr("x", responsiveDims.width / 2)
+  .attr("y", responsiveDims.height + 60)
   .attr("text-anchor", "middle")
   .text("Jurisdiction");
 
 svg1Small.append("text")
-  .attr("x", width / 2)
-  .attr("y", height + 60)
+  .attr("x", responsiveDims.width / 2)
+  .attr("y", responsiveDims.height + 60)
   .attr("text-anchor", "middle")
   .text("Jurisdiction");
 
@@ -94,6 +130,75 @@ d3.csv("../../data/cleaned_dataset_1.csv", d3.autoType).then(data => {
   update();
 
 }).catch(err => console.error("Error loading CSV for Stacked Bar Chart:", err));
+
+// Add window resize listener for responsiveness
+window.addEventListener('resize', debounce(() => {
+  const newDims = getResponsiveDimensions();
+  
+  // Only update if dimensions actually changed
+  if (newDims.width !== responsiveDims.width || 
+      newDims.height !== responsiveDims.height || 
+      newDims.isStacked !== responsiveDims.isStacked) {
+    
+    responsiveDims = newDims;
+    updateChartLayout();
+    if (originalData) update();
+  }
+}, 250));
+
+// Debounce function to limit resize event calls
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+function updateChartLayout() {
+  chartsContainer
+    .style("justify-content", responsiveDims.isStacked ? "center" : "space-between")
+    .style("flex-direction", responsiveDims.isStacked ? "column" : "row")
+    .style("align-items", responsiveDims.isStacked ? "center" : "stretch")
+    .style("width", responsiveDims.fullWidth + "px");
+  
+  chartsContainer.selectAll("div")
+    .style("margin-bottom", responsiveDims.isStacked ? "2rem" : "0");
+    
+  chartsContainer.selectAll("svg")
+    .attr("width", responsiveDims.width + margin.left + margin.right)
+    .attr("height", responsiveDims.height + margin.top + margin.bottom);
+  
+  y1.range([responsiveDims.height, 0]);
+  y2.range([responsiveDims.height, 0]);
+  x1.range([0, responsiveDims.width]);
+  x2.range([0, responsiveDims.width]);
+  
+  xAxisG1.attr("transform", `translate(0,${responsiveDims.height})`);
+  xAxisG2.attr("transform", `translate(0,${responsiveDims.height})`);
+  
+  svg1Large.selectAll("text")
+    .filter(function() { return d3.select(this).text() === "Number of Fines"; })
+    .attr("x", -responsiveDims.height / 2);
+    
+  svg1Small.selectAll("text")
+    .filter(function() { return d3.select(this).text() === "Number of Fines"; })
+    .attr("x", -responsiveDims.height / 2);
+    
+  svg1Large.selectAll("text")
+    .filter(function() { return d3.select(this).text() === "Jurisdiction"; })
+    .attr("x", responsiveDims.width / 2)
+    .attr("y", responsiveDims.height + 60);
+    
+  svg1Small.selectAll("text")
+    .filter(function() { return d3.select(this).text() === "Jurisdiction"; })
+    .attr("x", responsiveDims.width / 2)
+    .attr("y", responsiveDims.height + 60);
+}
 
 function buildFilterDropdown(id, values, changeCallback) {
   const dropdownContainer = d3.select(`#${id}`);
@@ -191,9 +296,9 @@ function update() {
   const smallData = sumData.filter(d => !largeJurs.includes(d.JURISDICTION));
 
   x1.domain(largeData.map(d => d.JURISDICTION))
-    .range([0, width]);
+    .range([0, responsiveDims.width]);
   x2.domain(smallData.map(d => d.JURISDICTION))
-    .range([0, width]);
+    .range([0, responsiveDims.width]);
 
   y1.domain([0, d3.max(largeData, d => d.total) * 1.1 || 10]);
   y2.domain([0, d3.max(smallData, d => d.total) * 1.1 || 10]);

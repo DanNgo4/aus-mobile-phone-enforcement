@@ -159,7 +159,57 @@ footer {
   border-radius: 5px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) and (min-width: 769px) {
+  .main-content-area {
+    padding: 1.5rem;
+  }
+  
+  .chart-description {
+    padding: 0 1rem;
+  }
+  
+  .chart-description h2 {
+    font-size: 1.6rem;
+  }
+  
+  .chart-description h3 {
+    font-size: 1.2rem;
+  }
+  
+  .filters-container {
+    gap: 15px;
+    margin: 15px 0;
+  }
+  
+  .filter-btn {
+    min-width: 160px;
+    font-size: 13px;
+    padding: 9px 18px;
+  }
+  
+  .main-nav a {
+    font-size: 13px;
+    min-width: 110px;
+    padding: 9px 18px;
+  }
+  
+  #chart1 > div {
+    flex-direction: column !important;
+    align-items: center;
+    width: 100% !important;
+  }
+  
+  #chart1 > div > div {
+    margin-bottom: 2rem;
+  }
+  
+  #chart1 h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
   .filter-group {
     display: block;
     margin-bottom: 1rem;
@@ -185,6 +235,42 @@ footer {
   }
   svg {
     width: 100%;
+  }
+  
+  .main-content-area {
+    padding: 1rem;
+  }
+  
+  .chart-description {
+    padding: 0 0.5rem;
+  }
+  
+  .chart-description h2 {
+    font-size: 1.4rem;
+  }
+  
+  .chart-description h3 {
+    font-size: 1.1rem;
+  }
+  
+  .main-nav {
+    gap: 10px;
+  }
+  
+  .main-nav a {
+    font-size: 12px;
+    min-width: 100px;
+    padding: 8px 15px;
+  }
+  
+  #chart1 > div {
+    flex-direction: column !important;
+    align-items: center;
+    width: 100% !important;
+  }
+  
+  #chart1 > div > div {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -359,4 +445,19 @@ footer {
   max-width: 800px;
   display: flex;
   justify-content: center;
+}
+
+.chart-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.chart-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.chart-container svg {
+  max-width: 100%;
+  height: auto;
 }
