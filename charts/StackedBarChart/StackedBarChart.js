@@ -8,24 +8,21 @@ const tooltip1 = d3.select("body")
 function getResponsiveDimensions() {
   const screenWidth = window.innerWidth;
   
-  if (screenWidth <= 768) {
-    // Mobile
+  if (screenWidth <= 768) {   // Mobile
     return {
       fullWidth: Math.min(screenWidth - 40, 600),
       width: Math.min(screenWidth - 40, 600) - margin.left - margin.right,
       height: 400 - margin.top - margin.bottom,
       isStacked: true
     };
-  } else if (screenWidth <= 1024) {
-    // Tablet
+  } else if (screenWidth <= 1024) { // Tablet
     return {
       fullWidth: Math.min(screenWidth - 60, 800),
       width: Math.min(screenWidth - 60, 800) - margin.left - margin.right,
       height: 500 - margin.top - margin.bottom,
       isStacked: true
     };
-  } else {
-    // Desktop
+  } else { // Desktop
     return {
       fullWidth: fullWidth,
       width: (fullWidth / 2) - margin.left - margin.right,
@@ -134,7 +131,7 @@ d3.csv("../../data/cleaned_dataset_1.csv", d3.autoType).then(data => {
 }).catch(err => console.error("Error loading CSV for Stacked Bar Chart:", err));
 
 // Add window resize listener for responsiveness
-window.addEventListener('resize', debounce(() => {
+window.addEventListener("resize", debounce(() => {
   const newDims = getResponsiveDimensions();
   
   // Only update if dimensions actually changed
@@ -148,15 +145,17 @@ window.addEventListener('resize', debounce(() => {
   }
 }, 250));
 
-// Debounce function to limit resize event calls
 function debounce(func, wait) {
   let timeout;
+
   return function executedFunction(...args) {
     const later = () => {
       clearTimeout(timeout);
       func(...args);
     };
+
     clearTimeout(timeout);
+
     timeout = setTimeout(later, wait);
   };
 }
@@ -204,7 +203,9 @@ function updateChartLayout() {
 
 function buildFilterDropdown(id, values, changeCallback) {
   const dropdownContainer = d3.select(`#${id}`);
+
   dropdownContainer.selectAll("*").remove();
+
   values.forEach(v => {
     const label = dropdownContainer.append("label");
 
@@ -273,15 +274,21 @@ function update() {
   
   const sumMap = d3.rollup(
     filtered,
+
     v => {
       const totals = { total: 0 };
+
       selectedMethods.forEach(m => { 
         const count = d3.sum(v.filter(d => d.DETECTION_METHOD === m), d => d.FINES);
+
         totals[m] = isNaN(count) ? 0 : count;
+
         totals.total += totals[m]; 
       });
+      
       return totals;
     },
+
     d => d.JURISDICTION
   );
 

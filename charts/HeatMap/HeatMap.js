@@ -48,20 +48,23 @@ d3.csv("../../data/cleaned_dataset_2.csv", d3.autoType).then(data => {
 
   setupHeatmapEventListeners(); 
   updateHeatmap();
-  isInitialHeatmapRender = false; 
 
+  isInitialHeatmapRender = false; 
 }).catch(err => console.error("Error loading CSV for Heatmap:", err));
 
 function buildHeatmapFilterDropdown(id, values, changeCallback) {
   const dropdownContainer = d3.select(`#${id}`);
   dropdownContainer.selectAll("*").remove();
+
   values.forEach(v => {
     const label = dropdownContainer.append("label");
+
     label.append("input")
       .attr("type", "checkbox")
       .attr("value", v)
       .property("checked", true)
       .on("change", changeCallback);
+
     label.append("span").text(v);
   });
 }
@@ -73,6 +76,7 @@ function setupHeatmapEventListeners() {
       document.querySelectorAll("#chart2 input[type='checkbox']").forEach(checkbox => {
         checkbox.checked = true;
       });
+
       updateHeatmap();
     });
   }
@@ -131,6 +135,7 @@ function updateHeatmap() {
 
     if (jurisdiction === "QLD") {
       const perMonth = fines / 12;
+
       for (let i = 0; i < 12; i++) {
         if (selectedMonths.includes(i)) { 
           records.push({ jurisdiction, month: i, fines: perMonth });
@@ -138,6 +143,7 @@ function updateHeatmap() {
       }
     } else {
       const date = d.START_DATE instanceof Date ? d.START_DATE : parseDate(d.START_DATE);
+      
       if (date) { 
         const month = date.getMonth();
         if (selectedMonths.includes(month)) { 

@@ -68,10 +68,12 @@ Promise.all([
       .attr("class", "x-axis")
       .attr("transform", `translate(0,${height3})`);
   }
+
   if (svg3.select(".y-axis").empty()) {
     svg3.append("g")
       .attr("class", "y-axis");
   }
+
   if (svg3.select(".x-label").empty()) {
     svg3.append("text")
       .attr("class", "x-label")
@@ -81,6 +83,7 @@ Promise.all([
       .style("font-size", "14px")
       .text("Number of Road Deaths");
   }
+
   if (svg3.select(".y-label").empty()) {
     svg3.append("text")
       .attr("class", "y-label")
@@ -94,6 +97,7 @@ Promise.all([
   
   setupBubbleChartEventListeners();
   updateBubbleChart();
+
   isInitialBubbleRender = false;
 
 }).catch(error => {
@@ -102,25 +106,31 @@ Promise.all([
 
 function buildBubbleFilterDropdown(id, values, changeCallback) {
   const dropdownContainer = d3.select(`#${id}`);
+
   dropdownContainer.selectAll("*").remove();
+
   values.forEach(v => {
     const label = dropdownContainer.append("label");
+
     label.append("input")
       .attr("type", "checkbox")
       .attr("value", v)
       .property("checked", true)
       .on("change", changeCallback);
+
     label.append("span").text(v);
   });
 }
 
 function setupBubbleChartEventListeners() {
   const resetButton = document.querySelector("#chart3 .filters-container .reset-filters-btn");
+
   if (resetButton) {
     resetButton.addEventListener("click", () => {
       document.querySelectorAll("#chart3 input[type='checkbox']").forEach(checkbox => {
         checkbox.checked = true;
       });
+
       updateBubbleChart();
     });
   }
@@ -129,7 +139,9 @@ function setupBubbleChartEventListeners() {
   document.querySelectorAll("#chart3 .filter-btn").forEach(btn => {
     btn.addEventListener("click", (e) => {
       const dropdown = e.target.closest(".filter-dropdown");
+
       e.stopPropagation();
+
       dropdown.classList.toggle("active");
     });
   });
@@ -156,6 +168,7 @@ function setupBubbleChartEventListeners() {
       svg3.selectAll(".bubble")
         .style("opacity", 0.7)
         .style("stroke-width", 1);
+
       tooltip3.style("opacity", 0);
     }
   });
@@ -180,7 +193,9 @@ function updateBubbleChart() {
 
   const bubbleData = originalRoadData.map(d => {
     const totalFines = finesByJurisdiction.get(d.JURISDICTION) || 0;
+
     const finesPer10k = Math.floor((totalFines / d.LICENSES) * 10000);
+
     return {
       jurisdiction: d.JURISDICTION,
       roadDeaths: d.ROAD_DEATHS,
@@ -192,6 +207,7 @@ function updateBubbleChart() {
 
   xScale.domain([0, d3.max(bubbleData, d => d.roadDeaths) * 1.1 || 10]);
   const maxFines = d3.max(bubbleData, d => d.totalFines);
+
   yScale.domain([0, Math.max(1, maxFines * 1.1 || 10)]);
   radiusScale.domain([0, d3.max(bubbleData, d => d.finesPer10k) || 1]);
 
@@ -305,21 +321,26 @@ function updateBubbleChart() {
   }
 
   svg3.selectAll(".legend").remove();
+
   const allJurisdictions = originalRoadData.map(d => d.JURISDICTION).sort((a, b) => a.localeCompare(b));
+
   const legend = svg3.append("g")
     .attr("class", "legend")
     .attr("transform", `translate(${width3 + 20}, 20)`);
+
   const legendItems = legend.selectAll(".legend-item")
     .data(allJurisdictions, d => d)
     .enter().append("g")
     .attr("class", "legend-item")
     .attr("transform", (_, i) => `translate(0, ${i * 25})`);
+
   legendItems.append("circle")
     .attr("cx", 8)
     .attr("cy", 8)
     .attr("r", 8)
     .style("fill", d => colorScale(d))
     .style("opacity", 0.7);
+
   legendItems.append("text")
     .attr("x", 20)
     .attr("y", 8)
@@ -327,6 +348,7 @@ function updateBubbleChart() {
     .style("font-size", "12px")
     .style("text-decoration", "underline")
     .text(d => d);
+
   legendItems
     .style("cursor", "pointer")
     .on("mouseover", function() {
@@ -415,7 +437,6 @@ function updateBubbleChart() {
             .style("left", tooltipX + "px")
             .style("top", tooltipY + "px")
             .style("transform", "translateX(-50%)"); 
-
         } else {
           console.warn("No bubble data for legend item:", jurisdiction);
         }
