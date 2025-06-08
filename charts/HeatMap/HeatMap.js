@@ -32,12 +32,12 @@ function getHeatmapResponsiveDimensions() {
   }
 }
 
-let heatmapResponsiveDims = getHeatmapResponsiveDimensions();
+let heatmapResponsiveDimensions = getHeatmapResponsiveDimensions();
 
 const svg = container2
   .append("svg")
-    .attr("width", heatmapResponsiveDims.fullWidth) 
-    .attr("height", heatmapResponsiveDims.fullHeight) 
+    .attr("width", heatmapResponsiveDimensions.fullWidth) 
+    .attr("height", heatmapResponsiveDimensions.fullHeight) 
   .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
@@ -49,12 +49,12 @@ container2.insert("h2", ":first-child")
 svg.append("text")
   .attr("transform", "rotate(-90)")
   .attr("y", -60)
-  .attr("x", -heatmapResponsiveDims.height / 2)
+  .attr("x", -heatmapResponsiveDimensions.height / 2)
   .attr("text-anchor", "middle")
   .text("Jurisdiction");
 
 svg.append("text")
-  .attr("x", heatmapResponsiveDims.width / 2)
+  .attr("x", heatmapResponsiveDimensions.width / 2)
   .attr("y", -30) 
   .attr("text-anchor", "middle")
   .text("Month");
@@ -84,10 +84,10 @@ d3.csv("../../data/cleaned_dataset_2.csv", d3.autoType).then(data => {
 window.addEventListener("resize", debounceHeatmap(() => {
   const newDims = getHeatmapResponsiveDimensions();
   
-  if (newDims.width !== heatmapResponsiveDims.width || 
-      newDims.height !== heatmapResponsiveDims.height) {
+  if (newDims.width !== heatmapResponsiveDimensions.width || 
+      newDims.height !== heatmapResponsiveDimensions.height) {
     
-    heatmapResponsiveDims = newDims;
+    heatmapResponsiveDimensions = newDims;
     updateHeatmapLayout();
     if (originalHeatmapData) updateHeatmap();
   }
@@ -107,16 +107,16 @@ function debounceHeatmap(func, wait) {
 
 function updateHeatmapLayout() {
   container2.select("svg")
-    .attr("width", heatmapResponsiveDims.fullWidth)
-    .attr("height", heatmapResponsiveDims.fullHeight);
+    .attr("width", heatmapResponsiveDimensions.fullWidth)
+    .attr("height", heatmapResponsiveDimensions.fullHeight);
   
   svg.select("text[text-anchor='middle']")
     .filter(function() { return d3.select(this).text() === "Jurisdiction"; })
-    .attr("x", -heatmapResponsiveDims.height / 2);
+    .attr("x", -heatmapResponsiveDimensions.height / 2);
     
   svg.select("text[text-anchor='middle']")
     .filter(function() { return d3.select(this).text() === "Month"; })
-    .attr("x", heatmapResponsiveDims.width / 2);
+    .attr("x", heatmapResponsiveDimensions.width / 2);
 }
 
 function buildHeatmapFilterDropdown(id, values, changeCallback) {
@@ -240,12 +240,12 @@ function updateHeatmap() {
 
   const x = d3.scaleBand()
     .domain(heatmapMonths)
-    .range([0, heatmapResponsiveDims.width])
+    .range([0, heatmapResponsiveDimensions.width])
     .padding(0.05);
 
   const y = d3.scaleBand()
     .domain(heatmapJurisdictions)
-    .range([0, heatmapResponsiveDims.height])
+    .range([0, heatmapResponsiveDimensions.height])
     .padding(0.05);
 
   const color = d3.scaleSequential()
