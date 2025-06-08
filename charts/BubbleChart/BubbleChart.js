@@ -195,14 +195,14 @@ function updateBubbleChart() {
   const bubbleData = originalRoadData.map(d => {
     const totalFines = finesByJurisdiction.get(d.JURISDICTION) || 0;
 
-    const finesPer10k = Math.floor((totalFines / d.LICENSES) * 10000);
+    const finesPer10kLicenses = Math.floor((totalFines / d.LICENSES) * 10000);
 
     return {
       jurisdiction: d.JURISDICTION,
       roadDeaths: d.ROAD_DEATHS,
       totalFines: totalFines,
       licenses: d.LICENSES,
-      finesPer10k: finesPer10k
+      finesPer10k: finesPer10kLicenses
     };
   });
 
