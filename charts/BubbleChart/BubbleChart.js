@@ -47,7 +47,8 @@ const colorScale = d3.scaleOrdinal()
     "rgba(0, 157, 255, 0.9)"
   ]);
 
-let originalRoadData, originalFinesData;
+let originalRoadData;
+let originalFinesData;
 let isInitialBubbleRender = true;
 
 Promise.all([
